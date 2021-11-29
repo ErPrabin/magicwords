@@ -212,15 +212,15 @@
                                 </li>
                             </ul>
                             <div class="others-option">
-                                <div class="cart-icon">
+                                {{-- <div class="cart-icon">
                                     <a href="shopping-cart.html">
                                         <i class="bx bx-cart"></i>
                                         <span>0</span>
                                     </a>
-                                </div>
+                                </div> --}}
                                 <div class="get-quote">
                                     <a href="#" class="default-btn">
-                                        <span>Get a Quote</span>
+                                        <span>Contact Us</span>
                                     </a>
                                 </div>
                             </div>
@@ -411,6 +411,7 @@
 
 
     {{-- <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>___scripts_1___ --}}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('assets/js/meanmenu.min.js') }}"></script>
     <script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>

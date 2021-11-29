@@ -7,10 +7,9 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 col-md-12">
                     <div class="banner-content">
-                        <span class="top-title">World Class Cyber Security</span>
-                        <h1>Powerful Protection Easy Recovery</h1>
-                        <p>Cybersecurity is the protection from the theft to protect of our computer systems and
-                            networks or being damaged of our hardware and software.</p>
+                        {{-- <span class="top-title">{{ getCData('Home Banner', 'synopsis') }}</span> --}}
+                        <h1>{{ strip_tags(getCData('Home Banner', 'synopsis')) }}</h1>
+                        <p>{{ getCData('Home Banner', 'description') }}</p>
                         <div class="banner-btn">
                             <a href="contact.html" class="default-btn">
                                 <span>Contact Us</span>
@@ -20,7 +19,7 @@
                 </div>
                 <div class="col-lg-6 col-md-12">
                     <div class="banner-image">
-                        <img src="assets/img/banner/banner-img-1.jpg" alt="image">
+                        <img src="{{ asset('images/component/' . getCData('Home Banner', 'image')) }}" alt="image">
                     </div>
                 </div>
             </div>
@@ -31,51 +30,22 @@
     <section class="feature-area feature-area-two pt-100 pb-70">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single-feature overly-one">
-                        <div class="overly-two">
-                            <div class="title">
-                                <i class="flaticon-testing"></i>
-                                <h3>Pen Testing</h3>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore.</p>
-                            <div class="feature-shape">
-                                <img src="assets/img/feature-shape.png" alt="Image">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single-feature overly-one">
-                        <div class="overly-two">
-                            <div class="title">
-                                <i class="flaticon-cybercrime"></i>
-                                <h3>Cyber Threat Hunting</h3>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore.</p>
-                            <div class="feature-shape">
-                                <img src="assets/img/feature-shape.png" alt="Image">
+                @foreach ($services as $service)
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="single-feature overly-one">
+                            <div class="overly-two">
+                                <div class="title">
+                                    <i class="flaticon-testing"></i>
+                                    <h3>{{ strip_tags($service->title) }}</h3>
+                                </div>
+                                <p>{!! $service->description !!}</p>
+                                <div class="feature-shape">
+                                    <img src="{{ asset('assets/img/feature-shape.png') }} " alt="Image">
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 offset-sm-3 offset-lg-0">
-                    <div class="single-feature overly-one">
-                        <div class="overly-two">
-                            <div class="title">
-                                <i class="flaticon-cyber-security"></i>
-                                <h3>Security Center</h3>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore.</p>
-                            <div class="feature-shape">
-                                <img src="assets/img/feature-shape.png" alt="Image">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
@@ -86,15 +56,14 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="about-img">
-                        <img src="assets/img/about-img.jpg" alt="Image">
+                        <img src="{{ asset('images/component/' . getCData('About Us', 'image')) }}" alt="Image">
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="about-content">
                         <div class="about-title">
                             <span>About Us</span>
-                            <h2>Without stopping for a moment we give you best technology experience discussing from our
-                                expertise to stop threats being theft or damaged.</h2>
+                            <h2>{{ strip_tags(getCData('About Us', 'description')) }}</h2>
                         </div>
                         <div class="tab">
                             <ul class="tabs">
@@ -102,81 +71,16 @@
                                     Our Experience
                                 </li>
                                 <li>
-                                    Why Us?
-                                </li>
-                                <li>
                                     Our Approach
                                 </li>
                             </ul>
                             <div class="tab_content">
                                 <div class="tabs_item">
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat atque quibusdam
-                                        fuga natus non necessitatibus eveniet maiores nostrum esse ut voluptates sint
-                                        dolores, voluptatum consequatur ad est enim perferendis reprehenderit.</p>
-                                    <ul>
-                                        <li>
-                                            <i class="bx bx-check-circle"></i>
-                                            Trusted Partner
-                                        </li>
-                                        <li>
-                                            <i class="bx bx-check-circle"></i>
-                                            Product Security
-                                        </li>
-                                        <li>
-                                            <i class="bx bx-check-circle"></i>
-                                            System Security
-                                        </li>
-                                        <li>
-                                            <i class="bx bx-check-circle"></i>
-                                            Operational Security
-                                        </li>
-                                    </ul>
+                                    {!! getCData('Our Experience', 'description') !!}
                                 </div>
                                 <div class="tabs_item">
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat atque quibusdam
-                                        fuga natus non necessitatibus eveniet maiores nostrum esse ut voluptates sint
-                                        dolores, voluptatum consequatur ad est enim perferendis reprehenderit.</p>
-                                    <ul>
-                                        <li>
-                                            <i class="bx bx-check-circle"></i>
-                                            Trusted Partner
-                                        </li>
-                                        <li>
-                                            <i class="bx bx-check-circle"></i>
-                                            Product Security
-                                        </li>
-                                        <li>
-                                            <i class="bx bx-check-circle"></i>
-                                            System Security
-                                        </li>
-                                        <li>
-                                            <i class="bx bx-check-circle"></i>
-                                            Operational Security
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="tabs_item">
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat atque quibusdam
-                                        fuga natus non necessitatibus eveniet maiores nostrum esse ut voluptates sint
-                                        dolores, voluptatum consequatur ad est enim perferendis reprehenderit.</p>
-                                    <ul>
-                                        <li>
-                                            <i class="bx bx-check-circle"></i>
-                                            Trusted Partner
-                                        </li>
-                                        <li>
-                                            <i class="bx bx-check-circle"></i>
-                                            Product Security
-                                        </li>
-                                        <li>
-                                            <i class="bx bx-check-circle"></i>
-                                            System Security
-                                        </li>
-                                        <li>
-                                            <i class="bx bx-check-circle"></i>
-                                            Operational Security
-                                        </li>
-                                    </ul>
+                                    {!! getCData('Our Approach', 'description') !!}
+
                                 </div>
                             </div>
                         </div>
@@ -187,7 +91,7 @@
     </section>
 
 
-    <section class="challenges-area pt-100 pb-70 jarallax" data-jarallax='{"speed": 0.3}'>
+    {{-- <section class="challenges-area pt-100 pb-70 jarallax" data-jarallax='{"speed": 0.3}'>
         <div class="container">
             <div class="section-title white-title">
                 <span>Our Challenges</span>
@@ -236,10 +140,10 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
 
-    <section class="services-area pt-100 pb-70">
+    {{-- <section class="services-area pt-100 pb-70">
         <div class="container">
             <div class="section-title">
                 <span>Cyber Security Services</span>
@@ -318,7 +222,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
 
     <section class="solution-area pb-70">
@@ -327,59 +231,32 @@
                 <div class="col-lg-6">
                     <div class="solution-content">
                         <div class="solution-title">
-                            <span>All-in Solution</span>
-                            <h2>Our experts are providing and planning 24/7 technical support services with product and
-                                security consultation.</h2>
+                            <span>Working Process</span>
+                            <h2>{{ strip_tags(getCData('Working Process', 'description')) }}</h2>
                         </div>
                         <div class="row">
-                            <div class="col-lg-12 col-md-6">
-                                <div class="single-solution overly-one">
-                                    <div class="overly-two">
-                                        <h3>
-                                            <a href="solution-details.html">
-                                                Product Consultation
-                                            </a>
-                                        </h3>
-                                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                                            eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
-                                        <span>01</span>
+                            @foreach ($working_process as $key => $wp)
+                                <div class="col-lg-12 col-md-6">
+                                    <div class="single-solution overly-one">
+                                        <div class="overly-two">
+                                            <h3>
+                                                <a href="javascript:void(0)">
+                                                    {{ $wp->title }}
+                                                </a>
+                                            </h3>
+                                            {!! $wp->description !!}
+                                            <span>0{{ $key + 1 }}</span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-12 col-md-6">
-                                <div class="single-solution overly-one">
-                                    <div class="overly-two">
-                                        <h3>
-                                            <a href="solution-details.html">
-                                                Security Consultation
-                                            </a>
-                                        </h3>
-                                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                                            eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
-                                        <span>02</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-12 col-md-6 offset-md-3 offset-lg-0">
-                                <div class="single-solution overly-one">
-                                    <div class="overly-two">
-                                        <h3>
-                                            <a href="solution-details.html">
-                                                24/7 Technical Support
-                                            </a>
-                                        </h3>
-                                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                                            eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
-                                        <span>03</span>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 pr-0">
-                    <div class="solution-img">
-                        <img src="assets/img/solution-img.png" alt="Image">
+                    <div class="solution-img"
+                        style="background-image: url('{{ asset('images/component/' . getCData('Working Process', 'image')) }}')">
+                        <img src="{{ asset('images/component/' . getCData('Working Process', 'image')) }}" alt="Image">
                     </div>
                 </div>
             </div>
@@ -387,7 +264,7 @@
     </section>
 
 
-    <section class="get-in-touch-area ptb-100 jarallax" data-jarallax='{"speed": 0.3}'>
+    {{-- <section class="get-in-touch-area ptb-100 jarallax" data-jarallax='{"speed": 0.3}'>
         <div class="container">
             <div class="section-title white-title">
                 <span>Get In Touch</span>
@@ -425,7 +302,7 @@
                 </button>
             </form>
         </div>
-    </section>
+    </section> --}}
 
 
     <section class="protect-area pt-100 pb-70">
@@ -434,57 +311,28 @@
                 <div class="col-lg-6">
                     <div class="protect-content">
                         <div class="protect-title">
-                            <span>Cyber Security Protect</span>
-                            <h2>Protect your website, web server, and web application for helping you being threats from
-                                the hacker</h2>
+                            <span>Why Choose Us?</span>
+                            <h2>{!! strip_tags(getCData('Why Choose Us', 'description')) !!}</h2>
                         </div>
                         <div class="row">
-                            <div class="col-lg-6 col-sm-6">
-                                <div class="single-challenges overly-one">
-                                    <div class="overly-two">
-                                        <i class="flaticon-database"></i>
-                                        <h3>Database Security</h3>
-                                        <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit sed do.</p>
-                                        <span class="flaticon-database"></span>
+                            @foreach ($whyus as $w)
+                                <div class="col-lg-6 col-sm-6">
+                                    <div class="single-challenges overly-one">
+                                        <div class="overly-two">
+                                            <i class="flaticon-database"></i>
+                                            <h3>{{ $w->title }}</h3>
+                                            {!! $w->description !!}
+                                            <span class="flaticon-database"></span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-6 col-sm-6">
-                                <div class="single-challenges overly-one">
-                                    <div class="overly-two">
-                                        <i class="flaticon-application"></i>
-                                        <h3>Database Security</h3>
-                                        <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit sed do.</p>
-                                        <span class="flaticon-application"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-sm-6">
-                                <div class="single-challenges overly-one">
-                                    <div class="overly-two">
-                                        <i class="flaticon-security"></i>
-                                        <h3>Web Security</h3>
-                                        <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit sed do.</p>
-                                        <span class="flaticon-security"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-sm-6">
-                                <div class="single-challenges overly-one">
-                                    <div class="overly-two">
-                                        <i class="flaticon-security-1"></i>
-                                        <h3>Server Security</h3>
-                                        <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit sed do.</p>
-                                        <span class="flaticon-security-1"></span>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="protect-img">
-                        <img src="assets/img/protect-img.jpg" alt="Image">
+                        <img src="{{ asset('images/component/' . getCData('why-choose-us', 'image')) }}" alt="Image">
                     </div>
                 </div>
             </div>
@@ -497,171 +345,18 @@
             <div class="testimonials">
                 <span>What our customers say</span>
                 <div class="testimonials-slider owl-carousel owl-theme">
-                    <div class="testimonials-item">
-                        <i class="flaticon-quote"></i>
-                        <p>“Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod
-                            mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                            sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.”</p>
-                        <ul>
-                            <li>
-                                <i class="bx bxs-star"></i>
-                            </li>
-                            <li>
-                                <i class="bx bxs-star"></i>
-                            </li>
-                            <li>
-                                <i class="bx bxs-star"></i>
-                            </li>
-                            <li>
-                                <i class="bx bxs-star"></i>
-                            </li>
-                            <li>
-                                <i class="bx bxs-star"></i>
-                            </li>
-                        </ul>
-                        <h3>Jastin Anderson</h3>
-                        <span>CEO</span>
-                    </div>
-                    <div class="testimonials-item">
-                        <i class="flaticon-quote"></i>
-                        <p>“Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod
-                            mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                            sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.”</p>
-                        <ul>
-                            <li>
-                                <i class="bx bxs-star"></i>
-                            </li>
-                            <li>
-                                <i class="bx bxs-star"></i>
-                            </li>
-                            <li>
-                                <i class="bx bxs-star"></i>
-                            </li>
-                            <li>
-                                <i class="bx bxs-star"></i>
-                            </li>
-                            <li>
-                                <i class="bx bxs-star"></i>
-                            </li>
-                        </ul>
-                        <h3>Juhon Anderson</h3>
-                        <span>Manager</span>
-                    </div>
+                    @foreach ($testimonials as $testimonial)
+                        <div class="testimonials-item">
+                            <i class="flaticon-quote"></i>
+                            {!! $testimonial->description !!}
+
+                            <h3>{{ $testimonial->name }}</h3>
+                            <span>{{ $testimonial->designation }}</span>
+                        </div>
+                    @endforeach
+
                 </div>
             </div>
         </div>
     </section>
-
-
-    <div class="partner-area ptb-100">
-        <div class="container">
-            <div class="partner-slider owl-theme owl-carousel">
-                <div class="partner-item">
-                    <a href="#">
-                        <img src="assets/img/partner/partner-1.png" alt="Image">
-                    </a>
-                </div>
-                <div class="partner-item">
-                    <a href="#">
-                        <img src="assets/img/partner/partner-2.png" alt="Image">
-                    </a>
-                </div>
-                <div class="partner-item">
-                    <a href="#">
-                        <img src="assets/img/partner/partner-3.png" alt="Image">
-                    </a>
-                </div>
-                <div class="partner-item">
-                    <a href="#">
-                        <img src="assets/img/partner/partner-4.png" alt="Image">
-                    </a>
-                </div>
-                <div class="partner-item">
-                    <a href="#">
-                        <img src="assets/img/partner/partner-5.png" alt="Image">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <section class="blog-area pb-70">
-        <div class="container">
-            <div class="section-title">
-                <span>Latest News</span>
-                <h2>Read The Latest Articles From Us</h2>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-blog">
-                        <div class="blog-img">
-                            <a href="blog-details.html">
-                                <img src="assets/img/blog/blog-4.jpg" alt="Image">
-                            </a>
-                        </div>
-                        <div class="blog-content">
-                            <span>January 20, 2021</span>
-                            <h3><a href="blog-details.html">The security risks of changing package owners</a></h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-blog">
-                        <div class="blog-img">
-                            <a href="blog-details.html">
-                                <img src="assets/img/blog/blog-5.jpg" alt="Image">
-                            </a>
-                        </div>
-                        <div class="blog-content">
-                            <span>January 19, 2021</span>
-                            <h3><a href="blog-details.html">Tips to Protecting Your Business and Family</a></h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0">
-                    <div class="single-blog">
-                        <div class="blog-img">
-                            <a href="blog-details.html">
-                                <img src="assets/img/blog/blog-6.jpg" alt="Image">
-                            </a>
-                        </div>
-                        <div class="blog-content">
-                            <span>January 18, 2021</span>
-                            <h3><a href="blog-details.html">Protect Your Workplace from Cyber Attacks</a></h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section class="subscribe-area pb-100">
-        <div class="container">
-            <div class="subscribe-bg">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 col-sm-6">
-                        <div class="subscribe-content">
-                            <img src="assets/img/subscribe-img.png" alt="Image">
-                            <h3>Sing up for newsletter</h3>
-                            <span>Subscribe to the newsletter for all the latest updates</span>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-sm-6">
-                        <form class="newsletter-form" data-toggle="validator">
-                            <input type="email" class="form-control" placeholder="Enter email address" name="EMAIL"
-                                required autocomplete="off">
-                            <button class="default-btn" type="submit">
-                                Subscribe
-                            </button>
-                            <div id="validator-newsletter" class="form-result"></div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
 @endsection

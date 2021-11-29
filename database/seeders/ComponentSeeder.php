@@ -28,6 +28,9 @@ class ComponentSeeder extends Seeder
             'Twitter Link',
             'Linkedin Link',
             'Home Banner',
+            'Our Experience',
+            'Our Approach',
+            'Working Process',
         ];
         $arr = [];
         foreach ($datas as $d) {

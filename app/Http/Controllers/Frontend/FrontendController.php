@@ -12,6 +12,7 @@ use App\Models\Feature;
 use App\Models\Pricing;
 use App\Models\Process;
 use App\Models\Service;
+use App\Models\Testimonial;
 use App\Models\WhyChooseUs;
 use App\Models\WorkingProcess;
 use Illuminate\Http\Request;
@@ -24,7 +25,9 @@ class FrontendController extends Controller
     public function index()
     {
         $whyus = WhyChooseUs::orderBy('sort', 'asc')->get();
-        return view('frontend.pages.index', compact('whyus'));
+        $working_process = WorkingProcess::orderBy('sort', 'asc')->get();
+        $testimonials = Testimonial::orderBy('sort', 'asc')->get();
+        return view('frontend.pages.index', compact('whyus', 'working_process', 'testimonials'));
     }
     public function aboutus()
     {
