@@ -61,12 +61,12 @@
                         <div class="collapse navbar-collapse mean-menu">
                             <ul class="navbar-nav m-auto">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link active">
+                                    <a href="{{ route('index') }}" class="nav-link active">
                                         Home
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="{{ route('aboutus') }}" class="nav-link">
                                         About Us
                                     </a>
                                     {{-- <ul class="dropdown-menu">
@@ -146,17 +146,17 @@
                                     </ul> --}}
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="{{ route('service') }}" class="nav-link">
                                         Services
-                                        <i class="bx bx-chevron-down"></i>
+                                        {{-- <i class="bx bx-chevron-down"></i> --}}
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li class="nav-item">
+                                        {{-- <li class="nav-item">
                                             <a href="solutions.html" class="nav-link">Solutions</a>
                                         </li>
                                         <li class="nav-item">
                                             <a href="solution-details.html" class="nav-link">Solution Details</a>
-                                        </li>
+                                        </li> --}}
                                     </ul>
                                 </li>
                                 {{-- <li class="nav-item">

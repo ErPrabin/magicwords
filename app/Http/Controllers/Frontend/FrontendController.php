@@ -31,9 +31,11 @@ class FrontendController extends Controller
     }
     public function aboutus()
     {
-        $processes = WorkingProcess::orderBy('sort', 'asc')->get();
+        $working_process = WorkingProcess::orderBy('sort', 'asc')->get();
         $whyus = WhyChooseUs::orderBy('sort', 'asc')->get();
-        return view('frontend.pages.about', compact('whyus', 'processes'));
+        $testimonials = Testimonial::orderBy('sort', 'asc')->get();
+
+        return view('frontend.pages.about', compact('whyus', 'working_process', 'testimonials'));
     }
     public function contact()
     {
