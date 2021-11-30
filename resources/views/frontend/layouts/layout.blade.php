@@ -150,14 +150,14 @@
                                         Services
                                         {{-- <i class="bx bx-chevron-down"></i> --}}
                                     </a>
-                                    <ul class="dropdown-menu">
-                                        {{-- <li class="nav-item">
+                                    {{-- <ul class="dropdown-menu">
+                                        <li class="nav-item">
                                             <a href="solutions.html" class="nav-link">Solutions</a>
                                         </li>
                                         <li class="nav-item">
                                             <a href="solution-details.html" class="nav-link">Solution Details</a>
-                                        </li> --}}
-                                    </ul>
+                                        </li>
+                                    </ul> --}}
                                 </li>
                                 {{-- <li class="nav-item">
                                     <a href="#" class="nav-link">
@@ -208,7 +208,7 @@
                                     </ul>
                                 </li> --}}
                                 <li class="nav-item">
-                                    <a href="contact.html" class="nav-link">Contact</a>
+                                    <a href="{{ route('contact') }}" class="nav-link">Contact</a>
                                 </li>
                             </ul>
                             <div class="others-option">

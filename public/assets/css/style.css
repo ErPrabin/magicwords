@@ -66,6 +66,7 @@ p {
     line-height: 1.8;
     font-weight: 500;
 }
+
 p:last-child {
     margin-bottom: 0;
 }
@@ -77,6 +78,11 @@ ul {
     list-style: none;
     padding: 0;
     margin: 0;
+}
+ul.address{
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 1px 5px 10px 1px #000;
 }
 .form-control {
     height: 50px;
