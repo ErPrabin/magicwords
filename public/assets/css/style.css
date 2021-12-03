@@ -70,6 +70,9 @@ p {
 p:last-child {
     margin-bottom: 0;
 }
+.logo img{
+    width: 200px;
+}
 img {
     max-width: 100%;
     height: auto;

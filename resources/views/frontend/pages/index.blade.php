@@ -11,7 +11,7 @@
                         <h1>{{ strip_tags(getCData('Home Banner', 'synopsis')) }}</h1>
                         <p>{{ getCData('Home Banner', 'description') }}</p>
                         <div class="banner-btn">
-                            <a href="contact.html" class="default-btn">
+                            <a href="{{ route('contact') }}" class="default-btn">
                                 <span>Contact Us</span>
                             </a>
                         </div>

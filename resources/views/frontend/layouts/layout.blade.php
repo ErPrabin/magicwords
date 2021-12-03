@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
 
-    <link rel="icon" type="image/png" href="{{ asset('assets/img/favicon.png') }}">
+    <link rel="icon" type="image/png" href="{{ asset('static/logo.jpeg') }}">
 
     <title>MagicWords</title>
 </head>
@@ -47,26 +47,28 @@
         <div class="navbar-area navbar-area-two">
             <div class="mobile-nav">
                 <div class="container">
-                    <a href="index.html" class="logo">
-                        <img src="assets/img/black-logo.png" alt="Logo">
+                    <a href="{{ route('index') }}" class="logo">
+                        <img src="{{ asset('static/logo.jpeg') }}" alt="Logo">
                     </a>
                 </div>
             </div>
             <div class="main-nav">
                 <div class="container">
                     <nav class="navbar navbar-expand-md">
-                        <a class="navbar-brand" href="index.html">
-                            <img src="assets/img/black-logo.png" alt="Logo">
+                        <a class="navbar-brand logo" href="{{ route('index') }}">
+                            <img src="{{ asset('static/logo.jpeg') }}" alt="Logo">
                         </a>
                         <div class="collapse navbar-collapse mean-menu">
                             <ul class="navbar-nav m-auto">
                                 <li class="nav-item">
-                                    <a href="{{ route('index') }}" class="nav-link active">
+                                    <a href="{{ route('index') }}"
+                                        class="nav-link {{ request()->routeIs('index') ? 'active' : '' }}">
                                         Home
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{ route('aboutus') }}" class="nav-link">
+                                    <a href="{{ route('aboutus') }}"
+                                        class="nav-link {{ request()->routeIs('aboutus') ? 'active' : '' }}">
                                         About Us
                                     </a>
                                     {{-- <ul class="dropdown-menu">
@@ -146,7 +148,8 @@
                                     </ul> --}}
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{ route('service') }}" class="nav-link">
+                                    <a href="{{ route('service') }}"
+                                        class="nav-link {{ request()->routeIs('service') ? 'active' : '' }}">
                                         Services
                                         {{-- <i class="bx bx-chevron-down"></i> --}}
                                     </a>
@@ -208,7 +211,8 @@
                                     </ul>
                                 </li> --}}
                                 <li class="nav-item">
-                                    <a href="{{ route('contact') }}" class="nav-link">Contact</a>
+                                    <a href="{{ route('contact') }}"
+                                        class="nav-link {{ request()->routeIs('contact') ? 'active' : '' }}">Contact</a>
                                 </li>
                             </ul>
                             <div class="others-option">
@@ -219,7 +223,7 @@
                                     </a>
                                 </div> --}}
                                 <div class="get-quote">
-                                    <a href="#" class="default-btn">
+                                    <a href="{{ route('contact') }}" class="default-btn">
                                         <span>Contact Us</span>
                                     </a>
                                 </div>
@@ -266,16 +270,14 @@
     <footer class="footer-area pt-100 pb-70 jarallax" data-jarallax='{"speed": 0.3}'>
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-4 col-md-6">
                     <div class="single-footer-widget">
-                        <a href="index.html" class="logo">
-                            <img src="assets/img/logo.png" alt="Image">
+                        <a href="{{ route('index') }}" class="logo">
+                            <img src="{{ asset('static/logo.jpeg') }}" alt="Image">
                         </a>
-                        <p>Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua consec tetur adipiscing.</p>
                         <ul class="social-icon">
                             <li>
-                                <a href="#">
+                                <a href="{!! strip_tags(getCData('Facebook Link', 'description')) !!}">
                                     <i class="bx bxl-facebook"></i>
                                 </a>
                             </li>
@@ -297,76 +299,57 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-4 col-md-6">
                     <div class="single-footer-widget">
                         <h3>Address</h3>
                         <ul class="address">
                             <li class="location">
                                 <i class="bx bxs-location-plus"></i>
-                                6890 Blvd, The Bronx, NY 1058 New York, USA
+                                {!! strip_tags(getCData('Address', 'description')) !!}
+
                             </li>
                             <li>
                                 <i class="bx bxs-envelope"></i>
-                                <a
-                                    href="https://templates.envytheme.com/cdn-cgi/l/email-protection#4a222f2626250a392f3b3e3364292527"><span
-                                        class="__cf_email__"
-                                        data-cfemail="b4dcd1d8d8dbf4c7d1c5c0cd9ad7dbd9">[email&#160;protected]</span></a>
-                                <a href="#">skype: example</a>
+                                <a href="mailto:  {!! strip_tags(getCData('Email', 'description')) !!}"><span>
+                                        {!! strip_tags(getCData('Email', 'description')) !!}
+
+                                    </span></a>
                             </li>
                             <li>
                                 <i class="bx bxs-phone-call"></i>
-                                <a href="tel:+1-(514)-312-5678">+1 (514) 312-5678</a>
-                                <a href="tel:+1-(514)-312-6677">+1 (514) 312-6677</a>
+                                {!! strip_tags(getCData('Contact Number', 'description')) !!}
                             </li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                {{-- <div class="col-lg-3 col-md-6">
                     <div class="single-footer-widget">
-                        <h3>Solution</h3>
+                        <h3>Quick Links</h3>
                         <ul class="import-link">
                             <li>
-                                <a href="#">Secure Private Cloud</a>
+                                <a href="{{ route('aboutus') }}">About Us</a>
                             </li>
                             <li>
-                                <a href="#">Online Backup</a>
+                                <a href="{{ route('service') }}">Service</a>
                             </li>
                             <li>
-                                <a href="#">Secure Websites</a>
-                            </li>
-                            <li>
-                                <a href="#">Cyber-Security</a>
-                            </li>
-                            <li>
-                                <a href="#">Enterprise Networks</a>
-                            </li>
-                            <li>
-                                <a href="#">Collaboration</a>
+                                <a href="{{ route('contact') }}">Contact</a>
                             </li>
                         </ul>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
+                </div> --}}
+                <div class="col-lg-4 col-md-6">
                     <div class="single-footer-widget">
-                        <h3>Resources</h3>
+                        <h3>Quick Links</h3>
                         <ul class="import-link">
                             <li>
-                                <a href="#">Cybersecurity Strategies</a>
+                                <a href="{{ route('aboutus') }}">About Us</a>
                             </li>
                             <li>
-                                <a href="#">Security Advisories</a>
+                                <a href="{{ route('service') }}">Service</a>
                             </li>
                             <li>
-                                <a href="#">Security News</a>
-                            </li>
-                            <li>
-                                <a href="#">Blog</a>
-                            </li>
-                            <li>
-                                <a href="#">Case Studies</a>
-                            </li>
-                            <li>
-                                <a href="#">User Guides</a>
+                                <a href="{{ route('contact') }}">Contact</a>
                             </li>
                         </ul>
                     </div>
@@ -381,12 +364,13 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 col-md-6">
                     <p>
-                        Copyright <i class="bx bx-copyright"></i>2021 Seqty. Designed By
-                        <a href="https://envytheme.com/" target="_blank">EnvyTheme</a>
+                        Copyright <i class="bx bx-copyright"></i>{{ \Carbon\Carbon::now()->format('Y') }} MagicWords
+                        Pvt. Ltd.
+
                     </p>
                 </div>
                 <div class="col-lg-6 col-md-6">
-                    <ul class="footer-menu">
+                    {{-- <ul class="footer-menu">
                         <li>
                             <a href="privacy-policy.html" target="_blank">
                                 Privacy Policy
@@ -397,7 +381,7 @@
                                 Terms & Conditions
                             </a>
                         </li>
-                    </ul>
+                    </ul> --}}
                 </div>
             </div>
         </div>
