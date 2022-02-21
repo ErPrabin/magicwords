@@ -51,7 +51,9 @@ p{
     padding: 0 15px;
     margin: 0;
 }
-
+.sub-head{
+    letter-spacing:1.5px;
+}
 .navbar-nav .nav-item .active {
     font-weight: 400;
     border-bottom: 4px solid #da251d;
@@ -76,6 +78,8 @@ p{
 .about-text h1 {
     font-size: 3rem;
     font-weight: bolder;
+    color: #ff0032 !important;
+    letter-spacing: 1.5px;
 }
 
 .overview-right img {
@@ -125,6 +129,8 @@ p{
     font-size: 3rem;
     font-weight: bolder;
     text-align: center;
+    color: #ff0032 !important;
+    letter-spacing: 1.5px;
 }
 .services .card {
     border: none;
@@ -185,6 +191,8 @@ p{
     font-size: 3rem;
     font-weight: bolder;
     text-align: center;
+    color: #ff0032 !important;
+    letter-spacing: 1.5px;
 }
 .nav-tabs {
     border-bottom: 0px solid #dee2e6;
@@ -227,6 +235,8 @@ p{
     font-size: 3rem;
     font-weight: bolder;
     text-align: center;
+    color: #ff0032 !important;
+    letter-spacing: 1.5px;
 }
 .testimonials .card {
     position: relative;
