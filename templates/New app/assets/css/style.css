@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Arizonia&family=Baloo+Bhaijaan+2:wght@800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 body {
     line-height: 1.9;
     /* font-family: 'Poppins', sans-serif;
@@ -16,6 +16,7 @@ h4,
 h5,
 h6 {
     color: #333 !important;
+    font-family: 'Poppins', sans-serif;
 }
 
 .home-banner-text h1 {
@@ -28,7 +29,7 @@ h6 {
     content: "Accelerate ";
     color: #da251d;
 }
-.bread-crumb{
+.bread-crumb {
     height: 40vh;
 }
 .logo {
@@ -85,11 +86,11 @@ h6 {
 .top-contact-section {
     border-left: 3px solid #dd726d;
 }
-.contact-number-index h1{
-    color: rgb(43, 76, 114)!important;
+.contact-number-index h1 {
+    color: rgb(43, 76, 114) !important;
 }
-.contact-right-index i{
-    color: rgb(43, 76, 114)!important;
+.contact-right-index i {
+    color: rgb(43, 76, 114) !important;
 }
 /* test end */
 /* service */
@@ -132,22 +133,20 @@ h6 {
     border-bottom: 0px solid #dee2e6;
     text-decoration: none;
     font-size: 1.4rem;
-    color: #333!important;
-
+    color: #333 !important;
 }
-.nav-tabs  li {
+.nav-tabs li {
     border-bottom: 0px solid #dee2e6;
     text-decoration: none !important;
-    color: #333!important;
+    color: #333 !important;
 }
-.nav-tabs  li a:hover {
+.nav-tabs li a:hover {
     border: 0px solid #dee2e6;
-   
 }
-.nav-tabs li a{
+.nav-tabs li a {
     border-bottom: 0px solid #dee2e6;
     text-decoration: none !important;
-    color: #333!important;
+    color: #333 !important;
 }
 .nav-tabs .nav-item.show .nav-link,
 .nav-tabs .nav-link.active {
@@ -164,7 +163,9 @@ h6 {
     border-radius: 50%;
     border: 5px solid #dd726d;
 }
-
+.testimonials {
+    background-color: #f8f9fb;
+}
 .testimonials h1 {
     font-size: 3rem;
     font-weight: bolder;
@@ -174,7 +175,9 @@ h6 {
     position: relative;
     border-bottom-left-radius: 80px;
     border-top-right-radius: 80px;
-    background-color: #f5f5f5;
+    box-shadow: 7px 8px 25px -7px rgba(0,0,0,0.75);
+
+    background-color: #f8f9fb;
 }
 .carousel-indicators [data-bs-target] {
     box-sizing: content-box;
