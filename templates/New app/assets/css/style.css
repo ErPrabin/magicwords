@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Arizonia&family=Baloo+Bhaijaan+2:wght@800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 body {
     line-height: 1.9;
     /* font-family: 'Poppins', sans-serif;
@@ -17,6 +17,9 @@ h5,
 h6 {
     color: #333 !important;
     font-family: 'Poppins', sans-serif;
+}
+a{
+    text-decoration:none;
 }
 
 .home-banner-text h1 {
@@ -42,14 +45,14 @@ h6 {
     padding: 0;
 }
 .navbar ul li {
-    font-size: 1rem;
-    font-weight: 700;
+    font-size: 1.3rem;
+    font-weight: 500;
     padding: 0 10px;
     margin: 0;
 }
 
 .navbar-nav .nav-item .active {
-    font-weight: 800;
+    font-weight: 400;
     border-bottom: 4px solid #da251d;
 }
 .home-banner img {
@@ -97,6 +100,9 @@ h6 {
 .index-service-img {
     width: 80px;
 }
+.services{
+    background-color: #f8f9fb;
+}
 .services h1 {
     font-size: 3rem;
     font-weight: bolder;
@@ -106,13 +112,45 @@ h6 {
     border: none;
     padding: 40px 30px !important;
     border-radius: 20px;
+    position:relative;
     /* background: linear-gradient(0deg,#dfdfdf,#e7e7e7,#efefef,#f7f7f7,#fff); */
 }
 .services .card:hover {
-    background-color: #fff !important;
-    box-shadow: 0px -2px 64px 5px rgba(184, 176, 176, 0.75);
+    background-color: #ff0032 !important;
+    margin-top: -10px;
+    transition: all ease 0.5s;
+    box-shadow: 9px 10px 24px -1px rgba(0,0,0,0.75);
+-webkit-box-shadow: 9px 10px 24px -1px rgba(0,0,0,0.75);
+-moz-box-shadow: 9px 10px 24px -1px rgba(0,0,0,0.75);
+    color:white;
+    {% comment %} box-shadow: 0px -2px 64px 5px rgba(184, 176, 176, 0.75);
     -webkit-box-shadow: 0px -2px 64px 5px rgba(184, 176, 176, 0.75);
-    -moz-box-shadow: 0px -2px 64px 5px rgba(184, 176, 176, 0.75);
+    -moz-box-shadow: 0px -2px 64px 5px rgba(184, 176, 176, 0.75); {% endcomment %}
+}
+.services .card:hover h4,
+.services .card:hover a {
+    color:white !important;
+}
+.readmore-circle{
+    height: 60px;
+    width: 60px;
+    border-radius:50%;
+    background-color:#ff0032 ;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:absolute;
+    bottom:-30px;
+    left: 40%;
+    box-shadow: 0px 1px 7px 2px rgba(148,142,142,0.75);
+-webkit-box-shadow: 0px 1px 7px 2px rgba(148,142,142,0.75);
+-moz-box-shadow: 0px 1px 7px 2px rgba(148,142,142,0.75);
+
+}
+.readmore-circle:hover{
+    box-shadow: 0px 1px 7px 2px rgba(148,142,142,0.75);
+    -webkit-box-shadow: 0px 1px 7px 2px rgba(148,142,142,0.75);
+    -moz-box-shadow: 0px 1px 7px 2px rgba(148,142,142,0.75);
 }
 
 .service-read-more {
@@ -124,6 +162,7 @@ h6 {
 .service-read-more:hover {
     color: #da251d;
 }
+
 .technologies h1 {
     font-size: 3rem;
     font-weight: bolder;
