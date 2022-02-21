@@ -23,7 +23,7 @@
             style="
                 background-image: url(../assets/images/banner.jpeg);
                 background-repeat: no-repeat;
-                background-position: center;
+                background-position: right;
                 
             "
         >
@@ -51,21 +51,21 @@
                         class="collapse navbar-collapse"
                         id="navbarSupportedContent"
                     >
-                        <ul class="navbar-nav ms-auto p-0 m-0 mb-lg-0">
+                        <ul class="navbar-nav align-items-center ms-auto p-0 m-0 mb-lg-0">
                             <li class="nav-item">
                                 <a
-                                    class="nav-link active py-4"
+                                    class="nav-link active"
                                     aria-current="page"
                                     href="#"
                                     >Home</a
                                 >
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link py-4" href="#">About</a>
+                                <a class="nav-link" href="#">About</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a
-                                    class="nav-link dropdown-toggle py-4"
+                                    class="nav-link dropdown-toggle"
                                     href="#"
                                     id="navbarDropdown"
                                     role="button"
@@ -101,12 +101,17 @@
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link py-4" href="#">Career</a>
+                                <a class="nav-link" href="#">Career</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link py-4" href="#">Contact</a>
+                                <a class="nav-link" href="#">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link nav-contact-btn"><i class="fa fa-phone pe-2" style="transform: rotate(160deg);"></i> 984110124</a>
+
                             </li>
                         </ul>
+                        
                     </div>
                 </div>
             </nav>
@@ -119,7 +124,7 @@
                         <div class="col-md-6">
                             <div class="home-banner-text">
                                 <h1>Your Digital Branding With Us.</h1>
-                                <div class="home-banner-desc">
+                                <div class="home-banner-desc mt-3">
                                     <p>
                                         Lorem ipsum dolor sit amet, consectetur
                                         adipiscing elit, sed do eiusmod tempor
@@ -129,8 +134,8 @@
                                         nisi ut aliquip ex ea commodo consequat.
                                     </p>
                                 </div>
-                                <button class="btn btn-index-banner">
-                                    Contact Us
+                                <button class="btn mt-3 btn-index-banner">
+                                     Contact Us<i class="ps-3 fa fa-arrow-right"></i>
                                 </button>
                             </div>
                         </div>
@@ -1185,5 +1190,6 @@
             }
             // end if innerWidth
         });
+        var myCarousel = document.querySelector('#myCarousel')
     </script>
 </html>
