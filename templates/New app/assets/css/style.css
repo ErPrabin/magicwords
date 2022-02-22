@@ -438,3 +438,53 @@ p{
     100% {margin-top:0px;}
   }
 
+  @keyframes moving-bar{
+      0%  {margin-left:0px}
+      100%  {margin-left:107px}
+  }
+  .bar{
+    background: #edaaa3;
+    border-radius: 30px;
+    height: 5px;
+    margin: 20px auto;
+    position: relative;
+    width: 111px;
+  }
+  .bar:before{
+      animation-name:moving-bar;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    {% comment %} animation-name: MOVE-BG; {% endcomment %}
+    animation-timing-function: linear;
+    background: #ff0032;
+    border-radius: 50%;
+    content: "";
+    height: 10px;
+    left: 0;
+    position: absolute;
+    top: -2.7px;
+    width: 10px;
+  }
+  .m-bar{
+    background: #edaaa3;
+    border-radius: 30px;
+    height: 5px;
+    margin: 20px 0px;
+    position: relative;
+    width: 111px;
+  }
+  .m-bar:before{
+      animation-name:moving-bar;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    background: #ff0032;
+    border-radius: 50%;
+    content: "";
+    height: 10px;
+    left: 0;
+    position: absolute;
+    top: -2.7px;
+    width: 10px;
+  }
+
