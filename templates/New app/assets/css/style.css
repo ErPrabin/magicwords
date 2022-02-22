@@ -28,7 +28,27 @@ h6 {
     content: "Accelerate ";
     color: #da251d;
 }
-.bread-crumb{
+.dropdown-menu {
+    position: absolute;
+    z-index: 1000;
+    display: none;
+    min-width: 10rem;
+    padding: 0.5rem 0;
+    margin: 0;
+    font-size: 1rem;
+    color: #fff !important;
+    text-align: left;
+    list-style: none;
+    background-color: #555;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+}
+.dropdown-menu li a {
+    color: #fff;
+    font-size: 1rem;
+}
+.bread-crumb {
     height: 40vh;
 }
 .logo {
@@ -85,11 +105,11 @@ h6 {
 .top-contact-section {
     border-left: 3px solid #dd726d;
 }
-.contact-number-index h1{
-    color: rgb(43, 76, 114)!important;
+.contact-number-index h1 {
+    color: rgb(43, 76, 114) !important;
 }
-.contact-right-index i{
-    color: rgb(43, 76, 114)!important;
+.contact-right-index i {
+    color: rgb(43, 76, 114) !important;
 }
 /* test end */
 /* service */
@@ -132,22 +152,20 @@ h6 {
     border-bottom: 0px solid #dee2e6;
     text-decoration: none;
     font-size: 1.4rem;
-    color: #333!important;
-
+    color: #333 !important;
 }
-.nav-tabs  li {
+.nav-tabs li {
     border-bottom: 0px solid #dee2e6;
     text-decoration: none !important;
-    color: #333!important;
+    color: #333 !important;
 }
-.nav-tabs  li a:hover {
+.nav-tabs li a:hover {
     border: 0px solid #dee2e6;
-   
 }
-.nav-tabs li a{
+.nav-tabs li a {
     border-bottom: 0px solid #dee2e6;
     text-decoration: none !important;
-    color: #333!important;
+    color: #333 !important;
 }
 .nav-tabs .nav-item.show .nav-link,
 .nav-tabs .nav-link.active {
@@ -356,3 +374,6 @@ h6 {
         margin-top: 0;
     }
 }
+
+/* test ends */
+
