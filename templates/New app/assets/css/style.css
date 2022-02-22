@@ -74,6 +74,9 @@ p{
 .home-banner img {
     height: 500px;
     width: 100%;
+    animation-name: banner-img;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
 }
 .about-text h1 {
     font-size: 3rem;
@@ -426,3 +429,12 @@ p{
         margin-top: 0;
     }
 }
+
+@keyframes banner-img {
+    0%   {margin-top:0px;}
+    25%  {margin-top:-10px;}
+    50%  {margin-top:0px;}
+    75%  {margin-top:10px;}
+    100% {margin-top:0px;}
+  }
+
