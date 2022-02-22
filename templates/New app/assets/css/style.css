@@ -90,6 +90,7 @@ p{
 }
 .colored-nav {
     background-color: #fff !important;
+    transition: all ease 0.5s;
     box-shadow: 0px 2px 9px 0px rgba(133, 93, 93, 0.75);
     -webkit-box-shadow: 0px 2px 9px 0px rgba(133, 93, 93, 0.75);
     -moz-box-shadow: 0px 2px 9px 0px rgba(133, 93, 93, 0.75);
