@@ -74,6 +74,9 @@ p{
 .home-banner img {
     height: 500px;
     width: 100%;
+    animation-name: banner-img;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
 }
 .about-text h1 {
     font-size: 3rem;
@@ -87,6 +90,7 @@ p{
 }
 .colored-nav {
     background-color: #fff !important;
+    transition: all ease 0.5s;
     box-shadow: 0px 2px 9px 0px rgba(133, 93, 93, 0.75);
     -webkit-box-shadow: 0px 2px 9px 0px rgba(133, 93, 93, 0.75);
     -moz-box-shadow: 0px 2px 9px 0px rgba(133, 93, 93, 0.75);
@@ -426,3 +430,62 @@ p{
         margin-top: 0;
     }
 }
+
+@keyframes banner-img {
+    0%   {margin-top:0px;}
+    25%  {margin-top:-10px;}
+    50%  {margin-top:0px;}
+    75%  {margin-top:10px;}
+    100% {margin-top:0px;}
+  }
+
+  @keyframes moving-bar{
+      0%  {margin-left:0px}
+      100%  {margin-left:107px}
+  }
+  .bar{
+    background: #edaaa3;
+    border-radius: 30px;
+    height: 5px;
+    margin: 20px auto;
+    position: relative;
+    width: 111px;
+  }
+  .bar:before{
+      animation-name:moving-bar;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    {% comment %} animation-name: MOVE-BG; {% endcomment %}
+    animation-timing-function: linear;
+    background: #ff0032;
+    border-radius: 50%;
+    content: "";
+    height: 10px;
+    left: 0;
+    position: absolute;
+    top: -2.7px;
+    width: 10px;
+  }
+  .m-bar{
+    background: #edaaa3;
+    border-radius: 30px;
+    height: 5px;
+    margin: 20px 0px;
+    position: relative;
+    width: 111px;
+  }
+  .m-bar:before{
+      animation-name:moving-bar;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    background: #ff0032;
+    border-radius: 50%;
+    content: "";
+    height: 10px;
+    left: 0;
+    position: absolute;
+    top: -2.7px;
+    width: 10px;
+  }
+
