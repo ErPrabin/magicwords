@@ -210,6 +210,7 @@ p{
     border-bottom: 0px solid #dee2e6;
     text-decoration: none !important;
     color: #333 !important;
+    font-size: 20px;
 }
 .nav-tabs li a:hover {
     border: 0px solid #dee2e6;
@@ -357,11 +358,25 @@ p{
     width: 100%;
 }
 .heading-features h3{
-    color: #da251d!important;
+    color: #000000!important;
+    font-size: 24px;
+    font-weight: 400;
+}
+.features{
+    background-color:#eff3f8;
+}
+.features h1{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 0;
+    text-transform: capitalize;
 }
 
 .contact h1 {
     color: #dd726d !important;
+}
+.contact-us{
+    padding: 6rem 0rem !important;
 }
 .contact input[type="text"],
 .contact input[type="email"],
@@ -493,4 +508,8 @@ p{
     top: -2.7px;
     width: 10px;
   }
+  .fa-check{
+      color:#ff0032
+  }
+  
 
