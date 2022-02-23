@@ -356,6 +356,10 @@ p{
     height: 500px;
     width: 100%;
 }
+.heading-features h3{
+    color: #da251d!important;
+}
+
 .contact h1 {
     color: #dd726d !important;
 }
