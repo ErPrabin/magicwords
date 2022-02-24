@@ -53,6 +53,8 @@ p{
 }
 .sub-head{
     letter-spacing:1.5px;
+    margin: 0 auto;
+    max-width: 520px;
 }
 .navbar-nav .nav-item .active {
     font-weight: 400;
@@ -79,10 +81,10 @@ p{
   animation-iteration-count: infinite;
 }
 .about-text h1 {
-    font-size: 3rem;
-    font-weight: bolder;
-    color: #ff0032 !important;
-    letter-spacing: 1.5px;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 0;
+    text-transform: capitalize;
 }
 
 .overview-right img {
@@ -130,11 +132,11 @@ p{
     background-color: #f8f9fb;
 }
 .services h1 {
-    font-size: 3rem;
-    font-weight: bolder;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 0;
+    text-transform: capitalize;
     text-align: center;
-    color: #ff0032 !important;
-    letter-spacing: 1.5px;
 }
 .services .card {
     border: none;
@@ -192,11 +194,11 @@ p{
 }
 
 .technologies h1 {
-    font-size: 3rem;
-    font-weight: bolder;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 0;
+    text-transform: capitalize;
     text-align: center;
-    color: #ff0032 !important;
-    letter-spacing: 1.5px;
 }
 .nav-tabs {
     border-bottom: 0px solid #dee2e6;
@@ -208,6 +210,7 @@ p{
     border-bottom: 0px solid #dee2e6;
     text-decoration: none !important;
     color: #333 !important;
+    font-size: 20px;
 }
 .nav-tabs li a:hover {
     border: 0px solid #dee2e6;
@@ -236,11 +239,11 @@ p{
     background-color: #f8f9fb;
 }
 .testimonials h1 {
-    font-size: 3rem;
-    font-weight: bolder;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 0;
+    text-transform: capitalize;
     text-align: center;
-    color: #ff0032 !important;
-    letter-spacing: 1.5px;
 }
 .testimonials .card {
     position: relative;
@@ -355,7 +358,18 @@ p{
     width: 100%;
 }
 .heading-features h3{
-    color: #da251d!important;
+    color: #000000!important;
+    font-size: 24px;
+    font-weight: 400;
+}
+.features{
+    background-color:#eff3f8;
+}
+.features h1{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 0;
+    text-transform: capitalize;
 }
 .career-vacancy .read-more-btn{
     background-color: #da251d;
@@ -374,6 +388,9 @@ p{
 }
 .contact h1 {
     color: #dd726d !important;
+}
+.contact-us{
+    padding: 6rem 0rem !important;
 }
 .contact input[type="text"],
 .contact input[type="email"],
@@ -451,9 +468,8 @@ p{
 
 @keyframes banner-img {
     0%   {margin-top:0px;}
-    25%  {margin-top:-10px;}
-    50%  {margin-top:0px;}
-    75%  {margin-top:10px;}
+    
+    50% {margin-top:10px;}
     100% {margin-top:0px;}
   }
 
@@ -506,4 +522,8 @@ p{
     top: -2.7px;
     width: 10px;
   }
+  .fa-check{
+      color:#ff0032
+  }
+  
 
