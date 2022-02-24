@@ -357,7 +357,21 @@ p{
 .heading-features h3{
     color: #da251d!important;
 }
-
+.career-vacancy .read-more-btn{
+    background-color: #da251d;
+    color: #fff;
+}
+.career-vacancy .card .vacancy-post{
+    color: #da251d;
+    font-weight: 600;
+}
+.career-vacancy .card:hover{
+    color: #fff!important;
+    background: #da251d;
+}
+.career-vacancy .card:hover .vacancy-post{
+    color: #fff!important;
+}
 .contact h1 {
     color: #dd726d !important;
 }
