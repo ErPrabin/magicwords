@@ -463,6 +463,26 @@ p{
       0%  {margin-left:0px}
       100%  {margin-left:107px}
   }
+  @keyframes slide-left{
+    0%  {
+        transform:translate(100px);
+        opacity:0;
+    }
+    100%  {
+        transform:translate(0px);
+        opacity:1;
+    }
+}
+@keyframes slide-right{
+    0%  {
+        transform:translate(-100px);
+        opacity:0;
+    }
+    100%  {
+        transform:translate(0px);
+        opacity:1;
+    }
+}
   .bar{
     background: #edaaa3;
     border-radius: 30px;
