@@ -371,20 +371,37 @@ p{
     margin-bottom: 0;
     text-transform: capitalize;
 }
+/* career */
+.career-vacancy .card{
+    border-radius: 20px;
+}
 .career-vacancy .read-more-btn{
-    background-color: #da251d;
+    background-color: #ff0032;
     color: #fff;
 }
 .career-vacancy .card .vacancy-post{
-    color: #da251d;
+    color: #ff0032;
     font-weight: 600;
 }
 .career-vacancy .card:hover{
     color: #fff!important;
-    background: #da251d;
+    background: #ff0032;
 }
-.career-vacancy .card:hover .vacancy-post{
+.career-vacancy .card:hover .read-more-btn{
+    color: #ff0032!important;
+    background: #fff;
+}
+.career-vacancy .card:hover .vacancy-post, .career-vacancy .card:hover h5, .career-vacancy .card:hover  .vacancy-desc{
     color: #fff!important;
+}
+/* job-description */
+.job-description-list ul li{
+    margin: 10px 0px;
+    color:rgb(145, 143, 143);
+}
+.job-requirement-list ul li{
+    margin: 10px 0px;
+    color:rgb(145, 143, 143);
 }
 .contact h1 {
     color: #dd726d !important;
@@ -489,7 +506,7 @@ p{
       animation-name:moving-bar;
     animation-duration: 5s;
     animation-iteration-count: infinite;
-    {% comment %} animation-name: MOVE-BG; {% endcomment %}
+    {% comment %} animation-name: MOVE-BG; {% endcomment %};
     animation-timing-function: linear;
     background: #ff0032;
     border-radius: 50%;
