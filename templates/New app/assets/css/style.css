@@ -403,6 +403,24 @@ p{
     margin: 10px 0px;
     color:rgb(145, 143, 143);
 }
+.job-description h1, h3{
+    color: #ff0032!important;
+}
+.application-form h1{
+    color: #ff0032!important;
+}
+.application-form .card{
+    border-radius: 30px;
+}
+.application-form input, .application-form textarea{
+    border-radius: 20px;
+}
+.application-form input:focus, .application-form textarea:focus{
+    box-shadow: 0px 0px 7px 0px rgba(222,77,77,0.75);
+-webkit-box-shadow: 0px 0px 7px 0px rgba(222,77,77,0.75);
+-moz-box-shadow: 0px 0px 7px 0px rgba(222,77,77,0.75);
+transition: all ease 0.6s;
+}
 .contact h1 {
     color: #dd726d !important;
 }
