@@ -47,7 +47,13 @@ p {
 }
 .navbar-nav .nav-link {
     color: #000 !important;
-    font-weight: 500;
+    font-weight: 600;
+    
+}
+.bread-crumb .back-home{
+    color: #000 !important;
+    font-weight: 600;
+    color: #6c757d!important;
 }
 .navbar ul li {
     font-size: 16px;
@@ -313,8 +319,10 @@ p {
     left: -60px;
 }
 .why-us h1 {
-    font-size: 3rem;
-    font-weight: bolder;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 0;
+    text-transform: capitalize;
     text-align: center;
 }
 
@@ -547,8 +555,15 @@ h3 {
     border-radius: 7px;
 }
 .service-list.active {
-    background-color: #8dc641;
+    background-color: #ff0033;
     border-right: 15px solid;
+}
+.service-detail-div-1 .description{
+    text-align: justify ;
+    
+}
+.service-detail-div-1 .description ul li, .service-detail-div-1 .description ol li{
+    font-size: 1.2rem!important;
 }
 
 @media all and (min-width: 992px) {
