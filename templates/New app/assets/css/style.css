@@ -34,7 +34,7 @@ p {
     font-size: 3.8rem;
 }
 .bread-crumb {
-    height: 40vh;
+    height: 190px;
 }
 .logo {
     width: 100px;
@@ -458,16 +458,19 @@ p {
     margin: 10px 0px;
     color: rgb(145, 143, 143);
 }
-.job-description h1,
-h3 {
-    color: #ff0032 !important;
-}
+
 .red-btn-color {
     background-color: #ff0032;
     color: #fff;
     font-weight: 600;
     transition: all ease 0.6s;
     padding: 10px 20px;
+}
+.job-description {
+    font-size: 1.2rem;
+}
+.job-description ul li, .job-description ol li {
+   font-size: 1.2rem;
 }
 .red-btn-color:hover {
     background-color: #fff;
