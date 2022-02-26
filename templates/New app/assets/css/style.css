@@ -311,7 +311,41 @@ p{
     font-weight: bolder;
     text-align: center;
 }
-
+.testimonials h1{
+        font-size: 3rem;
+        font-weight: bolder;
+    
+}
+.navbar .nav-item:hover .dropdown-menu {
+    background: rgba(255, 0, 51, 0.8);
+    color: #fff!important;
+}
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 0.25rem 1rem;
+    clear: both;
+    font-weight: 400;
+    color: #fff;
+    text-align: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0px;
+}
+.dropdown-item:hover {
+    display: block;
+    width: 100%;
+    padding: 0.25rem 1rem;
+    clear: both;
+    font-weight: 400;
+    color: #ff0032;
+    text-align: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: #fff;
+    border: 0px;
+}
 .footer {
     background-color: #000;
     color: #fff;
@@ -406,14 +440,26 @@ p{
 .job-description h1, h3{
     color: #ff0032!important;
 }
+.red-btn-color{
+    background-color: #ff0032;
+    color: #fff;
+    font-weight: 600;
+}
+.red-btn-color:hover{
+    background-color: #fff;
+    color: #ff0032;
+    font-weight: 600;
+    border: 1px solid #ff0032;
+}
 .application-form h1{
     color: #ff0032!important;
 }
 .application-form .card{
     border-radius: 30px;
 }
-.application-form input, .application-form textarea{
-    border-radius: 20px;
+#form-top{
+    border-top: 1px solid rgb(219, 217, 217);
+    padding-top: 20px;
 }
 .application-form input:focus, .application-form textarea:focus{
     box-shadow: 0px 0px 7px 0px rgba(222,77,77,0.75);
