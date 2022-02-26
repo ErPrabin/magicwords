@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Arizonia&family=Baloo+Bhaijaan+2:wght@800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 body {
     line-height: 1.9;
     /* font-family: 'Poppins', sans-serif;
@@ -16,25 +16,25 @@ h4,
 h5,
 h6 {
     color: #333 !important;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
 }
-a{
-    text-decoration:none;
+a {
+    text-decoration: none;
 }
-p{
+p {
     margin-top: 0;
     font-size: 1.2rem;
     margin-bottom: 1rem;
 }
-.home-banner-text{
-    padding-top:80px;
+.home-banner-text {
+    padding-top: 80px;
 }
 .home-banner-text h1 {
     font-weight: 700;
     font-size: 3.8rem;
 }
 .bread-crumb {
-    height: 40vh;
+    height: 190px;
 }
 .logo {
     width: 100px;
@@ -43,42 +43,52 @@ p{
     width: 200px;
 }
 .navbar {
-    padding: 10px 0px;
+    padding: 5px 0px;
+}
+.navbar-nav .nav-link {
+    color: #000 !important;
+    font-weight: 600;
+    
+}
+.bread-crumb .back-home{
+    color: #000 !important;
+    font-weight: 600;
+    color: #6c757d!important;
 }
 .navbar ul li {
-    font-size: 1.3rem;
+    font-size: 16px;
     font-weight: 500;
     padding: 0 15px;
     margin: 0;
 }
-.sub-head{
-    letter-spacing:1.5px;
+.sub-head {
+    letter-spacing: 1.5px;
     margin: 0 auto;
     max-width: 520px;
 }
 .navbar-nav .nav-item .active {
-    font-weight: 400;
+    font-weight: 700;
     border-bottom: 4px solid #da251d;
 }
-.nav-contact-btn{
+.nav-contact-btn {
     background: #ff0032;
     border-radius: 30px;
     font-weight: 500;
-    padding: 7px 30px !important;
+    padding: 10px 20px !important;
     font-size: 1.1rem;
     color: white !important;
 }
-.nav-contact-btn:hover{
-    box-shadow: 0px 1px 7px 2px rgba(148,142,142,0.75);
--webkit-box-shadow: 0px 1px 7px 2px rgba(148,142,142,0.75);
--moz-box-shadow: 0px 1px 7px 2px rgba(148,142,142,0.75);
+.nav-contact-btn:hover {
+    box-shadow: 0px 1px 7px 2px rgba(148, 142, 142, 0.75);
+    -webkit-box-shadow: 0px 1px 7px 2px rgba(148, 142, 142, 0.75);
+    -moz-box-shadow: 0px 1px 7px 2px rgba(148, 142, 142, 0.75);
 }
 .home-banner img {
     height: 500px;
     width: 100%;
     animation-name: banner-img;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
 }
 .about-text h1 {
     font-size: 30px;
@@ -86,7 +96,10 @@ p{
     margin-bottom: 0;
     text-transform: capitalize;
 }
-
+.about-index-description ul li,
+.about-index-description ol li {
+    font-size: 1.2rem;
+}
 .overview-right img {
     width: 100%;
 }
@@ -96,6 +109,9 @@ p{
     box-shadow: 0px 2px 9px 0px rgba(133, 93, 93, 0.75);
     -webkit-box-shadow: 0px 2px 9px 0px rgba(133, 93, 93, 0.75);
     -moz-box-shadow: 0px 2px 9px 0px rgba(133, 93, 93, 0.75);
+}
+.colored-nav .logo {
+    width: 80px;
 }
 .trans-nav {
     background: transparent;
@@ -109,9 +125,9 @@ p{
 }
 .btn-index-banner:hover {
     color: #fff !important;
-    box-shadow: 0px 1px 7px 2px rgba(148,142,142,0.75);
--webkit-box-shadow: 0px 1px 7px 2px rgba(148,142,142,0.75);
--moz-box-shadow: 0px 1px 7px 2px rgba(148,142,142,0.75);
+    box-shadow: 0px 1px 7px 2px rgba(148, 142, 142, 0.75);
+    -webkit-box-shadow: 0px 1px 7px 2px rgba(148, 142, 142, 0.75);
+    -moz-box-shadow: 0px 1px 7px 2px rgba(148, 142, 142, 0.75);
 }
 /* test */
 .top-contact-section {
@@ -128,7 +144,7 @@ p{
 .index-service-img {
     width: 80px;
 }
-.services{
+.services {
     background-color: #f8f9fb;
 }
 .services h1 {
@@ -142,45 +158,41 @@ p{
     border: none;
     padding: 40px 30px !important;
     border-radius: 20px;
-    position:relative;
+    position: relative;
     /* background: linear-gradient(0deg,#dfdfdf,#e7e7e7,#efefef,#f7f7f7,#fff); */
 }
 .services .card:hover {
     background-color: #ff0032 !important;
     margin-top: -10px;
     transition: all ease 0.5s;
-    box-shadow: 9px 10px 24px -1px rgba(0,0,0,0.75);
--webkit-box-shadow: 9px 10px 24px -1px rgba(0,0,0,0.75);
--moz-box-shadow: 9px 10px 24px -1px rgba(0,0,0,0.75);
-    color:white;
-    {% comment %} box-shadow: 0px -2px 64px 5px rgba(184, 176, 176, 0.75);
-    -webkit-box-shadow: 0px -2px 64px 5px rgba(184, 176, 176, 0.75);
-    -moz-box-shadow: 0px -2px 64px 5px rgba(184, 176, 176, 0.75); {% endcomment %}
+    box-shadow: 9px 10px 24px -1px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 9px 10px 24px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 9px 10px 24px -1px rgba(0, 0, 0, 0.75);
+    color: white;
 }
 .services .card:hover h4,
 .services .card:hover a {
-    color:white !important;
+    color: white !important;
 }
-.readmore-circle{
+.readmore-circle {
     height: 60px;
     width: 60px;
-    border-radius:50%;
-    background-color:#ff0032 ;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    position:absolute;
-    bottom:-30px;
+    border-radius: 50%;
+    background-color: #ff0032;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: -30px;
     left: 40%;
-    box-shadow: 0px 1px 7px 2px rgba(148,142,142,0.75);
--webkit-box-shadow: 0px 1px 7px 2px rgba(148,142,142,0.75);
--moz-box-shadow: 0px 1px 7px 2px rgba(148,142,142,0.75);
-
+    box-shadow: 0px 1px 7px 2px rgba(148, 142, 142, 0.75);
+    -webkit-box-shadow: 0px 1px 7px 2px rgba(148, 142, 142, 0.75);
+    -moz-box-shadow: 0px 1px 7px 2px rgba(148, 142, 142, 0.75);
 }
-.readmore-circle:hover{
-    box-shadow: 0px 1px 7px 2px rgba(148,142,142,0.75);
-    -webkit-box-shadow: 0px 1px 7px 2px rgba(148,142,142,0.75);
-    -moz-box-shadow: 0px 1px 7px 2px rgba(148,142,142,0.75);
+.readmore-circle:hover {
+    box-shadow: 0px 1px 7px 2px rgba(148, 142, 142, 0.75);
+    -webkit-box-shadow: 0px 1px 7px 2px rgba(148, 142, 142, 0.75);
+    -moz-box-shadow: 0px 1px 7px 2px rgba(148, 142, 142, 0.75);
 }
 
 .service-read-more {
@@ -249,7 +261,7 @@ p{
     position: relative;
     border-bottom-left-radius: 80px;
     border-top-right-radius: 80px;
-    box-shadow: 7px 8px 25px -7px rgba(0,0,0,0.75);
+    box-shadow: 7px 8px 25px -7px rgba(0, 0, 0, 0.75);
 
     background-color: #f8f9fb;
 }
@@ -307,11 +319,43 @@ p{
     left: -60px;
 }
 .why-us h1 {
-    font-size: 3rem;
-    font-weight: bolder;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 0;
+    text-transform: capitalize;
     text-align: center;
 }
 
+.navbar .nav-item:hover .dropdown-menu {
+    background: rgba(255, 0, 51, 0.8);
+    color: #fff !important;
+}
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 0.25rem 1rem;
+    clear: both;
+    font-weight: 400;
+    color: #fff;
+    text-align: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0px;
+}
+.dropdown-item:hover {
+    display: block;
+    width: 100%;
+    padding: 0.25rem 1rem;
+    clear: both;
+    font-weight: 400;
+    color: #ff0032;
+    text-align: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: #fff;
+    border: 0px;
+}
 .footer {
     background-color: #000;
     color: #fff;
@@ -357,25 +401,105 @@ p{
     height: 500px;
     width: 100%;
 }
-.heading-features h3{
-    color: #000000!important;
+.heading-features h3 {
+    color: #000000 !important;
     font-size: 24px;
     font-weight: 400;
 }
-.features{
-    background-color:#eff3f8;
+.features {
+    background-color: #eff3f8;
 }
-.features h1{
+.features h1 {
     font-size: 30px;
     font-weight: 600;
     margin-bottom: 0;
     text-transform: capitalize;
 }
+/* career */
+.career-vacancy .card {
+    border-radius: 20px;
+}
+.career-vacancy .card:hover {
+    background-color: #ff0032 !important;
+    margin-top: -10px;
+    transition: all ease 0.5s;
+    box-shadow: 9px 10px 24px -1px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 9px 10px 24px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 9px 10px 24px -1px rgba(0, 0, 0, 0.75);
+    color: white;
+}
+.career-vacancy .read-more-btn {
+    background-color: #ff0032;
+    color: #fff;
+}
+.career-vacancy .card .vacancy-post {
+    color: #ff0032;
+    font-weight: 600;
+}
+.career-vacancy .card:hover {
+    color: #fff !important;
+    background: #ff0032;
+}
+.career-vacancy .card:hover .read-more-btn {
+    color: #ff0032 !important;
+    background: #fff;
+}
+.career-vacancy .card:hover .vacancy-post,
+.career-vacancy .card:hover h5,
+.career-vacancy .card:hover .vacancy-desc {
+    color: #fff !important;
+}
+/* job-description */
+.job-description-list ul li {
+    margin: 10px 0px;
+    color: rgb(145, 143, 143);
+}
+.job-requirement-list ul li {
+    margin: 10px 0px;
+    color: rgb(145, 143, 143);
+}
 
+.red-btn-color {
+    background-color: #ff0032;
+    color: #fff;
+    font-weight: 600;
+    transition: all ease 0.6s;
+    padding: 10px 20px;
+}
+.job-description {
+    font-size: 1.2rem;
+}
+.job-description ul li, .job-description ol li {
+   font-size: 1.2rem;
+}
+.red-btn-color:hover {
+    background-color: #fff;
+    color: #ff0032;
+    font-weight: 600;
+    border: 1px solid #ff0032;
+    transition: all ease 0.6s;
+}
+.application-form h1 {
+    color: #ff0032 !important;
+}
+.application-form .card {
+    border-radius: 30px;
+}
+#form-top {
+    border-top: 1px solid rgb(219, 217, 217);
+    padding-top: 20px;
+}
+.application-form input:focus,
+.application-form textarea:focus {
+    box-shadow: 0px 0px 7px 0px rgba(222, 77, 77, 0.75);
+    -webkit-box-shadow: 0px 0px 7px 0px rgba(222, 77, 77, 0.75);
+    -moz-box-shadow: 0px 0px 7px 0px rgba(222, 77, 77, 0.75);
+    transition: all ease 0.6s;
+}
 .contact h1 {
     color: #dd726d !important;
 }
-.contact-us{
+.contact-us {
     padding: 6rem 0rem !important;
 }
 .contact input[type="text"],
@@ -434,8 +558,15 @@ p{
     border-radius: 7px;
 }
 .service-list.active {
-    background-color: #8dc641;
+    background-color: #ff0033;
     border-right: 15px solid;
+}
+.service-detail-div-1 .description{
+    text-align: justify ;
+    
+}
+.service-detail-div-1 .description ul li, .service-detail-div-1 .description ol li{
+    font-size: 1.2rem!important;
 }
 
 @media all and (min-width: 992px) {
@@ -453,49 +584,39 @@ p{
 }
 
 @keyframes banner-img {
-    0%   {margin-top:0px;}
-    
-    50% {margin-top:10px;}
-    100% {margin-top:0px;}
-  }
+    0% {
+        margin-top: 0px;
+    }
 
-  @keyframes moving-bar{
-      0%  {margin-left:0px}
-      100%  {margin-left:107px}
-  }
-  @keyframes slide-left{
-    0%  {
-        transform:translate(100px);
-        opacity:0;
+    50% {
+        margin-top: 10px;
     }
-    100%  {
-        transform:translate(0px);
-        opacity:1;
+    100% {
+        margin-top: 0px;
     }
 }
-@keyframes slide-right{
-    0%  {
-        transform:translate(-100px);
-        opacity:0;
+
+@keyframes moving-bar {
+    0% {
+        margin-left: 0px;
     }
-    100%  {
-        transform:translate(0px);
-        opacity:1;
+    100% {
+        margin-left: 107px;
     }
 }
-  .bar{
+.bar {
     background: #edaaa3;
     border-radius: 30px;
     height: 5px;
     margin: 20px auto;
     position: relative;
     width: 111px;
-  }
-  .bar:before{
-      animation-name:moving-bar;
+}
+.bar:before {
+    animation-name: moving-bar;
     animation-duration: 5s;
     animation-iteration-count: infinite;
-    {% comment %} animation-name: MOVE-BG; {% endcomment %}
+
     animation-timing-function: linear;
     background: #ff0032;
     border-radius: 50%;
@@ -505,17 +626,17 @@ p{
     position: absolute;
     top: -2.7px;
     width: 10px;
-  }
-  .m-bar{
+}
+.m-bar {
     background: #edaaa3;
     border-radius: 30px;
     height: 5px;
     margin: 20px 0px;
     position: relative;
     width: 111px;
-  }
-  .m-bar:before{
-      animation-name:moving-bar;
+}
+.m-bar:before {
+    animation-name: moving-bar;
     animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
@@ -527,9 +648,7 @@ p{
     position: absolute;
     top: -2.7px;
     width: 10px;
-  }
-  .fa-check{
-      color:#ff0032
-  }
-  
-
+}
+.fa-check {
+    color: #ff0032;
+}
