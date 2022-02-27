@@ -19,9 +19,11 @@ return [
     'menu' => [
         ['name' => 'Component', 'slug' => 'component'],
         ['name' => 'Service', 'slug' => 'service'],
+        ['name' => 'Career', 'slug' => 'career'],
+        ['name' => 'Specification', 'slug' => 'specification'],
         ['name' => 'Why Choose Us', 'slug' => 'why-choose-us'],
         ['name' => 'Testimonial', 'slug' => 'testimonial'],
-        ['name' => 'Working Process', 'slug' => 'working-process'],
+        // ['name' => 'Working Process', 'slug' => 'working-process'],
         ['name' => 'MetaTag', 'slug' => 'meta-tag'],
 
 
