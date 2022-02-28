@@ -1,417 +1,242 @@
-<!doctype html>
-<html lang="zxx">
-
-<!-- Mirrored from templates.envytheme.com/seqty/default/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Nov 2021 13:09:34 GMT -->
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{{ asset('assets/bootstrap-5.0.2-dist/css/bootstrap.min.css') }}" />
 
-    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }} ">
-    <link rel="stylesheet" href="{{ asset('assets/css/owl.theme.default.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/animate.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/boxicons.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/flaticon.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/meanmenu.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/nice-select.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/odometer.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
-
-    <link rel="icon" type="image/png" href="{{ asset('static/logo.jpeg') }}">
-
-    <title>MagicWords</title>
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" />
 </head>
 
 <body>
-
-    {{-- <div class="preloader">
-        <div class="loader">
-            <div class="loader-outter"></div>
-            <div class="loader-inner"></div>
-            <div class="indicator">
-                <svg width="16px" height="12px">
-                    <polyline id="back" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
-                    <polyline id="front" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
-                </svg>
-            </div>
-        </div>
-    </div> --}}
-
-
-    <header class="header-area p-relative">
-
-        <div class="navbar-area navbar-area-two">
-            <div class="mobile-nav">
-                <div class="container">
-                    <a href="{{ route('index') }}" class="logo">
-                        <img src="{{ asset('static/logo.jpeg') }}" alt="Logo">
-                    </a>
-                </div>
-            </div>
-            <div class="main-nav">
-                <div class="container">
-                    <nav class="navbar navbar-expand-md">
-                        <a class="navbar-brand logo" href="{{ route('index') }}">
-                            <img src="{{ asset('static/logo.jpeg') }}" alt="Logo">
-                        </a>
-                        <div class="collapse navbar-collapse mean-menu">
-                            <ul class="navbar-nav m-auto">
-                                <li class="nav-item">
-                                    <a href="{{ route('index') }}"
-                                        class="nav-link {{ request()->routeIs('index') ? 'active' : '' }}">
-                                        Home
-                                    </a>
+    <section class="banner-img-index" style="
+                background-image: url(../assets/images/banner.jpeg);
+                background-repeat: no-repeat;
+                background-position: right;
+            ">
+        <!-- navbar -->
+        <nav id="navbar_top" class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img class="logo" src="../assets/images/Logo.jpg"
+                        alt="" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav align-items-center ms-auto p-0 m-0 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About Us</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Services
+                            </a>
+                            <ul class="dropdown-menu py-0" aria-labelledby="navbarDropdown">
+                                <li class="px-0">
+                                    <a class="dropdown-item" href="#">Service 1</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a href="{{ route('aboutus') }}"
-                                        class="nav-link {{ request()->routeIs('aboutus') ? 'active' : '' }}">
-                                        About Us
-                                    </a>
-                                    {{-- <ul class="dropdown-menu">
-                                        <li class="nav-item">
-                                            <a href="about.html" class="nav-link">About Us</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="#" class="nav-link">
-                                                Services
-                                                <i class="bx bx-chevron-right"></i>
-                                            </a>
-                                            <ul class="dropdown-menu">
-                                                <li class="nav-item">
-                                                    <a href="services-style-one.html" class="nav-link">Services
-                                                        Style One</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a href="services-style-two.html" class="nav-link">Services
-                                                        Style Two</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a href="services-style-three.html" class="nav-link">Services
-                                                        Style Three</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a href="services-details.html" class="nav-link">Service
-                                                        Details</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="team.html" class="nav-link">Team</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="testimonials.html" class="nav-link">Testimonials</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="pricing.html" class="nav-link">Pricing</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="#" class="nav-link">
-                                                User
-                                                <i class="bx bx-chevron-right"></i>
-                                            </a>
-                                            <ul class="dropdown-menu">
-                                                <li class="nav-item">
-                                                    <a href="my-account.html" class="nav-link">My Account</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a href="log-in.html" class="nav-link">Log In</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a href="registration.html" class="nav-link">Registration</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a href="recover-password.html" class="nav-link">Recover
-                                                        Password</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="faq.html" class="nav-link">FAQ</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="privacy-policy.html" class="nav-link">Privacy Policy</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="terms-conditions.html" class="nav-link">Terms &
-                                                Conditions</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="coming-soon.html" class="nav-link">Coming Soon</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="404.html" class="nav-link">404 Error Page</a>
-                                        </li>
-                                    </ul> --}}
+                                <li class="px-0">
+                                    <a class="dropdown-item" href="#">Service 2</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a href="{{ route('service') }}"
-                                        class="nav-link {{ request()->routeIs('service') ? 'active' : '' }}">
-                                        Services
-                                        {{-- <i class="bx bx-chevron-down"></i> --}}
-                                    </a>
-                                    {{-- <ul class="dropdown-menu">
-                                        <li class="nav-item">
-                                            <a href="solutions.html" class="nav-link">Solutions</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="solution-details.html" class="nav-link">Solution Details</a>
-                                        </li>
-                                    </ul> --}}
+                                <li class="px-0">
+                                    <a class="dropdown-item" href="#">Service 3</a>
                                 </li>
-                                {{-- <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        Shop
-                                        <i class="bx bx-chevron-down"></i>
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li class="nav-item">
-                                            <a href="products.html" class="nav-link">Products</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="shopping-cart.html" class="nav-link">Shopping Cart</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="checkout.html" class="nav-link">Checkout</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="single-product.html" class="nav-link">Single Product</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="wishlist.html" class="nav-link">Wishlist</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        Blog
-                                        <i class="bx bx-chevron-down"></i>
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li class="nav-item">
-                                            <a href="blog-column-one.html" class="nav-link">Blog Column One</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="blog-column-two.html" class="nav-link">Blog Column Two</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="blog-column-three.html" class="nav-link">Blog Column
-                                                Three</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="blog-left-sidebar.html" class="nav-link">Blog Left
-                                                Sidebar</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="blog-details.html" class="nav-link">Blog Details</a>
-                                        </li>
-                                    </ul>
-                                </li> --}}
-                                <li class="nav-item">
-                                    <a href="{{ route('contact') }}"
-                                        class="nav-link {{ request()->routeIs('contact') ? 'active' : '' }}">Contact</a>
+                                <li class="px-0">
+                                    <a class="dropdown-item" href="#">Service 4</a>
                                 </li>
                             </ul>
-                            <div class="others-option">
-                                {{-- <div class="cart-icon">
-                                    <a href="shopping-cart.html">
-                                        <i class="bx bx-cart"></i>
-                                        <span>0</span>
-                                    </a>
-                                </div> --}}
-                                <div class="get-quote">
-                                    <a href="{{ route('contact') }}" class="default-btn">
-                                        <span>Contact Us</span>
-                                    </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Career</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-contact-btn"><i class="fa fa-phone-alt pe-1"></i>
+                                984110124</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        @yield('content')
+
+        <div class="footer py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img class="footer-logo" src="{{ asset('assets/images/Logo.jpg') }}" alt="" />
+                        <div class="mt-4">
+                            <h5 class="text-white">Connect With Us</h5>
+                            <div class="d-flex">
+                                <a class="text-decoration-none text-white" href="#">
+                                    <div class="connect-circle me-2">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </div>
+                                </a>
+                                <a class="text-decoration-none text-white" href="#">
+                                    <div class="connect-circle me-2">
+                                        <i class="fab fa-instagram"></i>
+                                    </div>
+                                </a>
+                                <a class="text-decoration-none text-white" href="#">
+                                    <div class="connect-circle me-2">
+                                        <i class="fab fa-twitter"></i>
+                                    </div>
+                                </a>
+                                <a class="text-decoration-none text-white" href="#">
+                                    <div class="connect-circle me-2">
+                                        <i class="fab fa-linkedin"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="mt-5">
+                            <div class="contact-us-footer-bg">
+                                <div class="contact-us-footer fw-bold">
+                                    Contact Us
                                 </div>
                             </div>
                         </div>
-                    </nav>
-                </div>
-            </div>
-            <div class="others-option-for-responsive">
-                <div class="container">
-                    <div class="dot-menu">
-                        <div class="inner">
-                            <div class="circle circle-one"></div>
-                            <div class="circle circle-two"></div>
-                            <div class="circle circle-three"></div>
+                    </div>
+                    <div class="col-md-3">
+                        <h4 class="text-white">Our Company</h4>
+
+                        <div class="footer-links">
+                            <ul>
+                                <li class="py-2"><a href="#">About Us</a></li>
+                                <li class="py-2"><a href="#">Services</a></li>
+                                <li class="py-2"><a href="#">Contact</a></li>
+                                <li class="py-2"><a href="#">Careers</a></li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="container">
-                        <div class="option-inner">
-                            <div class="others-option justify-content-center d-flex align-items-center">
-                                <div class="get-quote">
-                                    <a href="#" class="default-btn">
-                                        <span>Get a Quote</span>
-                                    </a>
-                                </div>
-                                <div class="cart-icon">
-                                    <a href="shopping-cart.html">
-                                        <i class="bx bx-cart"></i>
-                                        <span>0</span>
-                                    </a>
-                                </div>
-                            </div>
+                    <div class="col-md-3">
+                        <h4 class="text-white">Our Services</h4>
+
+                        <div class="footer-links">
+                            <ul>
+                                <li class="py-2"><a href="#">Service 1</a></li>
+                                <li class="py-2"><a href="#">Service 2</a></li>
+                                <li class="py-2"><a href="#">Service 3</a></li>
+                                <li class="py-2"><a href="#">Service 4</a></li>
+                                <li class="py-2"><a href="#">Service 5</a></li>
+                                <li class="py-2"><a href="#">Service 6</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <h4 class="text-white">Contact Us</h4>
+
+                        <div class="footer-links">
+                            <ul>
+                                <li class="py-2">Address</li>
+                                <li class="py-2">
+                                    <a href="#">Mobile Number/Landline</a>
+                                </li>
+                                <li class="py-2"><a href="#">Email</a></li>
+                                <li class="py-2">
+                                    <a href="#">Enquiry Email</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-    </header>
-
-    @yield('content')
-
-
-    <footer class="footer-area pt-100 pb-70 jarallax" data-jarallax='{"speed": 0.3}'>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-footer-widget">
-                        <a href="{{ route('index') }}" class="logo">
-                            <img src="{{ asset('static/logo.jpeg') }}" alt="Image">
-                        </a>
-                        <ul class="social-icon">
-                            <li>
-                                <a href="{!! strip_tags(getCData('Facebook Link', 'description')) !!}">
-                                    <i class="bx bxl-facebook"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="bx bxl-instagram"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="bx bxl-linkedin-square"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="bx bxl-twitter"></i>
-                                </a>
-                            </li>
-                        </ul>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="m-0">
+                        © 2022 Magicwords Pvt Ltd.All Rights Reserved
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-footer-widget">
-                        <h3>Address</h3>
-                        <ul class="address">
-                            <li class="location">
-                                <i class="bx bxs-location-plus"></i>
-                                {!! strip_tags(getCData('Address', 'description')) !!}
-
-                            </li>
-                            <li>
-                                <i class="bx bxs-envelope"></i>
-                                <a href="mailto:  {!! strip_tags(getCData('Email', 'description')) !!}"><span>
-                                        {!! strip_tags(getCData('Email', 'description')) !!}
-
-                                    </span></a>
-                            </li>
-                            <li>
-                                <i class="bx bxs-phone-call"></i>
-                                {!! strip_tags(getCData('Contact Number', 'description')) !!}
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                {{-- <div class="col-lg-3 col-md-6">
-                    <div class="single-footer-widget">
-                        <h3>Quick Links</h3>
-                        <ul class="import-link">
-                            <li>
-                                <a href="{{ route('aboutus') }}">About Us</a>
-                            </li>
-                            <li>
-                                <a href="{{ route('service') }}">Service</a>
-                            </li>
-                            <li>
-                                <a href="{{ route('contact') }}">Contact</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div> --}}
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-footer-widget">
-                        <h3>Quick Links</h3>
-                        <ul class="import-link">
-                            <li>
-                                <a href="{{ route('aboutus') }}">About Us</a>
-                            </li>
-                            <li>
-                                <a href="{{ route('service') }}">Service</a>
-                            </li>
-                            <li>
-                                <a href="{{ route('contact') }}">Contact</a>
-                            </li>
-                        </ul>
-                    </div>
+                    <div class="m-0">Privacy Policy</div>
                 </div>
             </div>
         </div>
-    </footer>
-
-
-    <div class="copy-right-area">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 col-md-6">
-                    <p>
-                        Copyright <i class="bx bx-copyright"></i>{{ \Carbon\Carbon::now()->format('Y') }} MagicWords
-                        Pvt. Ltd.
-
-                    </p>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    {{-- <ul class="footer-menu">
-                        <li>
-                            <a href="privacy-policy.html" target="_blank">
-                                Privacy Policy
-                            </a>
-                        </li>
-                        <li>
-                            <a href="terms-conditions.html" target="_blank">
-                                Terms & Conditions
-                            </a>
-                        </li>
-                    </ul> --}}
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="go-top">
-        <i class="bx bx-chevrons-up"></i>
-        <i class="bx bx-chevrons-up"></i>
-    </div>
-
-
-    {{-- <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>___scripts_1___ --}}
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('assets/js/meanmenu.min.js') }}"></script>
-    <script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
-    <script src="{{ asset('assets/js/nice-select.min.js') }}"></script>
-    <script src="{{ asset('assets/js/magnific-popup.min.js') }}"></script>
-    <script src="{{ asset('assets/js/jarallax.min.js') }}"></script>
-    <script src="{{ asset('assets/js/appear.min.js') }}"></script>
-    <script src="{{ asset('assets/js/odometer.min.js') }}"></script>
-    <script src="{{ asset('assets/js/smoothscroll.min.js') }}"></script>
-    <script src="{{ asset('assets/js/form-validator.min.js') }}"></script>
-    <script src="{{ asset('assets/js/contact-form-script.js') }}"></script>
-    <script src="{{ asset('assets/js/ajaxchimp.min.js') }}"></script>
-    <script src="{{ asset('assets/js/wow.min.js') }}"></script>
-    <script src="{{ asset('assets/js/custom.js') }}"></script>
+        <!-- footer ends -->
 </body>
+<script src="{{ asset('assets/bootstrap-5.0.2-dist/js/bootstrap.min.js') }}"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        window.addEventListener("scroll", function() {
+            if (window.scrollY > 80) {
+                document
+                    .getElementById("navbar_top")
+                    .classList.add("fixed-top");
+                document
+                    .getElementById("navbar_top")
+                    .classList.add("colored-nav");
 
-<!-- Mirrored from templates.envytheme.com/seqty/default/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Nov 2021 13:10:21 GMT -->
+                // add padding top to show content behind navbar
+                navbar_height =
+                    document.querySelector(".navbar").offsetHeight;
+                document.body.style.paddingTop = navbar_height + "px";
+            } else {
+                document
+                    .getElementById("navbar_top")
+                    .classList.remove("fixed-top");
+                document
+                    .getElementById("navbar_top")
+                    .classList.remove("colored-nav");
+
+                document
+                    .getElementById("navbar_top")
+                    .classList.add("trans-nav");
+                // remove padding top from body
+                document.body.style.paddingTop = "0";
+            }
+        });
+    });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // make it as accordion for smaller screens
+        if (window.innerWidth > 992) {
+            document
+                .querySelectorAll(".navbar .nav-item")
+                .forEach(function(everyitem) {
+                    everyitem.addEventListener("mouseover", function(e) {
+                        let el_link =
+                            this.querySelector("a[data-bs-toggle]");
+
+                        if (el_link != null) {
+                            let nextEl = el_link.nextElementSibling;
+                            el_link.classList.add("show");
+                            nextEl.classList.add("show");
+                        }
+                    });
+                    everyitem.addEventListener("mouseleave", function(e) {
+                        let el_link =
+                            this.querySelector("a[data-bs-toggle]");
+
+                        if (el_link != null) {
+                            let nextEl = el_link.nextElementSibling;
+                            el_link.classList.remove("show");
+                            nextEl.classList.remove("show");
+                        }
+                    });
+                });
+        }
+        // end if innerWidth
+    });
+    var myCarousel = document.querySelector("#myCarousel");
+</script>
 
 </html>
