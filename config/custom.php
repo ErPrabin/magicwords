@@ -20,6 +20,7 @@ return [
         ['name' => 'Component', 'slug' => 'component'],
         ['name' => 'Service', 'slug' => 'service'],
         ['name' => 'Career', 'slug' => 'career'],
+        ['name' => 'Technology', 'slug' => 'technology'],
         ['name' => 'Specification', 'slug' => 'specification'],
         ['name' => 'Why Choose Us', 'slug' => 'why-choose-us'],
         ['name' => 'Testimonial', 'slug' => 'testimonial'],
@@ -29,6 +30,7 @@ return [
 
 
     ],
+    'category' => ['mobile-development', 'frontend', 'backend', 'design', 'database'],
     'add-exclude' => ['Component'],
     'list-exclude' => []
 ];
