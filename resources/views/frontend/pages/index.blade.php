@@ -40,7 +40,7 @@
 
     <!-- banner ends -->
 
-   @include('frontend.partials.about')
+    @include('frontend.partials.about')
 
     <!-- services -->
     <div class="services py-5">
@@ -48,106 +48,25 @@
             <h1>Services</h1>
             <div class="bar"></div>
             <p class="text-center text-muted sub-head">
-                For your very specific industry, we have highly-tailored IT
-                solutions.
+                {!! strip_tags(getCData('Service', 'synopsis')) !!}
             </p>
             <div class="row pt-5">
-                <div class="col-md-4 p-4">
-                    <div class="card p-3">
-                        <img class="index-service-img" src="../assets/images/service.svg" alt="" />
-                        <h4 class="py-3">Web development</h4>
-                        <div>
-                            <p class="p-0 m-0">
-                                Our team is here to develop simple to
-                                complex websites based on the amount you're
-                                willing to spend.
-                            </p>
-                        </div>
-                        <div class="text-center">
-                            <a href="" class="readmore-circle text-white"><i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 p-4">
-                    <div class="card p-3">
-                        <img class="index-service-img" src="../assets/images/service.svg" alt="" />
-                        <h4 class="py-3">Web development</h4>
-                        <div>
-                            <p class="p-0 m-0">
-                                Our team is here to develop simple to
-                                complex websites based on the amount you're
-                                willing to spend.
-                            </p>
-                        </div>
-                        <div class="text-center">
-                            <a href="" class="readmore-circle text-white"><i class="fa fa-arrow-right"></i></a>
+                @foreach ($services as $service)
+                    <div class="col-md-4 p-4">
+                        <div class="card p-3">
+                            <img class="index-service-img" src="{{ asset('images/service/' . $service->image) }}" alt="" />
+                            <a href=""><h4 class="py-3">{{ $service->title }}</h4></a>
+                            <div>
+                                <p class="p-0 m-0">
+                                    {!! strip_tags($service->synopsis) !!}
+                                </p>
+                            </div>
+                            <div class="text-center">
+                                <a href="" class="readmore-circle text-white"><i class="fa fa-arrow-right"></i></a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 p-4">
-                    <div class="card p-3">
-                        <img class="index-service-img" src="../assets/images/service.svg" alt="" />
-                        <h4 class="py-3">Web development</h4>
-                        <div>
-                            <p class="p-0 m-0">
-                                Our team is here to develop simple to
-                                complex websites based on the amount you're
-                                willing to spend.
-                            </p>
-                        </div>
-                        <div class="text-center">
-                            <a href="" class="readmore-circle text-white"><i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 p-4">
-                    <div class="card p-3">
-                        <img class="index-service-img" src="../assets/images/service.svg" alt="" />
-                        <h4 class="py-3">Web development</h4>
-                        <div>
-                            <p class="p-0 m-0">
-                                Our team is here to develop simple to
-                                complex websites based on the amount you're
-                                willing to spend.
-                            </p>
-                        </div>
-                        <div class="text-center">
-                            <a href="" class="readmore-circle text-white"><i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 p-4">
-                    <div class="card p-3">
-                        <img class="index-service-img" src="../assets/images/service.svg" alt="" />
-                        <h4 class="py-3">Web development</h4>
-                        <div>
-                            <p class="p-0 m-0">
-                                Our team is here to develop simple to
-                                complex websites based on the amount you're
-                                willing to spend.
-                            </p>
-                        </div>
-                        <div class="text-center">
-                            <a href="" class="readmore-circle text-white"><i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 p-4">
-                    <div class="card p-3">
-                        <img class="index-service-img" src="../assets/images/service.svg" alt="" />
-                        <h4 class="py-3">Web development</h4>
-                        <div>
-                            <p class="p-0 m-0">
-                                Our team is here to develop simple to
-                                complex websites based on the amount you're
-                                willing to spend.
-                            </p>
-                        </div>
-                        <div class="text-center">
-                            <a href="" class="readmore-circle text-white"><i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
