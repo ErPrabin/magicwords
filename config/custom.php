@@ -22,6 +22,7 @@ return [
         ['name' => 'Career', 'slug' => 'career'],
         ['name' => 'Technology', 'slug' => 'technology'],
         ['name' => 'Specification', 'slug' => 'specification'],
+        ['name' => 'Feature', 'slug' => 'feature'],
         ['name' => 'Why Choose Us', 'slug' => 'why-choose-us'],
         ['name' => 'Testimonial', 'slug' => 'testimonial'],
         // ['name' => 'Working Process', 'slug' => 'working-process'],
@@ -30,7 +31,7 @@ return [
 
 
     ],
-    'category' => ['mobile-development', 'frontend', 'backend', 'design', 'database'],
+    'category' => ['mobile-development','web-development' ,'frontend', 'backend', 'design', 'database'],
     'add-exclude' => ['Component'],
     'list-exclude' => []
 ];

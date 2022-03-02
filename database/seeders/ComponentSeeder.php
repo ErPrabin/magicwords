@@ -32,6 +32,8 @@ class ComponentSeeder extends Seeder
             'Our Approach',
             'Working Process',
             'Service',
+            'Technology',
+            'Feature',
         ];
         $arr = [];
         foreach ($datas as $d) {

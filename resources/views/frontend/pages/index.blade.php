@@ -54,8 +54,11 @@
                 @foreach ($services as $service)
                     <div class="col-md-4 p-4">
                         <div class="card p-3">
-                            <img class="index-service-img" src="{{ asset('images/service/' . $service->image) }}" alt="" />
-                            <a href=""><h4 class="py-3">{{ $service->title }}</h4></a>
+                            <img class="index-service-img" src="{{ asset('images/service/' . $service->image) }}"
+                                alt="" />
+                            <a href="">
+                                <h4 class="py-3">{{ $service->title }}</h4>
+                            </a>
                             <div>
                                 <p class="p-0 m-0">
                                     {!! strip_tags($service->synopsis) !!}
@@ -78,8 +81,7 @@
             <h1>Technologies We Work With</h1>
             <div class="bar"></div>
             <p class="text-center text-muted sub-head">
-                For your very specific industry, we have highly-tailored IT
-                solutions.
+                {!! strip_tags(getCData('Technology', 'synopsis')) !!}
             </p>
             <div class="pt-4">
                 <ul class="nav nav-tabs justify-content-center" id="myTab">
@@ -105,274 +107,279 @@
                 <div class="tab-content mt-5">
                     <div class="tab-pane fade show active" id="all">
                         <div class="row">
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-html5 fa-3x"></i>
-                                <h6>HTML</h6>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-apple fa-3x"></i>
-                                <h6>IOS</h6>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-android fa-3x"></i>
-                                <h6>ANDROID</h6>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-js fa-3x"></i>
-                                <h6>JAVASCRIPT</h6>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-css3-alt fa-3x"></i>
-                                <h6>CSS</h6>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-react fa-3x"></i>
-                                <h6>REACT</h6>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-vuejs fa-3x"></i>
-                                <h6>VUE JS</h6>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-python fa-3x"></i>
-                                <h6>PYTHON</h6>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <img src="../assets/images/django.png" style="width: 58px; height: 58px" alt="django"
-                                    class="img-fluid" />
+                            @foreach ($technologies as $technology)
+                                <div class="col-md-2 col-sm-4 text-center p-3">
+                                    <img src="{{ asset('images/technology/' . $technology->iconkhgf) }}" alt="">
+                                    <h6>HTML</h6>
+                                </div>
+                            @endforeach
 
-                                <h6>DJANGO</h6>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-php fa-3x"></i>
-                                <h6>PHP</h6>
-                            </div>
+                        </div>
+
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-apple fa-3x"></i>
+                            <h6>IOS</h6>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-android fa-3x"></i>
+                            <h6>ANDROID</h6>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-js fa-3x"></i>
+                            <h6>JAVASCRIPT</h6>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-css3-alt fa-3x"></i>
+                            <h6>CSS</h6>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-react fa-3x"></i>
+                            <h6>REACT</h6>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-vuejs fa-3x"></i>
+                            <h6>VUE JS</h6>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-python fa-3x"></i>
+                            <h6>PYTHON</h6>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <img src="../assets/images/django.png" style="width: 58px; height: 58px" alt="django"
+                                class="img-fluid" />
+
+                            <h6>DJANGO</h6>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-php fa-3x"></i>
+                            <h6>PHP</h6>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="mobile-development">
-                        <div class="row">
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-html5 fa-3x"></i>
-                                <h4>HTML</h4>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-apple fa-3x"></i>
-                                <h4>IOS</h4>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-android fa-3x"></i>
-                                <h4>ANDROID</h4>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-js fa-3x"></i>
-                                <h4>JAVASCRIPT</h4>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-css3-alt fa-3x"></i>
-                                <h4>CSS</h4>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-react fa-3x"></i>
-                                <h4>REACT</h4>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-vuejs fa-3x"></i>
-                                <h4>VUE JS</h4>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-python fa-3x"></i>
-                                <h4>PYTHON</h4>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-django fa-3x"></i>
-                                <h4>DJANGO</h4>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-php fa-3x"></i>
-                                <h4>PHP</h4>
-                            </div>
+                </div>
+                <div class="tab-pane fade" id="mobile-development">
+                    <div class="row">
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-html5 fa-3x"></i>
+                            <h4>HTML</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-apple fa-3x"></i>
+                            <h4>IOS</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-android fa-3x"></i>
+                            <h4>ANDROID</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-js fa-3x"></i>
+                            <h4>JAVASCRIPT</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-css3-alt fa-3x"></i>
+                            <h4>CSS</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-react fa-3x"></i>
+                            <h4>REACT</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-vuejs fa-3x"></i>
+                            <h4>VUE JS</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-python fa-3x"></i>
+                            <h4>PYTHON</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-django fa-3x"></i>
+                            <h4>DJANGO</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-php fa-3x"></i>
+                            <h4>PHP</h4>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="frontend">
-                        <div class="row">
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-html5 fa-3x"></i>
-                                <h4>HTML</h4>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-apple fa-3x"></i>
-                                <h4>IOS</h4>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-android fa-3x"></i>
-                                <h4>ANDROID</h4>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-js fa-3x"></i>
-                                <h4>JAVASCRIPT</h4>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-css3-alt fa-3x"></i>
-                                <h4>CSS</h4>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-react fa-3x"></i>
-                                <h4>REACT</h4>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-vuejs fa-3x"></i>
-                                <h4>VUE JS</h4>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-python fa-3x"></i>
-                                <h4>PYTHON</h4>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-django fa-3x"></i>
-                                <h4>DJANGO</h4>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-php fa-3x"></i>
-                                <h4>PHP</h4>
-                            </div>
+                </div>
+                <div class="tab-pane fade" id="frontend">
+                    <div class="row">
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-html5 fa-3x"></i>
+                            <h4>HTML</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-apple fa-3x"></i>
+                            <h4>IOS</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-android fa-3x"></i>
+                            <h4>ANDROID</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-js fa-3x"></i>
+                            <h4>JAVASCRIPT</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-css3-alt fa-3x"></i>
+                            <h4>CSS</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-react fa-3x"></i>
+                            <h4>REACT</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-vuejs fa-3x"></i>
+                            <h4>VUE JS</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-python fa-3x"></i>
+                            <h4>PYTHON</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-django fa-3x"></i>
+                            <h4>DJANGO</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-php fa-3x"></i>
+                            <h4>PHP</h4>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="backend">
-                        <div class="row">
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-html5 fa-3x"></i>
-                                <h4>HTML</h4>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-apple fa-3x"></i>
-                                <h4>IOS</h4>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-android fa-3x"></i>
-                                <h4>ANDROID</h4>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-js fa-3x"></i>
-                                <h4>JAVASCRIPT</h4>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-css3-alt fa-3x"></i>
-                                <h4>CSS</h4>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-react fa-3x"></i>
-                                <h4>REACT</h4>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-vuejs fa-3x"></i>
-                                <h4>VUE JS</h4>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-python fa-3x"></i>
-                                <h4>PYTHON</h4>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-django fa-3x"></i>
-                                <h4>DJANGO</h4>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-php fa-3x"></i>
-                                <h4>PHP</h4>
-                            </div>
+                </div>
+                <div class="tab-pane fade" id="backend">
+                    <div class="row">
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-html5 fa-3x"></i>
+                            <h4>HTML</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-apple fa-3x"></i>
+                            <h4>IOS</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-android fa-3x"></i>
+                            <h4>ANDROID</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-js fa-3x"></i>
+                            <h4>JAVASCRIPT</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-css3-alt fa-3x"></i>
+                            <h4>CSS</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-react fa-3x"></i>
+                            <h4>REACT</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-vuejs fa-3x"></i>
+                            <h4>VUE JS</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-python fa-3x"></i>
+                            <h4>PYTHON</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-django fa-3x"></i>
+                            <h4>DJANGO</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-php fa-3x"></i>
+                            <h4>PHP</h4>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="deployment">
-                        <div class="row">
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-html5 fa-3x"></i>
-                                <h4>HTML</h4>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-apple fa-3x"></i>
-                                <h4>IOS</h4>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-android fa-3x"></i>
-                                <h4>ANDROID</h4>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-js fa-3x"></i>
-                                <h4>JAVASCRIPT</h4>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-css3-alt fa-3x"></i>
-                                <h4>CSS</h4>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-react fa-3x"></i>
-                                <h4>REACT</h4>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-vuejs fa-3x"></i>
-                                <h4>VUE JS</h4>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-python fa-3x"></i>
-                                <h4>PYTHON</h4>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-django fa-3x"></i>
-                                <h4>DJANGO</h4>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-php fa-3x"></i>
-                                <h4>PHP</h4>
-                            </div>
+                </div>
+                <div class="tab-pane fade" id="deployment">
+                    <div class="row">
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-html5 fa-3x"></i>
+                            <h4>HTML</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-apple fa-3x"></i>
+                            <h4>IOS</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-android fa-3x"></i>
+                            <h4>ANDROID</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-js fa-3x"></i>
+                            <h4>JAVASCRIPT</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-css3-alt fa-3x"></i>
+                            <h4>CSS</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-react fa-3x"></i>
+                            <h4>REACT</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-vuejs fa-3x"></i>
+                            <h4>VUE JS</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-python fa-3x"></i>
+                            <h4>PYTHON</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-django fa-3x"></i>
+                            <h4>DJANGO</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-php fa-3x"></i>
+                            <h4>PHP</h4>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="database">
-                        <div class="row">
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-html5 fa-3x"></i>
-                                <h4>HTML</h4>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-apple fa-3x"></i>
-                                <h4>IOS</h4>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-android fa-3x"></i>
-                                <h4>ANDROID</h4>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-js fa-3x"></i>
-                                <h4>JAVASCRIPT</h4>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-css3-alt fa-3x"></i>
-                                <h4>CSS</h4>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-react fa-3x"></i>
-                                <h4>REACT</h4>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-vuejs fa-3x"></i>
-                                <h4>VUE JS</h4>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-python fa-3x"></i>
-                                <h4>PYTHON</h4>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <img src="../assets/images/django.png" style="width: 38px" alt="django"
-                                    class="img-fluid" />
-                                <h4>DJANGO</h4>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <i class="fab fa-php fa-3x"></i>
-                                <h4>PHP</h4>
-                            </div>
+                </div>
+                <div class="tab-pane fade" id="database">
+                    <div class="row">
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-html5 fa-3x"></i>
+                            <h4>HTML</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-apple fa-3x"></i>
+                            <h4>IOS</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-android fa-3x"></i>
+                            <h4>ANDROID</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-js fa-3x"></i>
+                            <h4>JAVASCRIPT</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-css3-alt fa-3x"></i>
+                            <h4>CSS</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-react fa-3x"></i>
+                            <h4>REACT</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-vuejs fa-3x"></i>
+                            <h4>VUE JS</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-python fa-3x"></i>
+                            <h4>PYTHON</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <img src="../assets/images/django.png" style="width: 38px" alt="django"
+                                class="img-fluid" />
+                            <h4>DJANGO</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-php fa-3x"></i>
+                            <h4>PHP</h4>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
     <!-- technologies we work with ends -->
 
@@ -382,112 +389,32 @@
             <h1 class="text-center">Our Features</h1>
             <div class="bar"></div>
             <p class="text-center text-muted sub-head">
-                For your very specific industry, we have highly-tailored IT
-                solutions.
+                {!! strip_tags(getCData('feature', 'synopsis')) !!}
             </p>
             <div class="row pt-4">
-                <div class="col-md-6 p-3">
-                    <div class="d-flex">
-                        <i class="fa fa-check pe-3 pt-2"></i>
-                        <div class="heading-features">
-                            <h3>Warranty Management IT</h3>
-                            <div class="description-features text-muted pt-2">
-                                <p>
-                                    Our service offerings enhance customer
-                                    experience throughout secure & highly
-                                    functional end-to-end warranty
-                                    management.
-                                </p>
+                @foreach ($features as $feature)
+                    <div class="col-md-6 p-3">
+
+                        <div class="d-flex">
+                            <i class="fa fa-check pe-3 pt-2"></i>
+                            <div class="heading-features">
+                                <h3>{{ $feature->title }}</h3>
+                                <div class="description-features text-muted pt-2">
+                                    <p>
+                                        {!! strip_tags($feature->description) !!}
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 p-3">
-                    <div class="d-flex">
-                        <i class="fa fa-check pe-3 pt-2"></i>
-                        <div class="heading-features">
-                            <h3>Warranty Management IT</h3>
-                            <div class="description-features text-muted pt-2">
-                                <p>
-                                    Our service offerings enhance customer
-                                    experience throughout secure & highly
-                                    functional end-to-end warranty
-                                    management.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 p-3">
-                    <div class="d-flex">
-                        <i class="fa fa-check pe-3 pt-2"></i>
-                        <div class="heading-features">
-                            <h3>Warranty Management IT</h3>
-                            <div class="description-features text-muted pt-2">
-                                <p>
-                                    Our service offerings enhance customer
-                                    experience throughout secure & highly
-                                    functional end-to-end warranty
-                                    management.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 p-3">
-                    <div class="d-flex">
-                        <i class="fa fa-check pe-3 pt-2"></i>
-                        <div class="heading-features">
-                            <h3>Warranty Management IT</h3>
-                            <div class="description-features text-muted pt-2">
-                                <p>
-                                    Our service offerings enhance customer
-                                    experience throughout secure & highly
-                                    functional end-to-end warranty
-                                    management.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 p-3">
-                    <div class="d-flex">
-                        <i class="fa fa-check pe-3 pt-2"></i>
-                        <div class="heading-features">
-                            <h3>Warranty Management IT</h3>
-                            <div class="description-features text-muted pt-2">
-                                <p>
-                                    Our service offerings enhance customer
-                                    experience throughout secure & highly
-                                    functional end-to-end warranty
-                                    management.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 p-3">
-                    <div class="d-flex">
-                        <i class="fa fa-check pe-3 pt-2"></i>
-                        <div class="heading-features">
-                            <h3>Warranty Management IT</h3>
-                            <div class="description-features text-muted pt-2">
-                                <p>
-                                    Our service offerings enhance customer
-                                    experience throughout secure & highly
-                                    functional end-to-end warranty
-                                    management.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
+
             </div>
         </div>
     </div>
     <!-- our features ends-->
 
-    @include('frontend.partials.testimonial')
+    @include('frontend.partials.testimonial', ['testimonials' => $testimonials])
 
     <!-- Contact -->
     @include('frontend.partials.contact')

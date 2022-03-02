@@ -4,8 +4,7 @@
         <h1>Testimonials</h1>
         <div class="bar"></div>
         <p class="text-center text-muted sub-head">
-            For your very specific industry, we have highly-tailored IT
-            solutions.
+            {!! strip_tags(getCData('testimonial', 'synopsis')) !!}
         </p>
 
         <!-- carousel -->
@@ -19,220 +18,41 @@
                     aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="mt-5">
-                        <div class="row">
-                            <div class="col-md-6 p-5">
-                                <div class="card text-muted px-4 py-5">
-                                    <div class="card-entity">
-                                        <i class="fa fa-quote-left"></i>
-                                    </div>
-                                    Lorem Ipsum is simply dummy text of
-                                    the printing and typesetting
-                                    industry. Lorem Ipsum has been the
-                                    industry's standard dummy text ever
-                                    since the 1500s, when an unknown
-                                    printer took a galley of type and
-                                    scrambled it to make a type specimen
-                                    book. It has survived not only five
-                                    centuries,
-
-                                    <div class="mt-3">
-                                        <div class="d-flex align-items-center">
-                                            <div class="circle-img-testimonials">
-                                                <img src="../assets/images/service.svg" alt="" />
+                @foreach ($testimonials->chunk(2) as $key => $testimonial)
+                    <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
+                        <div class="mt-5">
+                            <div class="row">
+                                @foreach ($testimonial as $t)
+                                    <div class="col-md-6 p-5">
+                                        <div class="card text-muted px-4 py-5">
+                                            <div class="card-entity">
+                                                <i class="fa fa-quote-left"></i>
                                             </div>
+                                            {!! $t->description !!}
 
-                                            <div class="ps-3">
-                                                <h4 class="m-0">
-                                                    Gopi Krish
-                                                </h4>
-                                                <div>
-                                                    Managing director,
-                                                    NepalOne Adventure
+                                            <div class="mt-3">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="circle-img-testimonials">
+                                                        <img src="../assets/images/service.svg" alt="" />
+                                                    </div>
+
+                                                    <div class="ps-3">
+                                                        <h4 class="m-0">
+                                                            {{ $t->name }}
+                                                        </h4>
+                                                        <div>
+                                                            {{ $t->designation }}
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 p-5">
-                                <div class="card text-muted px-4 py-5">
-                                    <div class="card-entity">
-                                        <i class="fa fa-quote-left"></i>
-                                    </div>
-                                    Lorem Ipsum is simply dummy text of
-                                    the printing and typesetting
-                                    industry. Lorem Ipsum has been the
-                                    industry's standard dummy text ever
-                                    since the 1500s, when an unknown
-                                    printer took a galley of type and
-                                    scrambled it to make a type specimen
-                                    book. It has survived not only five
-                                    centuries,
-
-                                    <div class="mt-3">
-                                        <div class="d-flex align-items-center">
-                                            <div class="circle-img-testimonials">
-                                                <img src="../assets/images/service.svg" alt="" />
-                                            </div>
-
-                                            <div class="ps-3">
-                                                <h4 class="m-0">
-                                                    Gopi Krish
-                                                </h4>
-                                                <div>
-                                                    Managing director,
-                                                    NepalOne Adventure
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="mt-5">
-                        <div class="row">
-                            <div class="col-md-6 p-5">
-                                <div class="card text-muted px-4 py-5">
-                                    <div class="card-entity">01</div>
-                                    Lorem Ipsum is simply dummy text of
-                                    the printing and typesetting
-                                    industry. Lorem Ipsum has been the
-                                    industry's standard dummy text ever
-                                    since the 1500s, when an unknown
-                                    printer took a galley of type and
-                                    scrambled it to make a type specimen
-                                    book. It has survived not only five
-                                    centuries,
-
-                                    <div class="mt-3">
-                                        <div class="d-flex align-items-center">
-                                            <div class="circle-img-testimonials">
-                                                <img src="../assets/images/service.svg" alt="" />
-                                            </div>
-
-                                            <div class="ps-3">
-                                                <h4 class="m-0">
-                                                    Gopi Krish
-                                                </h4>
-                                                <div>
-                                                    Managing director,
-                                                    NepalOne Adventure
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 p-5">
-                                <div class="card text-muted px-4 py-5">
-                                    <div class="card-entity">02</div>
-                                    Lorem Ipsum is simply dummy text of
-                                    the printing and typesetting
-                                    industry. Lorem Ipsum has been the
-                                    industry's standard dummy text ever
-                                    since the 1500s, when an unknown
-                                    printer took a galley of type and
-                                    scrambled it to make a type specimen
-                                    book. It has survived not only five
-                                    centuries,
-
-                                    <div class="mt-3">
-                                        <div class="d-flex align-items-center">
-                                            <div class="circle-img-testimonials">
-                                                <img src="../assets/images/service.svg" alt="" />
-                                            </div>
-
-                                            <div class="ps-3">
-                                                <h4 class="m-0">
-                                                    Gopi Krish
-                                                </h4>
-                                                <div>
-                                                    Managing director,
-                                                    NepalOne Adventure
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="mt-5">
-                        <div class="row">
-                            <div class="col-md-6 p-5">
-                                <div class="card text-muted px-4 py-5">
-                                    <div class="card-entity">01</div>
-                                    Lorem Ipsum is simply dummy text of
-                                    the printing and typesetting
-                                    industry. Lorem Ipsum has been the
-                                    industry's standard dummy text ever
-                                    since the 1500s, when an unknown
-                                    printer took a galley of type and
-                                    scrambled it to make a type specimen
-                                    book. It has survived not only five
-                                    centuries,
-
-                                    <div class="mt-3">
-                                        <div class="d-flex align-items-center">
-                                            <div class="circle-img-testimonials">
-                                                <img src="../assets/images/service.svg" alt="" />
-                                            </div>
-
-                                            <div class="ps-3">
-                                                <h4 class="m-0">
-                                                    Gopi Krish
-                                                </h4>
-                                                <div>
-                                                    Managing director,
-                                                    NepalOne Adventure
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 p-5">
-                                <div class="card text-muted px-4 py-5">
-                                    <div class="card-entity">02</div>
-                                    Lorem Ipsum is simply dummy text of
-                                    the printing and typesetting
-                                    industry. Lorem Ipsum has been the
-                                    industry's standard dummy text ever
-                                    since the 1500s, when an unknown
-                                    printer took a galley of type and
-                                    scrambled it to make a type specimen
-                                    book. It has survived not only five
-                                    centuries,
-
-                                    <div class="mt-3">
-                                        <div class="d-flex align-items-center">
-                                            <div class="circle-img-testimonials">
-                                                <img src="../assets/images/service.svg" alt="" />
-                                            </div>
-
-                                            <div class="ps-3">
-                                                <h4 class="m-0">
-                                                    Gopi Krish
-                                                </h4>
-                                                <div>
-                                                    Managing director,
-                                                    NepalOne Adventure
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
                 data-bs-slide="prev">

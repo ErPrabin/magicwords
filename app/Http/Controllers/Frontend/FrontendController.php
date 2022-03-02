@@ -12,6 +12,7 @@ use App\Models\Feature;
 use App\Models\Pricing;
 use App\Models\Process;
 use App\Models\Service;
+use App\Models\Technology;
 use App\Models\Testimonial;
 use App\Models\WhyChooseUs;
 use App\Models\WorkingProcess;
@@ -27,7 +28,16 @@ class FrontendController extends Controller
         $whyus = WhyChooseUs::orderBy('sort', 'asc')->get();
         $working_process = WorkingProcess::orderBy('sort', 'asc')->get();
         $testimonials = Testimonial::orderBy('sort', 'asc')->get();
-        return view('frontend.pages.index', compact('whyus', 'working_process', 'testimonials'));
+        $technologies = Technology::orderBy('sort', 'asc')->get();
+        $features = Feature::orderBy('sort', 'asc')->get();
+        $mobile_development = Technology::where('category', 'mobile-development')->orderBy('sort', 'asc')->get();
+        $web_development = Technology::where('category', 'web-development')->orderBy('sort', 'asc')->get();
+        $graphic_design = Technology::where('category', 'design')->orderBy('sort', 'asc')->get();
+        $frontend_development = Technology::where('category', 'frontend')->orderBy('sort', 'asc')->get();
+        $backend_development = Technology::where('category', 'backend')->orderBy('sort', 'asc')->get();
+        $database_development = Technology::where('category', 'database')->orderBy('sort', 'asc')->get();
+
+        return view('frontend.pages.index', compact('whyus', 'working_process', 'testimonials','features', 'technologies', 'mobile_development', 'web_development', 'graphic_design', 'frontend_development', 'backend_development', 'database_development'));
     }
     public function aboutus()
     {
