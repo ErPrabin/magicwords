@@ -35,6 +35,7 @@ class ComponentSeeder extends Seeder
             'Contact Banner',
             'Why Choose Us',
             'Testimonial',
+            'Career',
         ];
         $arr = [];
         foreach ($datas as $d) {

@@ -34,7 +34,27 @@
     </section>
 
     <!-- banner ends -->
-
+    <div class="services py-5">
+        <div class="container">
+            <div class="row">
+                @foreach ($specifications as $specification)
+                    <div class="col-md-3 p-3">
+                        <div class="card p-4">
+                            <div class="text-center">
+                                <i class="fa {{ $specification->fa_icon }} fa-3x"></i>
+                            </div>
+                            <h4 class="text-center py-3">{{ $specification->title }}</h4>
+                            <div class="text-center">
+                                <p class="p-0 m-0">
+                                    {!! strip_tags($specification->description) !!}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
     @include('frontend.partials.about')
 
     <!-- services -->

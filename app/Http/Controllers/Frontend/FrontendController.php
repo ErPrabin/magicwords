@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Mail\SendMail;
 use App\Models\AboutUs;
 use App\Models\Blog;
+use App\Models\Career;
 use App\Models\Component;
 use App\Models\Faq;
 use App\Models\Feature;
@@ -37,8 +38,9 @@ class FrontendController extends Controller
         $frontend_development = Technology::where('category', 'frontend')->orderBy('sort', 'asc')->get();
         $backend_development = Technology::where('category', 'backend')->orderBy('sort', 'asc')->get();
         $database_development = Technology::where('category', 'database')->orderBy('sort', 'asc')->get();
+        $specifications = Specification::orderBy('sort', 'asc')->get();
 
-        return view('frontend.pages.index', compact('whyus', 'working_process', 'testimonials','features', 'technologies', 'mobile_development', 'web_development', 'graphic_design', 'frontend_development', 'backend_development', 'database_development'));
+        return view('frontend.pages.index', compact('whyus', 'working_process', 'specifications', 'testimonials', 'features', 'technologies', 'mobile_development', 'web_development', 'graphic_design', 'frontend_development', 'backend_development', 'database_development'));
     }
     public function aboutus()
     {
@@ -47,7 +49,19 @@ class FrontendController extends Controller
         $testimonials = Testimonial::orderBy('sort', 'asc')->get();
         $specifications = Specification::orderBy('sort', 'asc')->get();
 
-        return view('frontend.pages.about', compact('whyus', 'working_process', 'testimonials','specifications'));
+        return view('frontend.pages.about', compact('whyus', 'working_process', 'testimonials', 'specifications'));
+    }
+    public function career()
+    {
+        $careers = Career::orderBy('sort', 'asc')->get();
+
+        return view('frontend.pages.career', compact('careers'));
+    }
+    public function careerDetail($slug)
+    {
+        $career = Career::where('slug',$slug)->first();
+
+        return view('frontend.pages.career-detail', compact('career'));
     }
     public function contact()
     {
