@@ -1,16 +1,9 @@
-<div class="page-title-area">
-    <div class="container">
-        <div class="page-title-content">
-            <h2>{{ $page }}</h2>
-            <ul>
-                <li>
-                    <a href="{{ route('index') }}">
-                        <i class="bx bx-home"></i>
-                        Home
-                    </a>
-                </li>
-                <li class="active">{{ $page }}</li>
-            </ul>
+<div class="bread-crumb d-flex align-items-center justify-content-center">
+    <div class="div">
+        <h1 class="text-muted fw-bold">{{ $title }}</h1>
+        <div class="bact-to-home text-center">
+            <a href="{{ route('index') }}" class="text-decoration-none back-home">Home</a>
         </div>
     </div>
+
 </div>

@@ -17,7 +17,6 @@ class CreateWhyChooseUsTable extends Migration
             $table->id();
             $table->string('title');
             $table->text('description')->nullable();
-            $table->string('image')->nullable();
             $table->integer('sort')->default(1);
             $table->timestamps();
         });
