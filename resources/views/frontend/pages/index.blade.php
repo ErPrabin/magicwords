@@ -1,362 +1,420 @@
 @extends('frontend.layouts.layout')
 @section('content')
+    <!-- navbar ends -->
 
+    <!-- test -->
 
-    <section class="banner-area bg-1">
+    <!-- test ends -->
+
+    <!-- banner -->
+    <div class="home-banner pb-5" style="height: auto">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6 col-md-12">
-                    <div class="banner-content">
-                        {{-- <span class="top-title">{{ getCData('Home Banner', 'synopsis') }}</span> --}}
-                        <h1>{{ strip_tags(getCData('Home Banner', 'synopsis')) }}</h1>
-                        <p>{{ getCData('Home Banner', 'description') }}</p>
-                        <div class="banner-btn">
-                            <a href="{{ route('contact') }}" class="default-btn">
-                                <span>Contact Us</span>
-                            </a>
+                <div class="col-md-6">
+                    <div class="home-banner-text">
+                        <h1>{!! strip_tags(getCData('Home Banner','synopsis')) !!}</h1>
+                        <div class="home-banner-desc mt-3">
+                            <p>
+                               {!! getCData('Home Banner','description') !!}
+                            </p>
                         </div>
+                        <button class="btn mt-3 btn-index-banner">
+                            Contact Us<i class="ps-3 fa fa-arrow-right"></i>
+                        </button>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-12">
-                    <div class="banner-image">
-                        <img src="{{ asset('images/component/' . getCData('Home Banner', 'image')) }}" alt="image">
+                <div class="col-md-6">
+                    <div class="banner-img">
+                        <img src="{{ asset('images/component/'.getCData('Home Banner','image')) }}" alt="{{ config('app.name') }}" />
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </section>
 
+    <!-- banner ends -->
 
-    <section class="feature-area feature-area-two pt-100 pb-70">
+    @include('frontend.partials.about')
+
+    <!-- services -->
+    <div class="services py-5">
         <div class="container">
-            <div class="row">
+            <h1>Services</h1>
+            <div class="bar"></div>
+            <p class="text-center text-muted sub-head">
+                {!! strip_tags(getCData('Service', 'synopsis')) !!}
+            </p>
+            <div class="row pt-5">
                 @foreach ($services as $service)
-                    <div class="col-lg-4 col-sm-6">
-                        <div class="single-feature overly-one">
-                            <div class="overly-two">
-                                <div class="title">
-                                    <i class="flaticon-testing"></i>
-                                    <h3>{{ strip_tags($service->title) }}</h3>
-                                </div>
-                                <p>{!! $service->description !!}</p>
-                                <div class="feature-shape">
-                                    <img src="{{ asset('assets/img/feature-shape.png') }} " alt="Image">
-                                </div>
+                    <div class="col-md-4 p-4">
+                        <div class="card p-3">
+                            <img class="index-service-img" src="{{ asset('images/service/' . $service->image) }}"
+                                alt="" />
+                            <a href="">
+                                <h4 class="py-3">{{ $service->title }}</h4>
+                            </a>
+                            <div>
+                                <p class="p-0 m-0">
+                                    {!! strip_tags($service->synopsis) !!}
+                                </p>
+                            </div>
+                            <div class="text-center">
+                                <a href="" class="readmore-circle text-white"><i class="fa fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
                 @endforeach
             </div>
         </div>
-    </section>
+    </div>
+    <!-- service ends -->
 
-
-    <section class="about-us-area pb-70">
+    <!-- technologies we work with -->
+    <div class="technologies py-5">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="about-img">
-                        <img src="{{ asset('images/component/' . getCData('About Us', 'image')) }}" alt="Image">
+            <h1>Technologies We Work With</h1>
+            <div class="bar"></div>
+            <p class="text-center text-muted sub-head">
+                {!! strip_tags(getCData('Technology', 'synopsis')) !!}
+            </p>
+            <div class="pt-4">
+                <ul class="nav nav-tabs justify-content-center" id="myTab">
+                    <li class="nav-item">
+                        <a href="#all" class="nav-link active" data-bs-toggle="tab">All</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#mobile-development" class="nav-link" data-bs-toggle="tab">Mobile Development</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#frontend" class="nav-link" data-bs-toggle="tab">Frontend</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#backend" class="nav-link" data-bs-toggle="tab">Backend</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#deployment" class="nav-link" data-bs-toggle="tab">Deployment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#database" class="nav-link" data-bs-toggle="tab">Database</a>
+                    </li>
+                </ul>
+                <div class="tab-content mt-5">
+                    <div class="tab-pane fade show active" id="all">
+                        <div class="row">
+                            @foreach ($technologies as $technology)
+                                <div class="col-md-2 col-sm-4 text-center p-3">
+                                    <img src="{{ asset('images/technology/' . $technology->iconkhgf) }}" alt="">
+                                    <h6>HTML</h6>
+                                </div>
+                            @endforeach
+
+                        </div>
+
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-apple fa-3x"></i>
+                            <h6>IOS</h6>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-android fa-3x"></i>
+                            <h6>ANDROID</h6>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-js fa-3x"></i>
+                            <h6>JAVASCRIPT</h6>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-css3-alt fa-3x"></i>
+                            <h6>CSS</h6>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-react fa-3x"></i>
+                            <h6>REACT</h6>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-vuejs fa-3x"></i>
+                            <h6>VUE JS</h6>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-python fa-3x"></i>
+                            <h6>PYTHON</h6>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <img src="../assets/images/django.png" style="width: 58px; height: 58px" alt="django"
+                                class="img-fluid" />
+
+                            <h6>DJANGO</h6>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-php fa-3x"></i>
+                            <h6>PHP</h6>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="about-content">
-                        <div class="about-title">
-                            <span>About Us</span>
-                            <h2>{{ strip_tags(getCData('About Us', 'description')) }}</h2>
+                <div class="tab-pane fade" id="mobile-development">
+                    <div class="row">
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-html5 fa-3x"></i>
+                            <h4>HTML</h4>
                         </div>
-                        <div class="tab">
-                            <ul class="tabs">
-                                <li>
-                                    Our Experience
-                                </li>
-                                <li>
-                                    Our Approach
-                                </li>
-                            </ul>
-                            <div class="tab_content">
-                                <div class="tabs_item">
-                                    {!! getCData('Our Experience', 'description') !!}
-                                </div>
-                                <div class="tabs_item">
-                                    {!! getCData('Our Approach', 'description') !!}
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-apple fa-3x"></i>
+                            <h4>IOS</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-android fa-3x"></i>
+                            <h4>ANDROID</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-js fa-3x"></i>
+                            <h4>JAVASCRIPT</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-css3-alt fa-3x"></i>
+                            <h4>CSS</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-react fa-3x"></i>
+                            <h4>REACT</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-vuejs fa-3x"></i>
+                            <h4>VUE JS</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-python fa-3x"></i>
+                            <h4>PYTHON</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-django fa-3x"></i>
+                            <h4>DJANGO</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-php fa-3x"></i>
+                            <h4>PHP</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="frontend">
+                    <div class="row">
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-html5 fa-3x"></i>
+                            <h4>HTML</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-apple fa-3x"></i>
+                            <h4>IOS</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-android fa-3x"></i>
+                            <h4>ANDROID</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-js fa-3x"></i>
+                            <h4>JAVASCRIPT</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-css3-alt fa-3x"></i>
+                            <h4>CSS</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-react fa-3x"></i>
+                            <h4>REACT</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-vuejs fa-3x"></i>
+                            <h4>VUE JS</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-python fa-3x"></i>
+                            <h4>PYTHON</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-django fa-3x"></i>
+                            <h4>DJANGO</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-php fa-3x"></i>
+                            <h4>PHP</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="backend">
+                    <div class="row">
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-html5 fa-3x"></i>
+                            <h4>HTML</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-apple fa-3x"></i>
+                            <h4>IOS</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-android fa-3x"></i>
+                            <h4>ANDROID</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-js fa-3x"></i>
+                            <h4>JAVASCRIPT</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-css3-alt fa-3x"></i>
+                            <h4>CSS</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-react fa-3x"></i>
+                            <h4>REACT</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-vuejs fa-3x"></i>
+                            <h4>VUE JS</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-python fa-3x"></i>
+                            <h4>PYTHON</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-django fa-3x"></i>
+                            <h4>DJANGO</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-php fa-3x"></i>
+                            <h4>PHP</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="deployment">
+                    <div class="row">
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-html5 fa-3x"></i>
+                            <h4>HTML</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-apple fa-3x"></i>
+                            <h4>IOS</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-android fa-3x"></i>
+                            <h4>ANDROID</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-js fa-3x"></i>
+                            <h4>JAVASCRIPT</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-css3-alt fa-3x"></i>
+                            <h4>CSS</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-react fa-3x"></i>
+                            <h4>REACT</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-vuejs fa-3x"></i>
+                            <h4>VUE JS</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-python fa-3x"></i>
+                            <h4>PYTHON</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-django fa-3x"></i>
+                            <h4>DJANGO</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-php fa-3x"></i>
+                            <h4>PHP</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="database">
+                    <div class="row">
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-html5 fa-3x"></i>
+                            <h4>HTML</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-apple fa-3x"></i>
+                            <h4>IOS</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-android fa-3x"></i>
+                            <h4>ANDROID</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-js fa-3x"></i>
+                            <h4>JAVASCRIPT</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-css3-alt fa-3x"></i>
+                            <h4>CSS</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-react fa-3x"></i>
+                            <h4>REACT</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-vuejs fa-3x"></i>
+                            <h4>VUE JS</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-python fa-3x"></i>
+                            <h4>PYTHON</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <img src="../assets/images/django.png" style="width: 38px" alt="django"
+                                class="img-fluid" />
+                            <h4>DJANGO</h4>
+                        </div>
+                        <div class="col-md-2 col-sm-4 text-center p-3">
+                            <i class="fab fa-php fa-3x"></i>
+                            <h4>PHP</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- technologies we work with ends -->
 
+    <!-- our features -->
+    <div class="features py-5">
+        <div class="container">
+            <h1 class="text-center">Our Features</h1>
+            <div class="bar"></div>
+            <p class="text-center text-muted sub-head">
+                {!! strip_tags(getCData('feature', 'synopsis')) !!}
+            </p>
+            <div class="row pt-4">
+                @foreach ($features as $feature)
+                    <div class="col-md-6 p-3">
+
+                        <div class="d-flex">
+                            <i class="fa fa-check pe-3 pt-2"></i>
+                            <div class="heading-features">
+                                <h3>{{ $feature->title }}</h3>
+                                <div class="description-features text-muted pt-2">
+                                    <p>
+                                        {!! strip_tags($feature->description) !!}
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                @endforeach
+
             </div>
         </div>
-    </section>
+    </div>
+    <!-- our features ends-->
 
+    @include('frontend.partials.testimonial', ['testimonials' => $testimonials])
 
-    {{-- <section class="challenges-area pt-100 pb-70 jarallax" data-jarallax='{"speed": 0.3}'>
-        <div class="container">
-            <div class="section-title white-title">
-                <span>Our Challenges</span>
-                <h2>You Can Protect Your Organization’s Cybersecurity By Us</h2>
-            </div>
-            <div class="row">
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-challenges overly-one">
-                        <div class="overly-two">
-                            <i class="flaticon-threat"></i>
-                            <h3>Identifying Threats</h3>
-                            <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit sed do.</p>
-                            <span class="flaticon-threat"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-challenges overly-one">
-                        <div class="overly-two">
-                            <i class="flaticon-cyber"></i>
-                            <h3>Cyber Risk Assessment</h3>
-                            <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit sed do.</p>
-                            <span class="flaticon-cyber"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-challenges overly-one">
-                        <div class="overly-two">
-                            <i class="flaticon-cyber-security-1"></i>
-                            <h3>Testing Cyber Security</h3>
-                            <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit sed do.</p>
-                            <span class="flaticon-cyber-security-1"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-challenges overly-one">
-                        <div class="overly-two">
-                            <i class="flaticon-password"></i>
-                            <h3>Managing Cloud Security</h3>
-                            <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit sed do.</p>
-                            <span class="flaticon-password"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> --}}
+    <!-- Contact -->
+    @include('frontend.partials.contact')
 
+    <!-- contact ends -->
 
-    {{-- <section class="services-area pt-100 pb-70">
-        <div class="container">
-            <div class="section-title">
-                <span>Cyber Security Services</span>
-                <h2>You Can Protect Your Organization’s Cybersecurity By Services Us</h2>
-            </div>
-            <div class="row">
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-services">
-                        <div class="services-img">
-                            <a href="services-details.html">
-                                <img src="assets/img/services/services-1.jpg" alt="Image">
-                            </a>
-                        </div>
-                        <div class="services-content">
-                            <h3><a href="services-details.html">Website Scanning</a></h3>
-                            <div class="content">
-                                <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit sed do.</p>
-                                <a href="services-details.html" class="read-more">
-                                    Read More
-                                    <i class="flaticon-right-arrow"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-services">
-                        <div class="services-img">
-                            <a href="services-details.html">
-                                <img src="assets/img/services/services-2.jpg" alt="Image">
-                            </a>
-                        </div>
-                        <div class="services-content">
-                            <h3><a href="services-details.html">Malware Removal</a></h3>
-                            <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit sed do.</p>
-                            <a href="services-details.html" class="read-more">
-                                Read More
-                                <i class="flaticon-right-arrow"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-services">
-                        <div class="services-img">
-                            <a href="services-details.html">
-                                <img src="assets/img/services/services-3.jpg" alt="Image">
-                            </a>
-                        </div>
-                        <div class="services-content">
-                            <h3><a href="services-details.html">Cloud Security</a></h3>
-                            <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit sed do.</p>
-                            <a href="services-details.html" class="read-more">
-                                Read More
-                                <i class="flaticon-right-arrow"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-services">
-                        <div class="services-img">
-                            <a href="services-details.html">
-                                <img src="assets/img/services/services-4.jpg" alt="Image">
-                            </a>
-                        </div>
-                        <div class="services-content">
-                            <h3><a href="services-details.html">Data Protection</a></h3>
-                            <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit sed do.</p>
-                            <a href="services-details.html" class="read-more">
-                                Read More
-                                <i class="flaticon-right-arrow"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> --}}
-
-
-    <section class="solution-area pb-70">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="solution-content">
-                        <div class="solution-title">
-                            <span>Working Process</span>
-                            <h2>{{ strip_tags(getCData('Working Process', 'description')) }}</h2>
-                        </div>
-                        <div class="row">
-                            @foreach ($working_process as $key => $wp)
-                                <div class="col-lg-12 col-md-6">
-                                    <div class="single-solution overly-one">
-                                        <div class="overly-two">
-                                            <h3>
-                                                <a href="javascript:void(0)">
-                                                    {{ $wp->title }}
-                                                </a>
-                                            </h3>
-                                            {!! $wp->description !!}
-                                            <span>0{{ $key + 1 }}</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            @endforeach
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 pr-0">
-                    <div class="solution-img"
-                        style="background-image: url('{{ asset('images/component/' . getCData('Working Process', 'image')) }}')">
-                        <img src="{{ asset('images/component/' . getCData('Working Process', 'image')) }}" alt="Image">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    {{-- <section class="get-in-touch-area ptb-100 jarallax" data-jarallax='{"speed": 0.3}'>
-        <div class="container">
-            <div class="section-title white-title">
-                <span>Get In Touch</span>
-                <h2>Contact Us Today To Speak With An Expert About Your Specific Needs</h2>
-            </div>
-            <form class="get-in-touch-form">
-                <div class="row">
-                    <div class="col-lg-6 col-sm-6">
-                        <div class="form-group">
-                            <label>Name</label>
-                            <input type="text" class="form-control" id="First-Name">
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-sm-6">
-                        <div class="form-group">
-                            <label>Email</label>
-                            <input type="email" class="form-control" id="Email">
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-sm-6">
-                        <div class="form-group">
-                            <label>Phone</label>
-                            <input type="text" class="form-control" id="Number">
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-sm-6">
-                        <div class="form-group">
-                            <label>Company</label>
-                            <input type="text" class="form-control" id="Company">
-                        </div>
-                    </div>
-                </div>
-                <button type="submit" class="default-btn">
-                    <span>Consultation</span>
-                </button>
-            </form>
-        </div>
-    </section> --}}
-
-
-    <section class="protect-area pt-100 pb-70">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="protect-content">
-                        <div class="protect-title">
-                            <span>Why Choose Us?</span>
-                            <h2>{!! strip_tags(getCData('Why Choose Us', 'description')) !!}</h2>
-                        </div>
-                        <div class="row">
-                            @foreach ($whyus as $w)
-                                <div class="col-lg-6 col-sm-6">
-                                    <div class="single-challenges overly-one">
-                                        <div class="overly-two">
-                                            <i class="flaticon-database"></i>
-                                            <h3>{{ $w->title }}</h3>
-                                            {!! $w->description !!}
-                                            <span class="flaticon-database"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            @endforeach
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="protect-img">
-                        <img src="{{ asset('images/component/' . getCData('why-choose-us', 'image')) }}" alt="Image">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section class="testimonials-area ptb-100 jarallax" data-jarallax='{"speed": 0.3}'>
-        <div class="container">
-            <div class="testimonials">
-                <span>What our customers say</span>
-                <div class="testimonials-slider owl-carousel owl-theme">
-                    @foreach ($testimonials as $testimonial)
-                        <div class="testimonials-item">
-                            <i class="flaticon-quote"></i>
-                            {!! $testimonial->description !!}
-
-                            <h3>{{ $testimonial->name }}</h3>
-                            <span>{{ $testimonial->designation }}</span>
-                        </div>
-                    @endforeach
-
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- footer -->
 @endsection
