@@ -48,12 +48,11 @@ p {
 .navbar-nav .nav-link {
     color: #000 !important;
     font-weight: 600;
-    
 }
-.bread-crumb .back-home{
+.bread-crumb .back-home {
     color: #000 !important;
     font-weight: 600;
-    color: #6c757d!important;
+    color: #6c757d !important;
 }
 .navbar ul li {
     font-size: 16px;
@@ -327,16 +326,19 @@ p {
 }
 
 .navbar .nav-item:hover .dropdown-menu {
-    background: rgba(255, 0, 51, 0.8);
-    color: #fff !important;
+    background: #fff;
+    color: #000 !important;
+    border-radius: 15px;
+    border: 2px solid #000;
 }
 .dropdown-item {
     display: block;
     width: 100%;
-    padding: 0.25rem 1rem;
+    padding: 0.35rem 1rem;
     clear: both;
-    font-weight: 400;
-    color: #fff;
+    font-weight: 600;
+    border-radius: 20px;
+    color: #000;
     text-align: inherit;
     text-decoration: none;
     white-space: nowrap;
@@ -348,12 +350,14 @@ p {
     width: 100%;
     padding: 0.25rem 1rem;
     clear: both;
-    font-weight: 400;
-    color: #ff0032;
+    font-weight: 600;
+    color: #fff;
+    transition: all ease 0.5s;
+    border-radius: 15px;
     text-align: inherit;
     text-decoration: none;
     white-space: nowrap;
-    background-color: #fff;
+    background-color: rgb(255, 0, 50);
     border: 0px;
 }
 .footer {
@@ -469,8 +473,9 @@ p {
 .job-description {
     font-size: 1.2rem;
 }
-.job-description ul li, .job-description ol li {
-   font-size: 1.2rem;
+.job-description ul li,
+.job-description ol li {
+    font-size: 1.2rem;
 }
 .red-btn-color:hover {
     background-color: #fff;
@@ -561,13 +566,14 @@ p {
     background-color: #ff0033;
     border-right: 15px solid;
 }
-.service-detail-div-1 .description{
-    text-align: justify ;
-    
+.service-detail-div-1 .description {
+    text-align: justify;
 }
-.service-detail-div-1 .description ul li, .service-detail-div-1 .description ol li{
-    font-size: 1.2rem!important;
+.service-detail-div-1 .description ul li,
+.service-detail-div-1 .description ol li {
+    font-size: 1.2rem !important;
 }
+
 
 @media all and (min-width: 992px) {
     .navbar .nav-item .dropdown-menu {
@@ -603,6 +609,24 @@ p {
     100% {
         margin-left: 107px;
     }
+}
+/* test */
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+    color: #0b589e;
+    background-color: #fff;
+    border-color: #dee2e6 #dee2e6 #fff;
+    border-bottom: 2px solid;
+}
+.nav-tabs .nav-link {
+    margin-bottom: -1px;
+    color: grey;
+    border: none;
+}
+
+.technologies-img {
+    width: 50px;
+    height: 50px;
 }
 .bar {
     background: #edaaa3;
