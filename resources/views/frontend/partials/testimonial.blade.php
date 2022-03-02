@@ -10,12 +10,12 @@
         <!-- carousel -->
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                    class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
+                @foreach ($testimonials->chunk(2) as $key => $t)
+                    <button type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide-to="{{ $key + 1 }}" class="active" aria-current="true"
+                        aria-label="Slide 1"></button>
+                @endforeach
+
             </div>
             <div class="carousel-inner">
                 @foreach ($testimonials->chunk(2) as $key => $testimonial)
@@ -33,7 +33,8 @@
                                             <div class="mt-3">
                                                 <div class="d-flex align-items-center">
                                                     <div class="circle-img-testimonials">
-                                                        <img src="../assets/images/service.svg" alt="" />
+                                                        <img src="{{ asset('images/testimonial/' . $t->image) }}"
+                                                            alt="{{ config('app.name') }}" />
                                                     </div>
 
                                                     <div class="ps-3">

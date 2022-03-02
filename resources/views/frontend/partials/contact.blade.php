@@ -7,15 +7,12 @@
                 <div class="col-md-7">
                     <div class="top-contact-section ps-3">
                         <h1>
-                            Obtaining further information by make a contact
-                            with our experienced IT staffs.
+                            {!! strip_tags(getCData('Contact Banner','synopsis')) !!}
                         </h1>
                     </div>
                     <div class="bottom-contact-section ps-3">
                         <span class="text-muted">
-                            We're available 8 hours a day!,<br />
-                            Contact to require adetailed analysis and
-                            assessment of your plan.
+                            {!! getCData('Contact Banner','description') !!}
                         </span>
                     </div>
                 </div>
@@ -26,7 +23,7 @@
                             <span>Reach Out Now!</span>
                         </div>
                         <div class="contact-number-index">
-                            <h1>1900 688668</h1>
+                            <h1>{!! strip_tags(getCData('Contact Number','description')) !!}</h1>
                         </div>
                         <div class="contact-number-index">
                             <button class="btn red-btn-color">
