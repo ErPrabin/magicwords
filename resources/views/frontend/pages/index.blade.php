@@ -12,15 +12,10 @@
             <div class="row align-items-center">
                 <div class="col-md-6">
                     <div class="home-banner-text">
-                        <h1>Your Digital Branding With Us.</h1>
+                        <h1>{!! strip_tags(getCData('Home Banner','synopsis')) !!}</h1>
                         <div class="home-banner-desc mt-3">
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna
-                                aliqua. Ut enim ad minim veniam, quis
-                                nostrud exercitation ullamco laboris
-                                nisi ut aliquip ex ea commodo consequat.
+                               {!! getCData('Home Banner','description') !!}
                             </p>
                         </div>
                         <button class="btn mt-3 btn-index-banner">
@@ -30,7 +25,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="banner-img">
-                        <img src="../assets/images/aboutus.png" alt="" />
+                        <img src="{{ asset('images/component/'.getCData('Home Banner','image')) }}" alt="{{ config('app.name') }}" />
                     </div>
                 </div>
             </div>
