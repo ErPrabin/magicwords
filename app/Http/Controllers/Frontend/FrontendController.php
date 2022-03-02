@@ -12,6 +12,7 @@ use App\Models\Feature;
 use App\Models\Pricing;
 use App\Models\Process;
 use App\Models\Service;
+use App\Models\Specification;
 use App\Models\Technology;
 use App\Models\Testimonial;
 use App\Models\WhyChooseUs;
@@ -44,8 +45,9 @@ class FrontendController extends Controller
         $working_process = WorkingProcess::orderBy('sort', 'asc')->get();
         $whyus = WhyChooseUs::orderBy('sort', 'asc')->get();
         $testimonials = Testimonial::orderBy('sort', 'asc')->get();
+        $specifications = Specification::orderBy('sort', 'asc')->get();
 
-        return view('frontend.pages.about', compact('whyus', 'working_process', 'testimonials'));
+        return view('frontend.pages.about', compact('whyus', 'working_process', 'testimonials','specifications'));
     }
     public function contact()
     {

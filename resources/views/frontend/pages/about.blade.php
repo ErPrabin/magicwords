@@ -1,833 +1,494 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>About | Magicwords</title>
+@extends('frontend.layouts.layout')
+@section('content')
+    <!-- navbar ends -->
 
-        <link
-            rel="stylesheet"
-            href="../assets/bootstrap-5.0.2-dist/css/bootstrap.min.css"
-        />
-
-        <link rel="stylesheet" href="../assets/css/style.css" />
-        <link
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
-            rel="stylesheet"
-        />
-    </head>
-    <body>
-        <div
-            class=""
-            style="
-                background-image: url(../assets/images/banner.jpeg);
-                background-repeat: no-repeat;
-                background-position: center;
-            "
-        >
-            <!-- navbar -->
-            <nav id="navbar_top" class="navbar navbar-expand-lg navbar-light">
-                <div class="container">
-                    <a class="navbar-brand" href="#"
-                        ><img
-                            class="logo"
-                            src="../assets/images/Logo.jpg"
-                            alt=""
-                    /></a>
-                    <button
-                        class="navbar-toggler"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent"
-                        aria-controls="navbarSupportedContent"
-                        aria-expanded="false"
-                        aria-label="Toggle navigation"
-                    >
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div
-                        class="collapse navbar-collapse"
-                        id="navbarSupportedContent"
-                    >
-                        <ul
-                            class="navbar-nav align-items-center ms-auto p-0 m-0 mb-lg-0"
-                        >
-                            <li class="nav-item">
-                                <a
-                                    class="nav-link active"
-                                    aria-current="page"
-                                    href="#"
-                                    >Home</a
-                                >
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">About</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a
-                                    class="nav-link dropdown-toggle"
-                                    href="#"
-                                    id="navbarDropdown"
-                                    role="button"
-                                    data-bs-toggle="dropdown"
-                                    aria-expanded="false"
-                                >
-                                    Services
-                                </a>
-                                <ul
-                                    class="dropdown-menu py-0"
-                                    aria-labelledby="navbarDropdown"
-                                >
-                                    <li class="px-0">
-                                        <a class="dropdown-item" href="#"
-                                            >Service 1</a
-                                        >
-                                    </li>
-                                    <li class="px-0">
-                                        <a class="dropdown-item" href="#"
-                                            >Service 2</a
-                                        >
-                                    </li>
-                                    <li class="px-0">
-                                        <a class="dropdown-item" href="#"
-                                            >Service 3</a
-                                        >
-                                    </li>
-                                    <li class="px-0">
-                                        <a class="dropdown-item" href="#"
-                                            >Service 4</a
-                                        >
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Career</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Contact</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="" class=" nav-contact-btn "
-                                    ><i
-                                        class="fa  fa-phone-alt pe-1"
-                                        
-                                    ></i>
-                                    984110124</a
-                                >
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            <!-- navbar ends -->
-
-            <!-- banner -->
-            <div
-                class="bread-crumb d-flex align-items-center justify-content-center"
-            >
-            <div class="div">
-                <h1 class="text-muted fw-bold">ABOUT US</h1>
-                <div class="bact-to-home text-center">
-                    <a href="/" class="text-decoration-none back-home"
-                    >Home</a>
-                </div>
+    <!-- banner -->
+    <div class="bread-crumb d-flex align-items-center justify-content-center">
+        <div class="div">
+            <h1 class="text-muted fw-bold">ABOUT US</h1>
+            <div class="bact-to-home text-center">
+                <a href="/" class="text-decoration-none back-home">Home</a>
             </div>
-               
-            </div>
-            
-            <!-- banner ends -->
         </div>
 
-        <!-- about us   -->
-        <div class="about py-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 p-5">
-                        <img
-                            src="../assets/images/service.svg"
-                            alt=""
-                            class="img-fluid"
-                        />
-                    </div>
-                    <div class="col-md-6 p-4">
-                        <div class="about-text">
-                            <h1>About Title</h1>
-                            <div class="m-bar"></div>
-                            <div class="about-index-description mt-3">
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Quisquam, quidem. Lorem
-                                    ipsum dolor sit amet consectetur adipisicing
-                                    elit. Quisquam, quidem. Lorem ipsum dolor
-                                    sit amet consectetur adipisicing elit.
-                                    Quisquam, quidem. Lorem ipsum dolor sit amet
-                                    consectetur adipisicing elit. Quisquam,
-                                    quidem.
-                                </p>
-                              
-                            </div>
-                            <div class="contact-number-index">
-                                <button class="btn red-btn-color">
-                                    Read More
-                                </button>
-                            </div>
+    </div>
+
+    <!-- banner ends -->
+    </section>
+
+    <!-- about us   -->
+    <div class="about py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 p-5">
+                    <img src="../assets/images/service.svg" alt="" class="img-fluid" />
+                </div>
+                <div class="col-md-6 p-4">
+                    <div class="about-text">
+                        <h1>About Title</h1>
+                        <div class="m-bar"></div>
+                        <div class="about-index-description mt-3">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Quisquam, quidem. Lorem
+                                ipsum dolor sit amet consectetur adipisicing
+                                elit. Quisquam, quidem. Lorem ipsum dolor
+                                sit amet consectetur adipisicing elit.
+                                Quisquam, quidem. Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit. Quisquam,
+                                quidem.
+                            </p>
+
+                        </div>
+                        <div class="contact-number-index">
+                            <button class="btn red-btn-color">
+                                Read More
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- about us ends -->
+    </div>
+    <!-- about us ends -->
 
-        <!-- service copy  -->
-        <div class="services py-5">
-            <div class="container">
-                <div class="row">
+    <!-- service copy  -->
+    <div class="services py-5">
+        <div class="container">
+            <div class="row">
+                @foreach ($specifications as $specification)
                     <div class="col-md-3 p-3">
                         <div class="card p-4">
                             <div class="text-center">
-                                <i class="fab fa-html5 fa-3x"></i>
+                                <i class="fa {{ $specification->fa_icon }} fa-3x"></i>
                             </div>
-                            <h4 class="text-center py-3">Great Advice</h4>
+                            <h4 class="text-center py-3">{{ $specification->title }}</h4>
                             <div class="text-center">
                                 <p class="p-0 m-0">
-                                    Our team is here to develop simple to
-                                    complex websites based
+                                    {!! strip_tags($specification->description) !!}}
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 p-3">
-                        <div class="card p-4">
-                            <div class="text-center">
-                                <i class="fab fa-html5 fa-3x"></i>
-                            </div>
-                            <h4 class="text-center py-3">24/7 Support</h4>
-                            <div class="text-center">
-                                <p class="p-0 m-0">
-                                    Our team is here to develop simple to
-                                    complex websites based
-                                </p>
-                            </div>
+                @endforeach
+                {{-- <div class="col-md-3 p-3">
+                    <div class="card p-4">
+                        <div class="text-center">
+                            <i class="fa fa-headset fa-3x"></i>
+                        </div>
+                        <h4 class="text-center py-3">24/7 Support</h4>
+                        <div class="text-center">
+                            <p class="p-0 m-0">
+                                Our team is here to develop simple to
+                                complex websites based
+                            </p>
                         </div>
                     </div>
-                    <div class="col-md-3 p-3">
-                        <div class="card p-4">
-                            <div class="text-center">
-                                <i class="fab fa-html5 fa-3x"></i>
-                            </div>
-                            <h4 class="text-center py-3">Optimal Choice</h4>
-                            <div class="text-center">
-                                <p class="p-0 m-0">
-                                    Our team is here to develop simple to
-                                    complex websites based
-                                </p>
-                            </div>
+                </div>
+                <div class="col-md-3 p-3">
+                    <div class="card p-4">
+                        <div class="text-center">
+                            <i class="fab fa-html5 fa-3x"></i>
+                        </div>
+                        <h4 class="text-center py-3">Optimal Choice</h4>
+                        <div class="text-center">
+                            <p class="p-0 m-0">
+                                Our team is here to develop simple to
+                                complex websites based
+                            </p>
                         </div>
                     </div>
-                    <div class="col-md-3 p-3">
-                        <div class="card p-4">
-                            <div class="text-center">
-                                <i class="fab fa-html5 fa-3x"></i>
-                            </div>
-                            <h4 class="text-center py-3">Market Analysis</h4>
-                            <div class="text-center">
-                                <p class="p-0 m-0">
-                                    Our team is here to develop simple to
-                                    complex websites based
-                                </p>
-                            </div>
+                </div>
+                <div class="col-md-3 p-3">
+                    <div class="card p-4">
+                        <div class="text-center">
+                            <i class="fab fa-html5 fa-3x"></i>
+                        </div>
+                        <h4 class="text-center py-3">Market Analysis</h4>
+                        <div class="text-center">
+                            <p class="p-0 m-0">
+                                Our team is here to develop simple to
+                                complex websites based
+                            </p>
+                        </div>
+                    </div>
+                </div> --}}
+            </div>
+        </div>
+    </div>
+    <!-- service copy ends -->
+
+    <!-- Why Choose Us -->
+    <div class="why-us py-5">
+        <di class="container">
+            <h1>Why Choose Us</h1>
+            <div class="bar"></div>
+            <p class="text-center text-muted sub-head">For your very specific industry,
+                we have highly-tailored IT solutions.</p>
+            <div class="row mt-5 m-auto">
+                <div class="col-md-4">
+                    <div class="d-flex my-3">
+                        <div class="text-end">
+                            <h4>Awesome Suport</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Quisquam, quidem.
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="d-flex my-3">
+                        <div class="text-end">
+                            <h4>Awesome Suport</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Quisquam, quidem.
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="d-flex my-3">
+                        <div class="text-end">
+                            <h4>Awesome Suport</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Quisquam, quidem.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <img src="../assets/images/service.svg" alt="" class="img-fluid" />
+                </div>
+                <div class="col-md-4">
+                    <div class="d-flex my-3">
+
+                        <div class="text-start">
+                            <h4>Awesome Suport</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Quisquam, quidem.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="d-flex my-3">
+
+                        <div class="text-start">
+                            <h4 class="p-0">Awesome Suport</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Quisquam, quidem.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="d-flex my-3">
+
+                        <div class="text-start">
+                            <h4 class="p-0">Awesome Suport</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Quisquam, quidem.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- service copy ends -->
+    </div>
+    </div>
+    <!-- Why Choose Us ends -->
 
-        <!-- Why Choose Us -->
-        <div class="why-us py-5">
-            <di class="container">
-                <h1>Why Choose Us</h1>
-                <div class="bar"></div>
-                <p class="text-center text-muted sub-head">For your very specific industry,
-                    we have highly-tailored IT solutions.</p>
-                <div class="row mt-5 m-auto">
-                    <div class="col-md-4">
-                        <div class="d-flex my-3">
-                            <div class="text-end">
-                                <h4>Awesome Suport</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Quisquam, quidem.
-                                </p>
-                            </div>
-                            
-                        </div>
-                        <div class="d-flex my-3">
-                            <div class="text-end">
-                                <h4>Awesome Suport</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Quisquam, quidem.
-                                </p>
-                            </div>
-                            
-                        </div>
-                        <div class="d-flex my-3">
-                            <div class="text-end">
-                                <h4>Awesome Suport</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Quisquam, quidem.
-                                </p>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <img
-                            src="../assets/images/service.svg"
-                            alt=""
-                            class="img-fluid"
-                        />
-                    </div>
-                    <div class="col-md-4">
-                        <div class="d-flex my-3">
-                            
-                            <div class="text-start">
-                                <h4>Awesome Suport</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Quisquam, quidem.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="d-flex my-3">
-                            
-                            <div class="text-start">
-                                <h4 class="p-0">Awesome Suport</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Quisquam, quidem.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="d-flex my-3">
-                            
-                            <div class="text-start">
-                                <h4 class="p-0" >Awesome Suport</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Quisquam, quidem.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <!-- testimonials -->
+    <div class="testimonials py-5">
+        <div class="container">
+            <h1>Testimonials</h1>
+            <div class="bar">
             </div>
-        </div>
-        <!-- Why Choose Us ends -->
+            <p class="text-center text-muted sub-head">For your very specific industry,
+                we have highly-tailored IT solutions.</p>
 
-        <!-- testimonials -->
-        <div class="testimonials py-5">
-            <div class="container">
-                <h1>Testimonials</h1>
-                <div class="bar">
+            <!-- carousel -->
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
                 </div>
-                <p class="text-center text-muted sub-head">For your very specific industry,
-                    we have highly-tailored IT solutions.</p>
-
-                <!-- carousel -->
-                <div
-                    id="carouselExampleIndicators"
-                    class="carousel slide"
-                    data-bs-ride="carousel"
-                >
-                    <div class="carousel-indicators">
-                        <button
-                            type="button"
-                            data-bs-target="#carouselExampleIndicators"
-                            data-bs-slide-to="0"
-                            class="active"
-                            aria-current="true"
-                            aria-label="Slide 1"
-                        ></button>
-                        <button
-                            type="button"
-                            data-bs-target="#carouselExampleIndicators"
-                            data-bs-slide-to="1"
-                            aria-label="Slide 2"
-                        ></button>
-                        <button
-                            type="button"
-                            data-bs-target="#carouselExampleIndicators"
-                            data-bs-slide-to="2"
-                            aria-label="Slide 3"
-                        ></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="mt-5">
-                                <div class="row">
-                                    <div class="col-md-6 p-5">
-                                        <div class="card text-muted px-4 py-5">
-                                            <div class="card-entity">
-                                                <i class="fa fa-quote-left"></i>
-                                            </div>
-                                            Lorem Ipsum is simply dummy text of
-                                            the printing and typesetting
-                                            industry. Lorem Ipsum has been the
-                                            industry's standard dummy text ever
-                                            since the 1500s, when an unknown
-                                            printer took a galley of type and
-                                            scrambled it to make a type specimen
-                                            book. It has survived not only five
-                                            centuries,
-
-                                            <div class="mt-3">
-                                                <div
-                                                    class="d-flex align-items-center"
-                                                >
-                                                    <div
-                                                        class="circle-img-testimonials"
-                                                    >
-                                                        <img
-                                                            src="../assets/images/service.svg"
-                                                            alt=""
-                                                        />
-                                                    </div>
-
-                                                    <div class="ps-3">
-                                                        <h4 class="m-0">
-                                                            Gopi Krish
-                                                        </h4>
-                                                        <div>
-                                                            Managing director,
-                                                            NepalOne Adventure
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 p-5">
-                                        <div class="card text-muted px-4 py-5">
-                                            <div class="card-entity">
-                                                <i class="fa fa-quote-left"></i>
-                                            </div>
-                                            Lorem Ipsum is simply dummy text of
-                                            the printing and typesetting
-                                            industry. Lorem Ipsum has been the
-                                            industry's standard dummy text ever
-                                            since the 1500s, when an unknown
-                                            printer took a galley of type and
-                                            scrambled it to make a type specimen
-                                            book. It has survived not only five
-                                            centuries,
-
-                                            <div class="mt-3">
-                                                <div
-                                                    class="d-flex align-items-center"
-                                                >
-                                                    <div
-                                                        class="circle-img-testimonials"
-                                                    >
-                                                        <img
-                                                            src="../assets/images/service.svg"
-                                                            alt=""
-                                                        />
-                                                    </div>
-
-                                                    <div class="ps-3">
-                                                        <h4 class="m-0">
-                                                            Gopi Krish
-                                                        </h4>
-                                                        <div>
-                                                            Managing director,
-                                                            NepalOne Adventure
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="mt-5">
-                                <div class="row">
-                                    <div class="col-md-6 p-5">
-                                        <div class="card text-muted px-4 py-5">
-                                            <div class="card-entity">01</div>
-                                            Lorem Ipsum is simply dummy text of
-                                            the printing and typesetting
-                                            industry. Lorem Ipsum has been the
-                                            industry's standard dummy text ever
-                                            since the 1500s, when an unknown
-                                            printer took a galley of type and
-                                            scrambled it to make a type specimen
-                                            book. It has survived not only five
-                                            centuries,
-
-                                            <div class="mt-3">
-                                                <div
-                                                    class="d-flex align-items-center"
-                                                >
-                                                    <div
-                                                        class="circle-img-testimonials"
-                                                    >
-                                                        <img
-                                                            src="../assets/images/service.svg"
-                                                            alt=""
-                                                        />
-                                                    </div>
-
-                                                    <div class="ps-3">
-                                                        <h4 class="m-0">
-                                                            Gopi Krish
-                                                        </h4>
-                                                        <div>
-                                                            Managing director,
-                                                            NepalOne Adventure
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 p-5">
-                                        <div class="card text-muted px-4 py-5">
-                                            <div class="card-entity">02</div>
-                                            Lorem Ipsum is simply dummy text of
-                                            the printing and typesetting
-                                            industry. Lorem Ipsum has been the
-                                            industry's standard dummy text ever
-                                            since the 1500s, when an unknown
-                                            printer took a galley of type and
-                                            scrambled it to make a type specimen
-                                            book. It has survived not only five
-                                            centuries,
-
-                                            <div class="mt-3">
-                                                <div
-                                                    class="d-flex align-items-center"
-                                                >
-                                                    <div
-                                                        class="circle-img-testimonials"
-                                                    >
-                                                        <img
-                                                            src="../assets/images/service.svg"
-                                                            alt=""
-                                                        />
-                                                    </div>
-
-                                                    <div class="ps-3">
-                                                        <h4 class="m-0">
-                                                            Gopi Krish
-                                                        </h4>
-                                                        <div>
-                                                            Managing director,
-                                                            NepalOne Adventure
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="mt-5">
-                                <div class="row">
-                                    <div class="col-md-6 p-5">
-                                        <div class="card text-muted px-4 py-5">
-                                            <div class="card-entity">01</div>
-                                            Lorem Ipsum is simply dummy text of
-                                            the printing and typesetting
-                                            industry. Lorem Ipsum has been the
-                                            industry's standard dummy text ever
-                                            since the 1500s, when an unknown
-                                            printer took a galley of type and
-                                            scrambled it to make a type specimen
-                                            book. It has survived not only five
-                                            centuries,
-
-                                            <div class="mt-3">
-                                                <div
-                                                    class="d-flex align-items-center"
-                                                >
-                                                    <div
-                                                        class="circle-img-testimonials"
-                                                    >
-                                                        <img
-                                                            src="../assets/images/service.svg"
-                                                            alt=""
-                                                        />
-                                                    </div>
-
-                                                    <div class="ps-3">
-                                                        <h4 class="m-0">
-                                                            Gopi Krish
-                                                        </h4>
-                                                        <div>
-                                                            Managing director,
-                                                            NepalOne Adventure
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 p-5">
-                                        <div class="card text-muted px-4 py-5">
-                                            <div class="card-entity">02</div>
-                                            Lorem Ipsum is simply dummy text of
-                                            the printing and typesetting
-                                            industry. Lorem Ipsum has been the
-                                            industry's standard dummy text ever
-                                            since the 1500s, when an unknown
-                                            printer took a galley of type and
-                                            scrambled it to make a type specimen
-                                            book. It has survived not only five
-                                            centuries,
-
-                                            <div class="mt-3">
-                                                <div
-                                                    class="d-flex align-items-center"
-                                                >
-                                                    <div
-                                                        class="circle-img-testimonials"
-                                                    >
-                                                        <img
-                                                            src="../assets/images/service.svg"
-                                                            alt=""
-                                                        />
-                                                    </div>
-
-                                                    <div class="ps-3">
-                                                        <h4 class="m-0">
-                                                            Gopi Krish
-                                                        </h4>
-                                                        <div>
-                                                            Managing director,
-                                                            NepalOne Adventure
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <button
-                        class="carousel-control-prev"
-                        type="button"
-                        data-bs-target="#carouselExampleIndicators"
-                        data-bs-slide="prev"
-                    >
-                        <span
-                            class="carousel-control-prev-icon"
-                            aria-hidden="true"
-                        ></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button
-                        class="carousel-control-next"
-                        type="button"
-                        data-bs-target="#carouselExampleIndicators"
-                        data-bs-slide="next"
-                    >
-                        <span
-                            class="carousel-control-next-icon"
-                            aria-hidden="true"
-                        ></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-                <!-- carousel -->
-            </div>
-        </div>
-        <!-- testimonials ends -->
-
-        <!-- contact -->
-        <div
-            class="contact-us py-5"
-            style="
-                background: url('https://template.hasthemes.com/mitech/assets/images/bg/home-infotechno-contact-bg.webp')
-                    no-repeat center center;
-            "
-        >
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-7">
-                        <div class="top-contact-section ps-3">
-                            <h1>
-                                Obtaining further information by make a contact
-                                with our experienced IT staffs.
-                            </h1>
-                        </div>
-                        <div class="bottom-contact-section ps-3">
-                            <span class="text-muted">
-                                We're available 8 hours a day!,<br />
-                                Contact to require adetailed analysis and
-                                assessment of your plan.
-                            </span>
-                        </div>
-                    </div>
-                    <div class="col-md-5">
-                        <div class="contact-right-index text-center">
-                            <i class="fa fa-3x fa-phone"></i>
-                            <div class="text-uppercase">
-                                <span>Reach Out Now!</span>
-                            </div>
-                            <div class="contact-number-index">
-                                <h1>1900 688668</h1>
-                            </div>
-                            <div class="contact-number-index">
-                                <button class="btn red-btn-color">
-                                    Contact Us
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- contact ends -->
-
-        <!-- footer -->
-        <div class="footer py-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3">
-                        <img
-                            class="footer-logo"
-                            src="../assets/images/Logo.jpg"
-                            alt=""
-                        />
-                        <div class="mt-4">
-                            <h5>Connect with us</h5>
-                            <div class="d-flex">
-                                <div class="connect-circle me-2">
-                                    <i class="fab fa-facebook-f"></i>
-                                </div>
-                                <div class="connect-circle me-2">
-                                    <i class="fab fa-instagram"></i>
-                                </div>
-                                <div class="connect-circle me-2">
-                                    <i class="fab fa-twitter"></i>
-                                </div>
-                                <div class="connect-circle me-2">
-                                    <i class="fab fa-linkedin"></i>
-                                </div>
-                            </div>
-                        </div>
-
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
                         <div class="mt-5">
-                            <div class="contact-us-footer-bg">
-                                <div class="contact-us-footer fw-bold">
-                                    Contact Us
+                            <div class="row">
+                                <div class="col-md-6 p-5">
+                                    <div class="card text-muted px-4 py-5">
+                                        <div class="card-entity">
+                                            <i class="fa fa-quote-left"></i>
+                                        </div>
+                                        Lorem Ipsum is simply dummy text of
+                                        the printing and typesetting
+                                        industry. Lorem Ipsum has been the
+                                        industry's standard dummy text ever
+                                        since the 1500s, when an unknown
+                                        printer took a galley of type and
+                                        scrambled it to make a type specimen
+                                        book. It has survived not only five
+                                        centuries,
+
+                                        <div class="mt-3">
+                                            <div class="d-flex align-items-center">
+                                                <div class="circle-img-testimonials">
+                                                    <img src="../assets/images/service.svg" alt="" />
+                                                </div>
+
+                                                <div class="ps-3">
+                                                    <h4 class="m-0">
+                                                        Gopi Krish
+                                                    </h4>
+                                                    <div>
+                                                        Managing director,
+                                                        NepalOne Adventure
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 p-5">
+                                    <div class="card text-muted px-4 py-5">
+                                        <div class="card-entity">
+                                            <i class="fa fa-quote-left"></i>
+                                        </div>
+                                        Lorem Ipsum is simply dummy text of
+                                        the printing and typesetting
+                                        industry. Lorem Ipsum has been the
+                                        industry's standard dummy text ever
+                                        since the 1500s, when an unknown
+                                        printer took a galley of type and
+                                        scrambled it to make a type specimen
+                                        book. It has survived not only five
+                                        centuries,
+
+                                        <div class="mt-3">
+                                            <div class="d-flex align-items-center">
+                                                <div class="circle-img-testimonials">
+                                                    <img src="../assets/images/service.svg" alt="" />
+                                                </div>
+
+                                                <div class="ps-3">
+                                                    <h4 class="m-0">
+                                                        Gopi Krish
+                                                    </h4>
+                                                    <div>
+                                                        Managing director,
+                                                        NepalOne Adventure
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <h4>Our Company</h4>
+                    <div class="carousel-item">
+                        <div class="mt-5">
+                            <div class="row">
+                                <div class="col-md-6 p-5">
+                                    <div class="card text-muted px-4 py-5">
+                                        <div class="card-entity">01</div>
+                                        Lorem Ipsum is simply dummy text of
+                                        the printing and typesetting
+                                        industry. Lorem Ipsum has been the
+                                        industry's standard dummy text ever
+                                        since the 1500s, when an unknown
+                                        printer took a galley of type and
+                                        scrambled it to make a type specimen
+                                        book. It has survived not only five
+                                        centuries,
 
-                        <div class="footer-links">
-                            <ul>
-                                <li class="py-3"><a href="#">About Us</a></li>
-                                <li class="py-3"><a href="#">Services</a></li>
-                                <li class="py-3"><a href="#">Contact</a></li>
-                                <li class="py-3"><a href="#">Careers</a></li>
-                            </ul>
+                                        <div class="mt-3">
+                                            <div class="d-flex align-items-center">
+                                                <div class="circle-img-testimonials">
+                                                    <img src="../assets/images/service.svg" alt="" />
+                                                </div>
+
+                                                <div class="ps-3">
+                                                    <h4 class="m-0">
+                                                        Gopi Krish
+                                                    </h4>
+                                                    <div>
+                                                        Managing director,
+                                                        NepalOne Adventure
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 p-5">
+                                    <div class="card text-muted px-4 py-5">
+                                        <div class="card-entity">02</div>
+                                        Lorem Ipsum is simply dummy text of
+                                        the printing and typesetting
+                                        industry. Lorem Ipsum has been the
+                                        industry's standard dummy text ever
+                                        since the 1500s, when an unknown
+                                        printer took a galley of type and
+                                        scrambled it to make a type specimen
+                                        book. It has survived not only five
+                                        centuries,
+
+                                        <div class="mt-3">
+                                            <div class="d-flex align-items-center">
+                                                <div class="circle-img-testimonials">
+                                                    <img src="../assets/images/service.svg" alt="" />
+                                                </div>
+
+                                                <div class="ps-3">
+                                                    <h4 class="m-0">
+                                                        Gopi Krish
+                                                    </h4>
+                                                    <div>
+                                                        Managing director,
+                                                        NepalOne Adventure
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <h4>Our Services</h4>
+                    <div class="carousel-item">
+                        <div class="mt-5">
+                            <div class="row">
+                                <div class="col-md-6 p-5">
+                                    <div class="card text-muted px-4 py-5">
+                                        <div class="card-entity">01</div>
+                                        Lorem Ipsum is simply dummy text of
+                                        the printing and typesetting
+                                        industry. Lorem Ipsum has been the
+                                        industry's standard dummy text ever
+                                        since the 1500s, when an unknown
+                                        printer took a galley of type and
+                                        scrambled it to make a type specimen
+                                        book. It has survived not only five
+                                        centuries,
 
-                        <div class="footer-links">
-                            <ul>
-                                <li class="py-3"><a href="#">Service 1</a></li>
-                                <li class="py-3"><a href="#">Service 2</a></li>
-                                <li class="py-3"><a href="#">Service 3</a></li>
-                                <li class="py-3"><a href="#">Service 4</a></li>
-                                <li class="py-3"><a href="#">Service 5</a></li>
-                                <li class="py-3"><a href="#">Service 6</a></li>
-                            </ul>
+                                        <div class="mt-3">
+                                            <div class="d-flex align-items-center">
+                                                <div class="circle-img-testimonials">
+                                                    <img src="../assets/images/service.svg" alt="" />
+                                                </div>
+
+                                                <div class="ps-3">
+                                                    <h4 class="m-0">
+                                                        Gopi Krish
+                                                    </h4>
+                                                    <div>
+                                                        Managing director,
+                                                        NepalOne Adventure
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 p-5">
+                                    <div class="card text-muted px-4 py-5">
+                                        <div class="card-entity">02</div>
+                                        Lorem Ipsum is simply dummy text of
+                                        the printing and typesetting
+                                        industry. Lorem Ipsum has been the
+                                        industry's standard dummy text ever
+                                        since the 1500s, when an unknown
+                                        printer took a galley of type and
+                                        scrambled it to make a type specimen
+                                        book. It has survived not only five
+                                        centuries,
+
+                                        <div class="mt-3">
+                                            <div class="d-flex align-items-center">
+                                                <div class="circle-img-testimonials">
+                                                    <img src="../assets/images/service.svg" alt="" />
+                                                </div>
+
+                                                <div class="ps-3">
+                                                    <h4 class="m-0">
+                                                        Gopi Krish
+                                                    </h4>
+                                                    <div>
+                                                        Managing director,
+                                                        NepalOne Adventure
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <h4>Contact Us</h4>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <!-- carousel -->
+        </div>
+    </div>
+    <!-- testimonials ends -->
 
-                        <div class="footer-links">
-                            <ul>
-                                <li class="py-3">Address</li>
-                                <li class="py-3">
-                                    <a href="#">Mobile Number/Landline</a>
-                                </li>
-                                <li class="py-3"><a href="#">Email</a></li>
-                                <li class="py-3">
-                                    <a href="#">Enquiry Email</a>
-                                </li>
-                            </ul>
+    <!-- contact -->
+    <div class="contact-us py-5" style="
+                    background: url('https://template.hasthemes.com/mitech/assets/images/bg/home-infotechno-contact-bg.webp')
+                        no-repeat center center;
+                ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="top-contact-section ps-3">
+                        <h1>
+                            Obtaining further information by make a contact
+                            with our experienced IT staffs.
+                        </h1>
+                    </div>
+                    <div class="bottom-contact-section ps-3">
+                        <span class="text-muted">
+                            We're available 8 hours a day!,<br />
+                            Contact to require adetailed analysis and
+                            assessment of your plan.
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="contact-right-index text-center">
+                        <i class="fa fa-3x fa-phone"></i>
+                        <div class="text-uppercase">
+                            <span>Reach Out Now!</span>
+                        </div>
+                        <div class="contact-number-index">
+                            <h1>1900 688668</h1>
+                        </div>
+                        <div class="contact-number-index">
+                            <button class="btn red-btn-color">
+                                Contact Us
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="d-flex justify-content-between align-items-center">
-                    <div class="m-0">
-                        © 2022 Magicwords Pvt Ltd.All Rights Reserved
-                    </div>
-                    <div class="m-0">Privacy Policy</div>
-                </div>
-            </div>
-        </div>
-        <!-- footer ends -->
-    </body>
-    <script src="../assets/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
-    <script
-        src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-        crossorigin="anonymous"
-    ></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            window.addEventListener("scroll", function () {
-                if (window.scrollY > 80) {
-                    document
-                        .getElementById("navbar_top")
-                        .classList.add("fixed-top");
-                    document
-                        .getElementById("navbar_top")
-                        .classList.add("colored-nav");
-
-                    // add padding top to show content behind navbar
-                    navbar_height =
-                        document.querySelector(".navbar").offsetHeight;
-                    document.body.style.paddingTop = navbar_height + "px";
-                } else {
-                    document
-                        .getElementById("navbar_top")
-                        .classList.remove("fixed-top");
-                    document
-                        .getElementById("navbar_top")
-                        .classList.remove("colored-nav");
-
-                    document
-                        .getElementById("navbar_top")
-                        .classList.add("trans-nav");
-                    // remove padding top from body
-                    document.body.style.paddingTop = "0";
-                }
-            });
-        });
-    </script>
-</html>
+    </div>
+    <!-- contact ends -->
+@endsection
