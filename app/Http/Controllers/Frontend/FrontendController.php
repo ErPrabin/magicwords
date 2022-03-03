@@ -37,10 +37,10 @@ class FrontendController extends Controller
         $graphic_design = Technology::where('category', 'design')->orderBy('sort', 'asc')->get();
         $frontend_development = Technology::where('category', 'frontend')->orderBy('sort', 'asc')->get();
         $backend_development = Technology::where('category', 'backend')->orderBy('sort', 'asc')->get();
-        $database_development = Technology::where('category', 'database')->orderBy('sort', 'asc')->get();
+        // $database_development = Technology::where('category', 'database')->orderBy('sort', 'asc')->get();
         $specifications = Specification::orderBy('sort', 'asc')->get();
 
-        return view('frontend.pages.index', compact('whyus', 'working_process', 'specifications', 'testimonials', 'features', 'technologies', 'mobile_development', 'web_development', 'graphic_design', 'frontend_development', 'backend_development', 'database_development'));
+        return view('frontend.pages.index', compact('whyus', 'working_process', 'specifications', 'testimonials', 'features', 'technologies', 'mobile_development', 'web_development', 'graphic_design', 'frontend_development', 'backend_development'));
     }
     public function aboutus()
     {

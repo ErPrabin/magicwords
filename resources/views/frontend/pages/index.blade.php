@@ -237,7 +237,7 @@
                     <li class="nav-item">
                         <a href="#backend" class="nav-link" data-bs-toggle="tab">Backend</a>
                     </li>
-                    
+
                     {{-- <li class="nav-item">
                         <a href="#database" class="nav-link" data-bs-toggle="tab">Database</a>
                     </li> --}}
@@ -245,146 +245,76 @@
                 <div class="tab-content mt-5">
                     <div class="tab-pane fade show active" id="all">
                         <div class="row">
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <img src="" class="technologies-img" alt="" />
-                                <h6>HTML</h6>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <img src="" class="technologies-img" alt="" />
-                                <h6>IOS</h6>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <img src="" class="technologies-img" alt="" />
-                                <h6>ANDROID</h6>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <img src="" class="technologies-img" alt="" />
-                                <h6>JAVASCRIPT</h6>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <img src="" class="technologies-img" alt="" />
-                                <h6>CSS</h6>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <img src="" class="technologies-img" alt="" />
-                                <h6>REACT</h6>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <img src="" class="technologies-img" alt="" />
-                                <h6>VUE JS</h6>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <img src="" class="technologies-img" alt="" />
-                                <h6>PYTHON</h6>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <img src="../assets/images/django.png" style="width: 58px; height: 58px" alt="django"
-                                    class="img-fluid" />
+                            @foreach ($technologies as $data)
+                                <div class="col-md-2 col-sm-4 text-center p-3">
+                                    <img src="{{ asset('images/technology/' . $data->icon) }}"
+                                        alt="{{ config('app.name') }}">
+                                    <h6>{{ $data->name }}</h6>
+                                </div>
+                            @endforeach
 
-                                <h6>DJANGO</h6>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <img src="" class="technologies-img" alt="" />
-                                <h6>PHP</h6>
-                            </div>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="mobile-development">
                         <div class="row">
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <img src="" class="technologies-img" alt="" />
-                                <h6>HTML</h6>
-                            </div>
+                            @foreach ($mobile_development as $data)
+                                <div class="col-md-2 col-sm-4 text-center p-3">
+                                    <img src="{{ asset('images/technology/' . $data->icon) }}"
+                                        alt="{{ config('app.name') }}">
+                                    <h6>{{ $data->name }}</h6>
+                                </div>
+                            @endforeach
 
                         </div>
                     </div>
                     <div class="tab-pane fade" id="web-development">
                         <div class="row">
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <img src="" class="technologies-img" alt="" />
-                                <h6>Css</h6>
-                            </div>
+                            @foreach ($web_development as $data)
+                                <div class="col-md-2 col-sm-4 text-center p-3">
+                                    <img src="{{ asset('images/technology/' . $data->icon) }}"
+                                        alt="{{ config('app.name') }}">
+                                    <h6>{{ $data->name }}</h6>
+                                </div>
+                            @endforeach
 
                         </div>
                     </div>
                     <div class="tab-pane fade" id="graphic">
                         <div class="row">
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <img src="" class="technologies-img" alt="" />
-                                <h6>AI</h6>
-                            </div>
+                            @foreach ($graphic_design as $data)
+                                <div class="col-md-2 col-sm-4 text-center p-3">
+                                    <img src="{{ asset('images/technology/' . $data->icon) }}"
+                                        alt="{{ config('app.name') }}">
+                                    <h6>{{ $data->name }}</h6>
+                                </div>
+                            @endforeach
 
                         </div>
                     </div>
                     <div class="tab-pane fade" id="frontend">
                         <div class="row">
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <img src="" class="technologies-img" alt="" />
-                                <h6>HTML</h6>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <img src="" class="technologies-img" alt="" />
-                                <h6>IOS</h6>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <img src="" class="technologies-img" alt="" />
-                                <h6>ANDROID</h6>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <img src="" class="technologies-img" alt="" />
-                                <h6>JAVASCRIPT</h6>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <img src="" class="technologies-img" alt="" />
-                                <h6>CSS</h6>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <img src="" class="technologies-img" alt="" />
-                                <h6>REACT</h6>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <img src="" class="technologies-img" alt="" />
-                                <h6>VUE JS</h6>
-                            </div>
-
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <img src="" class="technologies-img" alt="" />
-                                <h6>PHP</h6>
-                            </div>
+                            @foreach ($frontend_development as $data)
+                                <div class="col-md-2 col-sm-4 text-center p-3">
+                                    <img src="{{ asset('images/technology/' . $data->icon) }}"
+                                        alt="{{ config('app.name') }}">
+                                    <h6>{{ $data->name }}</h6>
+                                </div>
+                            @endforeach
                         </div>
                     </div>
                     <div class="tab-pane fade" id="backend">
                         <div class="row">
 
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <img src="" class="technologies-img" alt="" />
-                                <h6>CSS</h6>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <img src="" class="technologies-img" alt="" />
-                                <h6>REACT</h6>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <img src="" class="technologies-img" alt="" />
-                                <h6>VUE JS</h6>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <img src="" class="technologies-img" alt="" />
-                                <h6>PYTHON</h6>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <img src="../assets/images/django.png" style="width: 58px; height: 58px" alt="django"
-                                    class="img-fluid" />
-
-                                <h6>DJANGO</h6>
-                            </div>
-                            <div class="col-md-2 col-sm-4 text-center p-3">
-                                <img src="" class="technologies-img" alt="" />
-                                <h6>PHP</h6>
-                            </div>
+                            @foreach ($backend_development as $data)
+                                <div class="col-md-2 col-sm-4 text-center p-3">
+                                    <img src="{{ asset('images/technology/' . $data->icon) }}"
+                                        alt="{{ config('app.name') }}">
+                                    <h6>{{ $data->name }}</h6>
+                                </div>
+                            @endforeach
                         </div>
                     </div>
-                   
+
                 </div>
             </div>
         </div>
