@@ -1,12 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Arizonia&family=Baloo+Bhaijaan+2:wght@800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Arizonia&family=Baloo+Bhaijaan+2:wght@800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500&display=swap"); */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans&display=swap');
 body {
     line-height: 1.9;
-    /* font-family: 'Poppins', sans-serif;
-  font-family: 'Arizonia', cursive;
-  font-family: 'Baloo Bhaijaan 2', cursive;
-  font-family: 'Roboto', sans-serif; */
-    color: #555;
+    font-family: "Montserrat", sans-serif;
+    /* font-family: 'Smooch Sans', sans-serif; */
+    color: #333;
     scroll-behavior: smooth;
 }
 h1,
@@ -21,17 +22,21 @@ h6 {
 a {
     text-decoration: none;
 }
+
 p {
     margin-top: 0;
     font-size: 1.2rem;
     margin-bottom: 1rem;
+}
+.text-justify {
+    text-align: justify;
 }
 .home-banner-text {
     padding-top: 80px;
 }
 .home-banner-text h1 {
     font-weight: 700;
-    font-size: 3.8rem;
+    font-size: 2.8rem;
 }
 .bread-crumb {
     height: 190px;
@@ -56,7 +61,7 @@ p {
 }
 .navbar ul li {
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 900!important;
     padding: 0 15px;
     margin: 0;
 }
@@ -327,18 +332,20 @@ p {
 
 .navbar .nav-item:hover .dropdown-menu {
     background: #fff;
-    color: #000 !important;
-    border-radius: 15px;
-    border: 2px solid #000;
+    color: #6c757d !important;
+    border: none;
+    /* border-bottom: 2px solid #da251d; */
+    transition: all ease 0.5s !important;
 }
+
 .dropdown-item {
     display: block;
     width: 100%;
     padding: 0.35rem 1rem;
     clear: both;
-    font-weight: 600;
-    border-radius: 20px;
-    color: #000;
+    /* font-weight: 600; */
+
+    color: #6c757d;
     text-align: inherit;
     text-decoration: none;
     white-space: nowrap;
@@ -348,16 +355,14 @@ p {
 .dropdown-item:hover {
     display: block;
     width: 100%;
-    padding: 0.25rem 1rem;
+    /* padding: 0.25rem 1rem; */
     clear: both;
     font-weight: 600;
-    color: #fff;
-    transition: all ease 0.5s;
-    border-radius: 15px;
+    color: #000;
     text-align: inherit;
     text-decoration: none;
     white-space: nowrap;
-    background-color: rgb(255, 0, 50);
+    background-color: transparent;
     border: 0px;
 }
 .footer {
@@ -574,7 +579,6 @@ p {
     font-size: 1.2rem !important;
 }
 
-
 @media all and (min-width: 992px) {
     .navbar .nav-item .dropdown-menu {
         display: none;
@@ -625,8 +629,8 @@ p {
 }
 
 .technologies-img {
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: auto;
 }
 .bar {
     background: #edaaa3;
@@ -640,7 +644,6 @@ p {
     animation-name: moving-bar;
     animation-duration: 5s;
     animation-iteration-count: infinite;
-
     animation-timing-function: linear;
     background: #ff0032;
     border-radius: 50%;
@@ -675,4 +678,24 @@ p {
 }
 .fa-check {
     color: #ff0032;
+}
+/* test */
+.menu-text {
+    margin-top: 5px;
+    /* padding-right: 35px; */
+    color: #6c757d;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+.menu-text:after {
+    transition: all ease-in-out 0.4s;
+    background: none repeat scroll 0 0 #da251d;
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0;
+}
+.menu-text:hover:after {
+    width: 100%;
 }
