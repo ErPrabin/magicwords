@@ -1,12 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Arizonia&family=Baloo+Bhaijaan+2:wght@800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Arizonia&family=Baloo+Bhaijaan+2:wght@800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500&display=swap"); */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 body {
     line-height: 1.9;
-    /* font-family: 'Poppins', sans-serif;
-  font-family: 'Arizonia', cursive;
-  font-family: 'Baloo Bhaijaan 2', cursive;
-  font-family: 'Roboto', sans-serif; */
-    color: #555;
+    font-family: "Montserrat", sans-serif;
+    /* font-family: 'Smooch Sans', sans-serif; */
+    color: #333;
     scroll-behavior: smooth;
 }
 h1,
@@ -21,17 +21,22 @@ h6 {
 a {
     text-decoration: none;
 }
-p {
-    margin-top: 0;
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
+
+div,p {
+    
+    font-size: 16px;
+    /* color: #6084a4; */
+   
+}
+.text-justify {
+    text-align: justify;
 }
 .home-banner-text {
     padding-top: 80px;
 }
 .home-banner-text h1 {
     font-weight: 700;
-    font-size: 3.8rem;
+    font-size: 2.8rem;
 }
 .bread-crumb {
     height: 190px;
@@ -56,7 +61,7 @@ p {
 }
 .navbar ul li {
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600 !important;
     padding: 0 15px;
     margin: 0;
 }
@@ -66,28 +71,37 @@ p {
     max-width: 520px;
 }
 .navbar-nav .nav-item .active {
-    font-weight: 700;
+    font-weight: 600;
     border-bottom: 4px solid #da251d;
+    color: #da251d!important;
 }
 .nav-contact-btn {
     background: #ff0032;
     border-radius: 30px;
     font-weight: 500;
+    border: 1px solid #ff0032;
+
     padding: 10px 20px !important;
     font-size: 1.1rem;
     color: white !important;
 }
 .nav-contact-btn:hover {
-    box-shadow: 0px 1px 7px 2px rgba(148, 142, 142, 0.75);
-    -webkit-box-shadow: 0px 1px 7px 2px rgba(148, 142, 142, 0.75);
-    -moz-box-shadow: 0px 1px 7px 2px rgba(148, 142, 142, 0.75);
+    background: #fff;
+    color: #ff0032 !important;
+    border: 1px solid #ff0032;
+    border-radius: 30px;
+    font-weight: 500;
+    padding: 10px 20px !important;
+    font-size: 1.1rem;
+    transition: all ease 0.5s;
+
 }
 .home-banner img {
     height: 500px;
     width: 100%;
-    animation-name: banner-img;
+    /* animation-name: banner-img;
     animation-duration: 4s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: infinite; */
 }
 .about-text h1 {
     font-size: 30px;
@@ -123,10 +137,13 @@ p {
     font-weight: 600;
 }
 .btn-index-banner:hover {
-    color: #fff !important;
-    box-shadow: 0px 1px 7px 2px rgba(148, 142, 142, 0.75);
-    -webkit-box-shadow: 0px 1px 7px 2px rgba(148, 142, 142, 0.75);
-    -moz-box-shadow: 0px 1px 7px 2px rgba(148, 142, 142, 0.75);
+    background-color: #fff;
+    color: #ff0032;
+    padding: 10px 24px;
+    border-radius: 30px;
+    font-weight: 600;
+    border: 1px solid #ff0032;
+    transition: all ease 0.5s;
 }
 /* test */
 .top-contact-section {
@@ -327,18 +344,20 @@ p {
 
 .navbar .nav-item:hover .dropdown-menu {
     background: #fff;
-    color: #000 !important;
-    border-radius: 15px;
-    border: 2px solid #000;
+    color: #6c757d !important;
+    border: none;
+    /* border-bottom: 2px solid #da251d; */
+    transition: all ease 0.5s !important;
 }
+
 .dropdown-item {
     display: block;
     width: 100%;
     padding: 0.35rem 1rem;
     clear: both;
-    font-weight: 600;
-    border-radius: 20px;
-    color: #000;
+    /* font-weight: 600; */
+
+    color: #6c757d;
     text-align: inherit;
     text-decoration: none;
     white-space: nowrap;
@@ -348,16 +367,14 @@ p {
 .dropdown-item:hover {
     display: block;
     width: 100%;
-    padding: 0.25rem 1rem;
+    /* padding: 0.25rem 1rem; */
     clear: both;
     font-weight: 600;
-    color: #fff;
-    transition: all ease 0.5s;
-    border-radius: 15px;
+    color: #000;
     text-align: inherit;
     text-decoration: none;
     white-space: nowrap;
-    background-color: rgb(255, 0, 50);
+    background-color: transparent;
     border: 0px;
 }
 .footer {
@@ -413,6 +430,23 @@ p {
 .features {
     background-color: #eff3f8;
 }
+.features .circle-entity{
+    height: 60px!important;
+    width: 60px;
+    border-radius: 50%;
+    background-color: rgb(255, 0, 50, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.features .card:hover{
+    margin-top: -15px;
+    transition: all ease 0.5s !important;
+}
+.features .card:hover h5{
+   color: #ff0032!important;
+}
+
 .features h1 {
     font-size: 30px;
     font-weight: 600;
@@ -487,6 +521,9 @@ p {
 .application-form h1 {
     color: #ff0032 !important;
 }
+.head{
+    color: #ff0032 !important;
+}
 .application-form .card {
     border-radius: 30px;
 }
@@ -501,9 +538,7 @@ p {
     -moz-box-shadow: 0px 0px 7px 0px rgba(222, 77, 77, 0.75);
     transition: all ease 0.6s;
 }
-.contact h1 {
-    color: #dd726d !important;
-}
+
 .contact-us {
     padding: 6rem 0rem !important;
 }
@@ -540,7 +575,7 @@ p {
 }
 .contact-sub-btn {
     border-radius: 30px;
-    background-color: #dd726d;
+    background-color: #ff0032;
     font-weight: 500;
     border: none;
     padding: 10px 30px;
@@ -573,7 +608,6 @@ p {
 .service-detail-div-1 .description ol li {
     font-size: 1.2rem !important;
 }
-
 
 @media all and (min-width: 992px) {
     .navbar .nav-item .dropdown-menu {
@@ -625,8 +659,8 @@ p {
 }
 
 .technologies-img {
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: auto;
 }
 .bar {
     background: #edaaa3;
@@ -640,7 +674,6 @@ p {
     animation-name: moving-bar;
     animation-duration: 5s;
     animation-iteration-count: infinite;
-
     animation-timing-function: linear;
     background: #ff0032;
     border-radius: 50%;
@@ -675,4 +708,24 @@ p {
 }
 .fa-check {
     color: #ff0032;
+}
+/* test */
+.menu-text {
+    margin-top: 5px;
+    /* padding-right: 35px; */
+    color: #6c757d;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+.menu-text:after {
+    transition: all ease-in-out 0.4s;
+    background: none repeat scroll 0 0 #da251d;
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0;
+}
+.menu-text:hover:after {
+    width: 100%;
 }
