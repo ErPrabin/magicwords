@@ -33,36 +33,31 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav align-items-center ms-auto p-0 m-0 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active" aria-current="page" href="{{ route('index') }}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About Us</a>
+                            <a class="nav-link" href="{{ route('aboutus') }}">About Us</a>
                         </li>
+
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 Services
                             </a>
                             <ul class="dropdown-menu py-0" aria-labelledby="navbarDropdown">
+                                @foreach ($services as $service)
+                                    
                                 <li class="px-0">
-                                    <a class="dropdown-item" href="#">Service 1</a>
+                                    <a class="dropdown-item menu-text" href="#">{{ $service->title }}</a>
                                 </li>
-                                <li class="px-0">
-                                    <a class="dropdown-item" href="#">Service 2</a>
-                                </li>
-                                <li class="px-0">
-                                    <a class="dropdown-item" href="#">Service 3</a>
-                                </li>
-                                <li class="px-0">
-                                    <a class="dropdown-item" href="#">Service 4</a>
-                                </li>
+                                @endforeach
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Career</a>
+                            <a class="nav-link" href="{{ route('career') }}">Career</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
+                            <a class="nav-link" href="{{ route('contact') }}">Contact</a>
                         </li>
                         <li class="nav-item">
                             <a href="" class="nav-contact-btn"><i class="fa fa-phone-alt pe-1"></i>

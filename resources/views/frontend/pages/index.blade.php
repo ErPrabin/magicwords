@@ -12,10 +12,10 @@
             <div class="row align-items-center">
                 <div class="col-md-6">
                     <div class="home-banner-text">
-                        <h1>{!! strip_tags(getCData('Home Banner','synopsis')) !!}</h1>
+                        <h1>{!! strip_tags(getCData('Home Banner', 'synopsis')) !!}</h1>
                         <div class="home-banner-desc mt-3">
                             <p>
-                               {!! getCData('Home Banner','description') !!}
+                                {!! getCData('Home Banner', 'description') !!}
                             </p>
                         </div>
                         <button class="btn mt-3 btn-index-banner">
@@ -25,7 +25,8 @@
                 </div>
                 <div class="col-md-6">
                     <div class="banner-img">
-                        <img src="{{ asset('images/component/'.getCData('Home Banner','image')) }}" alt="{{ config('app.name') }}" />
+                        <img src="{{ asset('images/component/' . getCData('Home Banner', 'image')) }}"
+                            alt="{{ config('app.name') }}" />
                     </div>
                 </div>
             </div>
@@ -58,7 +59,7 @@
     @include('frontend.partials.about')
 
     <!-- services -->
-    <div class="services py-5">
+    <div class="services py-5" style="background-image: url({{ asset('assets/images/bg.webp') }})">
         <div class="container">
             <h1>Services</h1>
             <div class="bar"></div>
@@ -399,7 +400,42 @@
     <!-- technologies we work with ends -->
 
     <!-- our features -->
-    <div class="features py-5">
+    <div class="features py-5" style="background-image: url({{ asset('assets/images/line.webp') }})">
+        <div class="container">
+            <h1 class="text-center">Our Features</h1>
+            <div class="bar"></div>
+            <p class="text-center text-muted sub-head">
+                {!! strip_tags(getCData('feature', 'synopsis')) !!}
+            </p>
+            <div class="row pt-4">
+                @foreach ($features as $feature)
+                    <div class="col-md-6 p-3">
+                        <div class="card p-3">
+                            <div class="d-flex justify-content-between">
+                                <div class="me-3">
+                                    <span class="circle-entity ">
+                                        <i class="fa fa-lg text-white fa-cog"></i>
+                                    </span>
+                                </div>
+                                <div class="heading-features ms-auto">
+                                    <h5 class="m-0">
+                                        {{ $feature->title }}
+                                    </h5>
+                                    <div class="description-features text-muted pt-2">
+                                        {!! $feature->description !!}
+                                    </div>
+                                </div>
+                                <!-- </div> -->
+
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+
+            </div>
+        </div>
+    </div>
+    {{-- <div class="features py-5">
         <div class="container">
             <h1 class="text-center">Our Features</h1>
             <div class="bar"></div>
@@ -426,10 +462,12 @@
 
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- our features ends-->
 
-    @include('frontend.partials.testimonial', ['testimonials' => $testimonials])
+    @include('frontend.partials.testimonial', [
+        'testimonials' => $testimonials,
+    ])
 
     <!-- Contact -->
     @include('frontend.partials.contact')
