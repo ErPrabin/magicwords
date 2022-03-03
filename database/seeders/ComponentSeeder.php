@@ -36,6 +36,7 @@ class ComponentSeeder extends Seeder
             'Why Choose Us',
             'Testimonial',
             'Career',
+            'Map',
         ];
         $arr = [];
         foreach ($datas as $d) {

@@ -115,14 +115,13 @@
                         </div>
                     </div>
                     <div class="col-md-3">
-                        <h4 class="text-white">Our Company</h4>
+                        <h4 class="text-white">Quick Links</h4>
 
                         <div class="footer-links">
                             <ul>
-                                <li class="py-2"><a href="#">About Us</a></li>
-                                <li class="py-2"><a href="#">Services</a></li>
-                                <li class="py-2"><a href="#">Contact</a></li>
-                                <li class="py-2"><a href="#">Careers</a></li>
+                                <li class="py-2"><a href="{{ route('aboutus') }}">About Us</a></li>
+                                <li class="py-2"><a href="{{ route('contact') }}">Contact</a></li>
+                                <li class="py-2"><a href="{{ route('career') }}">Careers</a></li>
                             </ul>
                         </div>
                     </div>
@@ -131,12 +130,9 @@
 
                         <div class="footer-links">
                             <ul>
-                                <li class="py-2"><a href="#">Service 1</a></li>
-                                <li class="py-2"><a href="#">Service 2</a></li>
-                                <li class="py-2"><a href="#">Service 3</a></li>
-                                <li class="py-2"><a href="#">Service 4</a></li>
-                                <li class="py-2"><a href="#">Service 5</a></li>
-                                <li class="py-2"><a href="#">Service 6</a></li>
+                                @foreach ($services as $service)
+                                    <li class="py-2"><a href="">{{ $service->title }}</a></li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>
