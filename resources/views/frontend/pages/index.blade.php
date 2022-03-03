@@ -108,16 +108,19 @@
                         <a href="#mobile-development" class="nav-link" data-bs-toggle="tab">Mobile Development</a>
                     </li>
                     <li class="nav-item">
+                        <a href="#web-development" class="nav-link" data-bs-toggle="tab">Web Development</a>
+                    </li>
+                    <li class="nav-item">
                         <a href="#frontend" class="nav-link" data-bs-toggle="tab">Frontend</a>
                     </li>
                     <li class="nav-item">
                         <a href="#backend" class="nav-link" data-bs-toggle="tab">Backend</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#deployment" class="nav-link" data-bs-toggle="tab">Deployment</a>
+                        <a href="#database" class="nav-link" data-bs-toggle="tab">Database</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#database" class="nav-link" data-bs-toggle="tab">Database</a>
+                        <a href="#graphic" class="nav-link" data-bs-toggle="tab">Graphic Design</a>
                     </li>
                 </ul>
                 <div class="tab-content mt-5">
@@ -125,277 +128,593 @@
                         <div class="row">
                             @foreach ($technologies as $technology)
                                 <div class="col-md-2 col-sm-4 text-center p-3">
-                                    <img src="{{ asset('images/technology/' . $technology->iconkhgf) }}" alt="">
-                                    <h6>HTML</h6>
+                                    <img src="{{ asset('images/technology/' . $technology->icon) }}"
+                                        alt="{{ config('app.name') }}">
+                                    <h6>{{ $technology->name }}</h6>
                                 </div>
                             @endforeach
-
                         </div>
-
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-apple fa-3x"></i>
-                            <h6>IOS</h6>
-                        </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-android fa-3x"></i>
-                            <h6>ANDROID</h6>
-                        </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-js fa-3x"></i>
-                            <h6>JAVASCRIPT</h6>
-                        </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-css3-alt fa-3x"></i>
-                            <h6>CSS</h6>
-                        </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-react fa-3x"></i>
-                            <h6>REACT</h6>
-                        </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-vuejs fa-3x"></i>
-                            <h6>VUE JS</h6>
-                        </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-python fa-3x"></i>
-                            <h6>PYTHON</h6>
-                        </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <img src="../assets/images/django.png" style="width: 58px; height: 58px" alt="django"
-                                class="img-fluid" />
-
-                            <h6>DJANGO</h6>
-                        </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-php fa-3x"></i>
-                            <h6>PHP</h6>
-                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="web-development">
+                    <div class="row">
+                        @foreach ($web_development as $data)
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img src="{{ asset('images/technology/' . $data->icon) }}"
+                                    alt="{{ config('app.name') }}">
+                                <h6>{{ $data->name }}</h6>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="graphic">
+                    <div class="row">
+                        @foreach ($graphic_design as $data)
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img src="{{ asset('images/technology/' . $data->icon) }}"
+                                    alt="{{ config('app.name') }}">
+                                <h6>{{ $data->name }}</h6>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
                 <div class="tab-pane fade" id="mobile-development">
                     <div class="row">
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-html5 fa-3x"></i>
-                            <h4>HTML</h4>
-                        </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-apple fa-3x"></i>
-                            <h4>IOS</h4>
-                        </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-android fa-3x"></i>
-                            <h4>ANDROID</h4>
-                        </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-js fa-3x"></i>
-                            <h4>JAVASCRIPT</h4>
-                        </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-css3-alt fa-3x"></i>
-                            <h4>CSS</h4>
-                        </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-react fa-3x"></i>
-                            <h4>REACT</h4>
-                        </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-vuejs fa-3x"></i>
-                            <h4>VUE JS</h4>
-                        </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-python fa-3x"></i>
-                            <h4>PYTHON</h4>
-                        </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-django fa-3x"></i>
-                            <h4>DJANGO</h4>
-                        </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-php fa-3x"></i>
-                            <h4>PHP</h4>
-                        </div>
+                        @foreach ($mobile_development as $data)
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img src="{{ asset('images/technology/' . $data->icon) }}"
+                                    alt="{{ config('app.name') }}">
+                                <h6>{{ $data->name }}</h6>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
                 <div class="tab-pane fade" id="frontend">
                     <div class="row">
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-html5 fa-3x"></i>
-                            <h4>HTML</h4>
-                        </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-apple fa-3x"></i>
-                            <h4>IOS</h4>
-                        </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-android fa-3x"></i>
-                            <h4>ANDROID</h4>
-                        </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-js fa-3x"></i>
-                            <h4>JAVASCRIPT</h4>
-                        </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-css3-alt fa-3x"></i>
-                            <h4>CSS</h4>
-                        </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-react fa-3x"></i>
-                            <h4>REACT</h4>
-                        </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-vuejs fa-3x"></i>
-                            <h4>VUE JS</h4>
-                        </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-python fa-3x"></i>
-                            <h4>PYTHON</h4>
-                        </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-django fa-3x"></i>
-                            <h4>DJANGO</h4>
-                        </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-php fa-3x"></i>
-                            <h4>PHP</h4>
+                        <div class="row">
+                            @foreach ($frontend_development as $data)
+                                <div class="col-md-2 col-sm-4 text-center p-3">
+                                    <img src="{{ asset('images/technology/' . $data->icon) }}"
+                                        alt="{{ config('app.name') }}">
+                                    <h6>{{ $data->name }}</h6>
+                                </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="backend">
                     <div class="row">
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-html5 fa-3x"></i>
-                            <h4>HTML</h4>
-                        </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-apple fa-3x"></i>
-                            <h4>IOS</h4>
-                        </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-android fa-3x"></i>
-                            <h4>ANDROID</h4>
-                        </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-js fa-3x"></i>
-                            <h4>JAVASCRIPT</h4>
-                        </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-css3-alt fa-3x"></i>
-                            <h4>CSS</h4>
-                        </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-react fa-3x"></i>
-                            <h4>REACT</h4>
-                        </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-vuejs fa-3x"></i>
-                            <h4>VUE JS</h4>
-                        </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-python fa-3x"></i>
-                            <h4>PYTHON</h4>
-                        </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-django fa-3x"></i>
-                            <h4>DJANGO</h4>
-                        </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-php fa-3x"></i>
-                            <h4>PHP</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="deployment">
-                    <div class="row">
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-html5 fa-3x"></i>
-                            <h4>HTML</h4>
-                        </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-apple fa-3x"></i>
-                            <h4>IOS</h4>
-                        </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-android fa-3x"></i>
-                            <h4>ANDROID</h4>
-                        </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-js fa-3x"></i>
-                            <h4>JAVASCRIPT</h4>
-                        </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-css3-alt fa-3x"></i>
-                            <h4>CSS</h4>
-                        </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-react fa-3x"></i>
-                            <h4>REACT</h4>
-                        </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-vuejs fa-3x"></i>
-                            <h4>VUE JS</h4>
-                        </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-python fa-3x"></i>
-                            <h4>PYTHON</h4>
-                        </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-django fa-3x"></i>
-                            <h4>DJANGO</h4>
-                        </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-php fa-3x"></i>
-                            <h4>PHP</h4>
-                        </div>
+                        @foreach ($backend_development as $data)
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img src="{{ asset('images/technology/' . $data->icon) }}"
+                                    alt="{{ config('app.name') }}">
+                                <h6>{{ $data->name }}</h6>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
                 <div class="tab-pane fade" id="database">
                     <div class="row">
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-html5 fa-3x"></i>
-                            <h4>HTML</h4>
+                        @foreach ($database_development as $data)
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img src="{{ asset('images/technology/' . $data->icon) }}"
+                                    alt="{{ config('app.name') }}">
+                                <h6>{{ $data->name }}</h6>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="technologies py-5">
+        <div class="container">
+            <h1>Technologies We Work With</h1>
+            <div class="bar"></div>
+            <p class="text-center text-muted sub-head">
+                For your very specific industry, we have highly-tailored IT
+                solutions.
+            </p>
+            <div class="pt-4">
+                <ul class="nav nav-tabs justify-content-center" id="myTab">
+                    <li class="nav-item">
+                        <a
+                            href="#all"
+                            class="nav-link active"
+                            data-bs-toggle="tab"
+                            >All</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a
+                            href="#mobile-development"
+                            class="nav-link"
+                            data-bs-toggle="tab"
+                            >Mobile Development</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a
+                            href="#frontend"
+                            class="nav-link"
+                            data-bs-toggle="tab"
+                            >Frontend</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a
+                            href="#backend"
+                            class="nav-link"
+                            data-bs-toggle="tab"
+                            >Backend</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a
+                            href="#deployment"
+                            class="nav-link"
+                            data-bs-toggle="tab"
+                            >Deployment</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a
+                            href="#database"
+                            class="nav-link"
+                            data-bs-toggle="tab"
+                            >Database</a
+                        >
+                    </li>
+                </ul>
+                <div class="tab-content mt-5">
+                    <div class="tab-pane fade show active" id="all">
+                        <div class="row">
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img
+                                    src=""
+                                    class="technologies-img"
+                                    alt=""
+                                />
+                                <h6>HTML</h6>
+                            </div>
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img
+                                    src=""
+                                    class="technologies-img"
+                                    alt=""
+                                />
+                                <h6>IOS</h6>
+                            </div>
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img
+                                    src=""
+                                    class="technologies-img"
+                                    alt=""
+                                />
+                                <h6>ANDROID</h6>
+                            </div>
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img
+                                    src=""
+                                    class="technologies-img"
+                                    alt=""
+                                />
+                                <h6>JAVASCRIPT</h6>
+                            </div>
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img
+                                    src=""
+                                    class="technologies-img"
+                                    alt=""
+                                />
+                                <h6>CSS</h6>
+                            </div>
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img
+                                    src=""
+                                    class="technologies-img"
+                                    alt=""
+                                />
+                                <h6>REACT</h6>
+                            </div>
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img
+                                    src=""
+                                    class="technologies-img"
+                                    alt=""
+                                />
+                                <h6>VUE JS</h6>
+                            </div>
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img
+                                    src=""
+                                    class="technologies-img"
+                                    alt=""
+                                />
+                                <h6>PYTHON</h6>
+                            </div>
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img
+                                    src="../assets/images/django.png"
+                                    style="width: 58px; height: 58px"
+                                    alt="django"
+                                    class="img-fluid"
+                                />
+
+                                <h6>DJANGO</h6>
+                            </div>
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img
+                                    src=""
+                                    class="technologies-img"
+                                    alt=""
+                                />
+                                <h6>PHP</h6>
+                            </div>
                         </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-apple fa-3x"></i>
-                            <h4>IOS</h4>
+                    </div>
+                    <div class="tab-pane fade" id="mobile-development">
+                        <div class="row">
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img
+                                    src=""
+                                    class="technologies-img"
+                                    alt=""
+                                />
+                                <h6>HTML</h6>
+                            </div>
+                            
                         </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-android fa-3x"></i>
-                            <h4>ANDROID</h4>
+                    </div>
+                    <div class="tab-pane fade" id="frontend">
+                        <div class="row">
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img
+                                    src=""
+                                    class="technologies-img"
+                                    alt=""
+                                />
+                                <h6>HTML</h6>
+                            </div>
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img
+                                    src=""
+                                    class="technologies-img"
+                                    alt=""
+                                />
+                                <h6>IOS</h6>
+                            </div>
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img
+                                    src=""
+                                    class="technologies-img"
+                                    alt=""
+                                />
+                                <h6>ANDROID</h6>
+                            </div>
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img
+                                    src=""
+                                    class="technologies-img"
+                                    alt=""
+                                />
+                                <h6>JAVASCRIPT</h6>
+                            </div>
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img
+                                    src=""
+                                    class="technologies-img"
+                                    alt=""
+                                />
+                                <h6>CSS</h6>
+                            </div>
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img
+                                    src=""
+                                    class="technologies-img"
+                                    alt=""
+                                />
+                                <h6>REACT</h6>
+                            </div>
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img
+                                    src=""
+                                    class="technologies-img"
+                                    alt=""
+                                />
+                                <h6>VUE JS</h6>
+                            </div>
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img
+                                    src=""
+                                    class="technologies-img"
+                                    alt=""
+                                />
+                                <h6>PYTHON</h6>
+                            </div>
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img
+                                    src="../assets/images/django.png"
+                                    style="width: 58px; height: 58px"
+                                    alt="django"
+                                    class="img-fluid"
+                                />
+
+                                <h6>DJANGO</h6>
+                            </div>
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img
+                                    src=""
+                                    class="technologies-img"
+                                    alt=""
+                                />
+                                <h6>PHP</h6>
+                            </div>
                         </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-js fa-3x"></i>
-                            <h4>JAVASCRIPT</h4>
+                    </div>
+                    <div class="tab-pane fade" id="backend">
+                        <div class="row">
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img
+                                    src=""
+                                    class="technologies-img"
+                                    alt=""
+                                />
+                                <h6>HTML</h6>
+                            </div>
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img
+                                    src=""
+                                    class="technologies-img"
+                                    alt=""
+                                />
+                                <h6>IOS</h6>
+                            </div>
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img
+                                    src=""
+                                    class="technologies-img"
+                                    alt=""
+                                />
+                                <h6>ANDROID</h6>
+                            </div>
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img
+                                    src=""
+                                    class="technologies-img"
+                                    alt=""
+                                />
+                                <h6>JAVASCRIPT</h6>
+                            </div>
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img
+                                    src=""
+                                    class="technologies-img"
+                                    alt=""
+                                />
+                                <h6>CSS</h6>
+                            </div>
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img
+                                    src=""
+                                    class="technologies-img"
+                                    alt=""
+                                />
+                                <h6>REACT</h6>
+                            </div>
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img
+                                    src=""
+                                    class="technologies-img"
+                                    alt=""
+                                />
+                                <h6>VUE JS</h6>
+                            </div>
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img
+                                    src=""
+                                    class="technologies-img"
+                                    alt=""
+                                />
+                                <h6>PYTHON</h6>
+                            </div>
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img
+                                    src="../assets/images/django.png"
+                                    style="width: 58px; height: 58px"
+                                    alt="django"
+                                    class="img-fluid"
+                                />
+
+                                <h6>DJANGO</h6>
+                            </div>
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img
+                                    src=""
+                                    class="technologies-img"
+                                    alt=""
+                                />
+                                <h6>PHP</h6>
+                            </div>
                         </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-css3-alt fa-3x"></i>
-                            <h4>CSS</h4>
+                    </div>
+                    <div class="tab-pane fade" id="deployment">
+                        <div class="row">
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img
+                                    src=""
+                                    class="technologies-img"
+                                    alt=""
+                                />
+                                <h6>HTML</h6>
+                            </div>
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img
+                                    src=""
+                                    class="technologies-img"
+                                    alt=""
+                                />
+                                <h6>IOS</h6>
+                            </div>
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img
+                                    src=""
+                                    class="technologies-img"
+                                    alt=""
+                                />
+                                <h6>ANDROID</h6>
+                            </div>
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img
+                                    src=""
+                                    class="technologies-img"
+                                    alt=""
+                                />
+                                <h6>JAVASCRIPT</h6>
+                            </div>
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img
+                                    src=""
+                                    class="technologies-img"
+                                    alt=""
+                                />
+                                <h6>CSS</h6>
+                            </div>
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img
+                                    src=""
+                                    class="technologies-img"
+                                    alt=""
+                                />
+                                <h6>REACT</h6>
+                            </div>
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img
+                                    src=""
+                                    class="technologies-img"
+                                    alt=""
+                                />
+                                <h6>VUE JS</h6>
+                            </div>
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img
+                                    src=""
+                                    class="technologies-img"
+                                    alt=""
+                                />
+                                <h6>PYTHON</h6>
+                            </div>
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img
+                                    src="../assets/images/django.png"
+                                    style="width: 58px; height: 58px"
+                                    alt="django"
+                                    class="img-fluid"
+                                />
+
+                                <h6>DJANGO</h6>
+                            </div>
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img
+                                    src=""
+                                    class="technologies-img"
+                                    alt=""
+                                />
+                                <h6>PHP</h6>
+                            </div>
                         </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-react fa-3x"></i>
-                            <h4>REACT</h4>
-                        </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-vuejs fa-3x"></i>
-                            <h4>VUE JS</h4>
-                        </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-python fa-3x"></i>
-                            <h4>PYTHON</h4>
-                        </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <img src="../assets/images/django.png" style="width: 38px" alt="django"
-                                class="img-fluid" />
-                            <h4>DJANGO</h4>
-                        </div>
-                        <div class="col-md-2 col-sm-4 text-center p-3">
-                            <i class="fab fa-php fa-3x"></i>
-                            <h4>PHP</h4>
+                    </div>
+                    <div class="tab-pane fade" id="database">
+                        <div class="row">
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img
+                                    src=""
+                                    class="technologies-img"
+                                    alt=""
+                                />
+                                <h6>HTML</h6>
+                            </div>
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img
+                                    src=""
+                                    class="technologies-img"
+                                    alt=""
+                                />
+                                <h6>IOS</h6>
+                            </div>
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img
+                                    src=""
+                                    class="technologies-img"
+                                    alt=""
+                                />
+                                <h6>ANDROID</h6>
+                            </div>
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img
+                                    src=""
+                                    class="technologies-img"
+                                    alt=""
+                                />
+                                <h6>JAVASCRIPT</h6>
+                            </div>
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img
+                                    src=""
+                                    class="technologies-img"
+                                    alt=""
+                                />
+                                <h6>CSS</h6>
+                            </div>
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img
+                                    src=""
+                                    class="technologies-img"
+                                    alt=""
+                                />
+                                <h6>REACT</h6>
+                            </div>
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img
+                                    src=""
+                                    class="technologies-img"
+                                    alt=""
+                                />
+                                <h6>VUE JS</h6>
+                            </div>
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img
+                                    src=""
+                                    class="technologies-img"
+                                    alt=""
+                                />
+                                <h6>PYTHON</h6>
+                            </div>
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img
+                                    src="../assets/images/django.png"
+                                    style="width: 58px; height: 58px"
+                                    alt="django"
+                                    class="img-fluid"
+                                />
+
+                                <h6>DJANGO</h6>
+                            </div>
+                            <div class="col-md-2 col-sm-4 text-center p-3">
+                                <img
+                                    src=""
+                                    class="technologies-img"
+                                    alt=""
+                                />
+                                <h6>PHP</h6>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
     <!-- technologies we work with ends -->
 

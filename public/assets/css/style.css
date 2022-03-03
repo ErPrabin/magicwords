@@ -22,11 +22,10 @@ a {
     text-decoration: none;
 }
 
-div,p {
-    
+div,
+p {
     font-size: 16px;
     /* color: #6084a4; */
-   
 }
 .text-justify {
     text-align: justify;
@@ -73,7 +72,7 @@ div,p {
 .navbar-nav .nav-item .active {
     font-weight: 600;
     border-bottom: 4px solid #da251d;
-    color: #da251d!important;
+    color: #da251d !important;
 }
 .nav-contact-btn {
     background: #ff0032;
@@ -94,7 +93,6 @@ div,p {
     padding: 10px 20px !important;
     font-size: 1.1rem;
     transition: all ease 0.5s;
-
 }
 .home-banner img {
     height: 500px;
@@ -429,13 +427,19 @@ div,p {
     font-size: 24px;
     font-weight: 400;
 }
+.tab-pane img {
+    width: 70px;
+    height: auto;
+    padding-bottom: 20px;
+}
+
 .features {
     background-color: #eff3f8;
     background-repeat: no-repeat;
     background-position: left;
 }
-.features .circle-entity{
-    height: 60px!important;
+.features .circle-entity {
+    height: 60px !important;
     width: 60px;
     border-radius: 50%;
     background-color: rgb(255, 0, 50, 0.4);
@@ -443,12 +447,12 @@ div,p {
     align-items: center;
     justify-content: center;
 }
-.features .card:hover{
+.features .card:hover {
     margin-top: -15px;
     transition: all ease 0.5s !important;
 }
-.features .card:hover h5{
-   color: #ff0032!important;
+.features .card:hover h5 {
+    color: #ff0032 !important;
 }
 
 .features h1 {
@@ -525,7 +529,7 @@ div,p {
 .application-form h1 {
     color: #ff0032 !important;
 }
-.head{
+.head {
     color: #ff0032 !important;
 }
 .application-form .card {
