@@ -15,12 +15,9 @@
 </head>
 
 <body>
-    <section class="banner-img-index" style="
-                background-image: url(../assets/images/banner.jpeg);
-                background-repeat: no-repeat;
-                background-position: right;
-            ">
+    <section class="banner-img-index">
         <!-- navbar -->
+        <div class="banner-curve" id="banner-curve"></div>
         <nav id="navbar_top" class="navbar navbar-expand-lg navbar-light">
             <div class="container">
                 <a class="navbar-brand" href="#"><img class="logo" src="../assets/images/Logo.jpg"
@@ -40,16 +37,15 @@
                         </li>
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Services
                             </a>
                             <ul class="dropdown-menu py-0" aria-labelledby="navbarDropdown">
                                 @foreach ($services as $service)
-                                    
-                                <li class="px-0">
-                                    <a class="dropdown-item menu-text" href="#">{{ $service->title }}</a>
-                                </li>
+                                    <li class="px-0">
+                                        <a class="dropdown-item menu-text" href="#">{{ $service->title }}</a>
+                                    </li>
                                 @endforeach
                             </ul>
                         </li>
@@ -175,11 +171,14 @@ integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="ano
                 document
                     .getElementById("navbar_top")
                     .classList.add("colored-nav");
+                // document
+                //     .getElementById("banner-curve")
+                //     .style.top = "-50px";
 
                 // add padding top to show content behind navbar
-                navbar_height =
-                    document.querySelector(".navbar").offsetHeight;
-                document.body.style.paddingTop = navbar_height + "px";
+                // navbar_height =
+                //     document.querySelector(".navbar").offsetHeight;
+                // document.body.style.paddingTop = navbar_height + "px";
             } else {
                 document
                     .getElementById("navbar_top")
@@ -187,6 +186,9 @@ integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="ano
                 document
                     .getElementById("navbar_top")
                     .classList.remove("colored-nav");
+                    // document
+                    // .getElementById("banner-curve")
+                    // .style.top = "0";
 
                 document
                     .getElementById("navbar_top")

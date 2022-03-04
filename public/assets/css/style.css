@@ -94,12 +94,35 @@ p {
     font-size: 1.1rem;
     transition: all ease 0.5s;
 }
-.home-banner img {
+.home-banner .banner-img img {
+    position: relative;
     height: 500px;
     width: 100%;
-    /* animation-name: banner-img;
+    animation-name: banner-img;
     animation-duration: 4s;
-    animation-iteration-count: infinite; */
+    animation-iteration-count: infinite;
+}
+.banner-img-index{
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden!important
+}
+.banner-img-index .banner-curve{
+    position: absolute;
+    background-color: #da251d;
+    height: 190%;
+    width: 100%;
+    display: block;
+    border-radius: 120px;
+    background: linear-gradient(-47deg, #F956CB 0%, #F74B54 100%);
+    bottom: 0;
+    right: 0;
+    -webkit-transform: translate(35%,-28%) rotate(-35deg);
+    transform: translate(35%,-28%) rotate(-35deg);
+    z-index: 0;
 }
 .about-text h1 {
     font-size: 30px;
@@ -633,14 +656,14 @@ p {
 
 @keyframes banner-img {
     0% {
-        margin-top: 0px;
+        top: 0px;
     }
 
     50% {
-        margin-top: 10px;
+        top: 20px;
     }
     100% {
-        margin-top: 0px;
+        top: 0px;
     }
 }
 
