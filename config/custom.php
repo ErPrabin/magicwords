@@ -9,8 +9,9 @@ return [
     'pages' => [
         Str::slug('home'),
         Str::slug('aboutus'),
-        Str::slug('service)'),
         Str::slug('contact'),
+        Str::slug('career'),
+        Str::slug('career-detail'),
     ],
     'meta_dropdown' => [
         'title',

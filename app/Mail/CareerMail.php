@@ -7,19 +7,21 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class SendMail extends Mailable
+class CareerMail extends Mailable
 {
     use Queueable, SerializesModels;
-    public $data;
+    private $data;
+    private $cv;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($data)
+    public function __construct($data, $cv)
     {
         $this->data = $data;
+        $this->cv = $cv;
     }
 
     /**
@@ -29,8 +31,10 @@ class SendMail extends Mailable
      */
     public function build()
     {
-        return $this->view('email.mail')
-            ->subject($this->data['subject'])
-            ->with('data', $this->data);
+        $mail =  $this->view('email.mail')
+            ->subject('Career | Apply for job')
+            ->with('data', $this->data)
+            ->attach(public_path('career-file/' . $this->cv));
+        return $mail;
     }
 }

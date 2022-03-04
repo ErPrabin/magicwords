@@ -26,9 +26,9 @@
                             <h1>{!! strip_tags(getCData('Contact Number','description')) !!}</h1>
                         </div>
                         <div class="contact-number-index">
-                            <button class="btn red-btn-color">
+                            <a href="{{ route('contact') }}" class="btn red-btn-color">
                                 Contact Us
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>

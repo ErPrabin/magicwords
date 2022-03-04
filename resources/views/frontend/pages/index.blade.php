@@ -1,4 +1,10 @@
 @extends('frontend.layouts.layout')
+@section('title', getPageTitle($titles, 'home'))
+@section('meta')
+    @include('frontend.partials.meta', [
+        'page' => 'home',
+    ])
+@endsection
 @section('content')
     <!-- navbar ends -->
 
@@ -18,9 +24,9 @@
                                 {!! getCData('Home Banner', 'description') !!}
                             </p>
                         </div>
-                        <button class="btn mt-3 btn-index-banner">
+                        <a href="{{ route('contact') }}" class="btn mt-3 btn-index-banner">
                             Contact Us<i class="ps-3 fa fa-arrow-right"></i>
-                        </button>
+                        </a>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -92,7 +98,10 @@
 
                                 <div class="heading-features ">
                                     <h5 class="m-0 text-white">
-                                        {{ $service->title }}
+                                        <a class="text-white" href="{{ route('singleservice', $service->slug) }}">
+
+                                            {{ $service->title }}
+                                        </a>
                                     </h5>
                                 </div>
                                 <!-- </div> -->
@@ -105,7 +114,8 @@
                                 </div>
                             </div>
                             <div class="text-center">
-                                <a href="" class="readmore-circle text-white"><i class="fa fa-arrow-right"></i></a>
+                                <a href="{{ route('singleservice', $service->slug) }}"
+                                    class="readmore-circle text-white"><i class="fa fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>

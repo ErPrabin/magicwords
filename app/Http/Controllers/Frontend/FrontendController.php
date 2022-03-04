@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Mail\CareerMail;
 use App\Mail\SendMail;
 use App\Models\AboutUs;
 use App\Models\Blog;
@@ -18,6 +19,9 @@ use App\Models\Technology;
 use App\Models\Testimonial;
 use App\Models\WhyChooseUs;
 use App\Models\WorkingProcess;
+use Carbon\Carbon;
+use Illuminate\Http\UploadedFile;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
@@ -59,7 +63,7 @@ class FrontendController extends Controller
     }
     public function careerDetail($slug)
     {
-        $career = Career::where('slug',$slug)->first();
+        $career = Career::where('slug', $slug)->first();
 
         return view('frontend.pages.career-detail', compact('career'));
     }
@@ -73,13 +77,14 @@ class FrontendController extends Controller
     }
     public function singleservice($slug)
     {
-        $service = Service::where('slug', $slug)->first();
-        return view('frontend.pages.singleservice', compact('service'));
+        $singleservice = Service::where('slug', $slug)->first();
+        return view('frontend.pages.singleservice', compact('singleservice'));
     }
 
     public function sendMail(Request $request)
     {
-        $email = Component::where('key', Str::slug('receiving-email-address'))->first();
+        // dd($request->all());
+        $email = Component::where('slug', Str::slug('receiving-email-address'))->first();
         if ($email) {
             $email = strip_tags($email->description);
         } else {
@@ -87,5 +92,37 @@ class FrontendController extends Controller
         }
         Mail::to($email)->send(new SendMail($request->except(['_token', 'g-recaptcha-response'])));
         return redirect()->back()->with('flash_success', 'Sent successfully');
+    }
+    public function sendCareerMail(Request $request)
+    {
+        $_email = Component::where('slug', Str::slug('Receiving Mail Address'))->first();
+
+        if ($_email) {
+            $email = strip_tags($_email->description);
+        } else {
+            $email = 'acounts@lifestylecareandsupport.com.au';
+        }
+
+        $cv = $this->storeFile($request->cv, $request->name);
+        // $cover_letter = null;
+        // if (!is_null($request->cover_letter)) {
+        //     $cover_letter = $this->storeFile($request->cover_letter, $request->name, true);
+        // }
+
+        Mail::to($email)->send(new CareerMail($request->except(['_token', 'g-recaptcha-response', 'cv']), $cv));
+
+        if ($request->has('jobmsg')) {
+            $msg = $request->jobmsg;
+        } else {
+            $msg = 'Thank you for applying the job. Our Staff will contact you soon.';
+        }
+        return redirect()->back()->with('flash_success', $msg);
+    }
+    public function storeFile(UploadedFile $file, $name, $cover_letter = false)
+    {
+        $fileName = $name . '-' . ($cover_letter ? 'cover-letter' : 'resume') . '-';
+        $fileName = $name . Str::slug(Carbon::now()->format('YmdHisu')) . '.' . $file->getClientOriginalExtension();
+        $file->move(public_path('career-file'), $fileName);
+        return $fileName;
     }
 }

@@ -1,9 +1,17 @@
 @extends('frontend.layouts.layout')
+@section('title', getPageTitle($titles, 'career-detail'))
+@section('meta')
+    @include('frontend.partials.meta', [
+        'page' => 'career-detail',
+    ])
+@endsection
 @section('content')
     <!-- navbar ends -->
 
     <!-- banner -->
-    @include('frontend.partials.breadcrum',['title'=>$career->title])
+    @include('frontend.partials.breadcrum', [
+        'title' => $career->title,
+    ])
 
     <!-- banner ends -->
     </section>
@@ -12,7 +20,7 @@
 
     <!-- job description -->
     <div class="job-description py-5">
-        
+
         <div class="container">
             <div class="top-part">
                 <h1>{{ $career->title }}</h1>
@@ -33,22 +41,36 @@
     <!-- appilcation form -->
     <div class="application-form py-5">
         <div class="container">
-            <h1>Apply now.</h1>
+            <h1 class="text-center">Apply now.</h1>
             <div class="bar"></div>
-            <div class="form pt-5" id="form" >
+            <form action="{{ route('careermail.send') }}" method="POST" enctype="multipart/form-data" class="form pt-5" id="form">
+                @csrf
                 <div class="row pb-5" id="form-top">
                     <div class="col-md-4">
                         <h4>Personal Information:</h4>
                     </div>
                     <div class="col-md-8">
                         <div class="py-3">
-                            <input type="text" class="form-control" placeholder="Your Full Name" />
+                            <input type="text" name="name" required class="form-control" placeholder="Your Full Name" />
                         </div>
                         <div class="py-3">
-                            <input type="text" class="form-control" placeholder="Your Email Address" />
+                            <input type="text" name="email" required class="form-control"
+                                placeholder="Your Email Address" />
                         </div>
                         <div class="py-3">
-                            <input type="text" class="form-control" placeholder="Your Phone Number" />
+                            <input type="text" name="phone_number" required class="form-control"
+                                placeholder="Your Phone Number" />
+                        </div>
+                        <input type="text" name="subject" hidden value="Career | Apply for job." required
+                            class="form-control" />
+                        <input type="text" name="applied_for" hidden value="{{ $career->title }}" required
+                            class="form-control" />
+                        <div class="form-group py-3">
+                            <select name="gender" class="form-control required">
+                                <option selected disabled>Choose Gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
                         </div>
                     </div>
                 </div>
@@ -59,28 +81,14 @@
                     </div>
                     <div class="col-md-8">
                         <div class="py-3">
-                            <input type="file" class="form-control" placeholder="Your Full Name" />
-                        </div>
-                    </div>
-                </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" name="cv" id="exampleInputFile">
+                                    </div>
 
-                <div class="row pb-5" id="form-top">
-                    <div class="col-md-4">
-                        <h4>Additional Details:</h4>
-                    </div>
-                    <div class="col-md-8">
-                        <div class="py-3">
-                            <input type="text" class="form-control"
-                                placeholder="How long will you be available for work?" />
-                        </div>
-                        <div class="py-3">
-                            <input type="text" class="form-control" placeholder="Notice Period" />
-                        </div>
-                        <div class="py-3">
-                            <input type="text" class="form-control" placeholder="Current Salary" />
-                        </div>
-                        <div class="py-3">
-                            <input type="text" class="form-control" placeholder="Expected Salary" />
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -91,7 +99,7 @@
                     </div>
                     <div class="col-md-8">
                         <div class="py-3">
-                            <textarea class="form-control" placeholder="Message"></textarea>
+                            <textarea name="cover_letter" class="form-control" placeholder="Cover Letter"></textarea>
                         </div>
                     </div>
                 </div>
@@ -101,7 +109,7 @@
                         Submit Application
                     </button>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 
