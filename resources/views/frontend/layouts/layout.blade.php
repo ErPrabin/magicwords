@@ -44,7 +44,8 @@
                             <ul class="dropdown-menu py-0" aria-labelledby="navbarDropdown">
                                 @foreach ($services as $service)
                                     <li class="px-0">
-                                        <a class="dropdown-item menu-text" href="#">{{ $service->title }}</a>
+                                        <a class="dropdown-item menu-text"
+                                            href="{{ route('singleservice', $service->slug) }}">{{ $service->title }}</a>
                                     </li>
                                 @endforeach
                             </ul>
@@ -56,8 +57,9 @@
                             <a class="nav-link" href="{{ route('contact') }}">Contact</a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-contact-btn"><i class="fa fa-phone-alt pe-1"></i>
-                                984110124</a>
+                            <a href="tel:{!! strip_tags(getCData('Contact Number', 'description')) !!}" class="nav-contact-btn"><i
+                                    class="fa fa-phone-alt pe-1"></i>
+                                {!! strip_tags(getCData('Contact Number', 'description')) !!}</a>
                         </li>
                     </ul>
                 </div>
@@ -186,9 +188,9 @@ integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="ano
                 document
                     .getElementById("navbar_top")
                     .classList.remove("colored-nav");
-                    // document
-                    // .getElementById("banner-curve")
-                    // .style.top = "0";
+                // document
+                // .getElementById("banner-curve")
+                // .style.top = "0";
 
                 document
                     .getElementById("navbar_top")

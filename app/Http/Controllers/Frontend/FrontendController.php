@@ -59,7 +59,7 @@ class FrontendController extends Controller
     }
     public function careerDetail($slug)
     {
-        $career = Career::where('slug',$slug)->first();
+        $career = Career::where('slug', $slug)->first();
 
         return view('frontend.pages.career-detail', compact('career'));
     }
@@ -73,8 +73,8 @@ class FrontendController extends Controller
     }
     public function singleservice($slug)
     {
-        $service = Service::where('slug', $slug)->first();
-        return view('frontend.pages.singleservice', compact('service'));
+        $singleservice = Service::where('slug', $slug)->first();
+        return view('frontend.pages.singleservice', compact('singleservice'));
     }
 
     public function sendMail(Request $request)
