@@ -67,13 +67,13 @@
                     <form class="form" method="POST" action="{{ route('sendmail') }}">
                         @csrf
                         <div class="py-3">
-                            <input type="text" name="name" class="form-control" placeholder="Full Name" />
+                            <input type="text" name="name" required class="form-control" placeholder="Full Name" />
                         </div>
                         <div class="py-3">
-                            <input type="text" name="email" class="form-control" placeholder="Email" />
+                            <input type="text" name="email" required class="form-control" placeholder="Email" />
                         </div>
                         <div class="py-3">
-                            <input type="text" name="subject" class="form-control" placeholder="Subject" />
+                            <input type="text" name="subject" required class="form-control" placeholder="Subject" />
                         </div>
                         <div class="py-3">
                             <textarea class="form-control" name="message" placeholder="Message"></textarea>

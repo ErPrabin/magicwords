@@ -34,6 +34,7 @@ Route::group([
     // Route::get('service', 'FrontendController@service')->name('service');
     Route::get('singleservice/{slug}', 'FrontendController@singleservice')->name('singleservice');
     Route::post('sendmail', 'FrontendController@sendMail')->name('sendmail');
+    Route::post('send-careermail', 'FrontendController@sendCareerMail')->name('careermail.send');
 });
 Route::group([
     'namespace' => 'Backend',
