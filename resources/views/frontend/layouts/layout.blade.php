@@ -20,8 +20,8 @@
         <div class="banner-curve" id="banner-curve"></div>
         <nav id="navbar_top" class="navbar navbar-expand-lg navbar-light">
             <div class="container">
-                <a class="navbar-brand" href="#"><img class="logo" src="../assets/images/Logo.jpg"
-                        alt="" /></a>
+                <a class="navbar-brand" href="{{ route('index') }}"><img class="logo"
+                        src="../assets/images/Logo.jpg" alt="{{ config('app.name') }}" /></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -76,33 +76,31 @@
                         <div class="mt-4">
                             <h5 class="text-white">Connect With Us</h5>
                             <div class="d-flex">
-                                <a class="text-decoration-none text-white" href="#">
+                                <a class="text-decoration-none text-white" href="{!! strip_tags(getCData('Facebook Link','description')) !!}">
                                     <div class="connect-circle me-2">
                                         <i class="fab fa-facebook-f"></i>
                                     </div>
                                 </a>
-                                <a class="text-decoration-none text-white" href="#">
+                                <a class="text-decoration-none text-white" href="{!! strip_tags(getCData('Twitter Link','description')) !!}">
                                     <div class="connect-circle me-2">
                                         <i class="fab fa-instagram"></i>
                                     </div>
                                 </a>
-                                <a class="text-decoration-none text-white" href="#">
-                                    <div class="connect-circle me-2">
-                                        <i class="fab fa-twitter"></i>
-                                    </div>
-                                </a>
-                                <a class="text-decoration-none text-white" href="#">
+                                <a class="text-decoration-none text-white" href="{!! strip_tags(getCData('Linkedin Link','description')) !!}">
                                     <div class="connect-circle me-2">
                                         <i class="fab fa-linkedin"></i>
                                     </div>
                                 </a>
+                                
                             </div>
                         </div>
 
                         <div class="mt-5">
                             <div class="contact-us-footer-bg">
                                 <div class="contact-us-footer fw-bold">
+                                   <a href="{{ route('contact') }}" class="text-white">
                                     Contact Us
+                                   </a>
                                 </div>
                             </div>
                         </div>
@@ -124,7 +122,9 @@
                         <div class="footer-links">
                             <ul>
                                 @foreach ($services as $service)
-                                    <li class="py-2"><a href="">{{ $service->title }}</a></li>
+                                    <li class="py-2"><a
+                                            href="{{ route('singleservice', $service->slug) }}">{{ $service->title }}</a>
+                                    </li>
                                 @endforeach
                             </ul>
                         </div>
@@ -134,14 +134,13 @@
 
                         <div class="footer-links">
                             <ul>
-                                <li class="py-2">Address</li>
+                                <li class="py-2">{!! strip_tags(getCData('Address', 'description')) !!}</li>
                                 <li class="py-2">
-                                    <a href="#">Mobile Number/Landline</a>
+                                    <a href="tel:{!! strip_tags(getCData('Contact Number', 'description')) !!}">{!! strip_tags(getCData('Contact Number', 'description')) !!}</a>
                                 </li>
-                                <li class="py-2"><a href="#">Email</a></li>
-                                <li class="py-2">
-                                    <a href="#">Enquiry Email</a>
-                                </li>
+                                <li class="py-2"><a
+                                        href="mailto:{!! strip_tags(getCData('Email', 'description')) !!}">{!! strip_tags(getCData('Email', 'description')) !!}</a></li>
+
                             </ul>
                         </div>
                     </div>
@@ -152,9 +151,9 @@
             <div class="container">
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="m-0">
-                        © 2022 Magicwords Pvt Ltd.All Rights Reserved
+                        © {{ \Carbon\Carbon::now()->format('Y') }}  {{ config('app.name') }}.All Rights Reserved
                     </div>
-                    <div class="m-0">Privacy Policy</div>
+                    {{-- <div class="m-0">Privacy Policy</div> --}}
                 </div>
             </div>
         </div>

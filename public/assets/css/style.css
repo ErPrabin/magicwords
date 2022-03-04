@@ -71,6 +71,12 @@ p {
 .breadcrum-text{
     z-index: 999;
 }
+.contact-section i{
+    color: #000 !important;
+}
+.contact-section:hover i{
+    color: #ffffff !important;
+}
 
 .sub-head {
     letter-spacing: 1.5px;
