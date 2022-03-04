@@ -1,9 +1,18 @@
 @extends('frontend.layouts.layout')
+@section('title', getPageTitle($titles, 'aboutus'))
+@section('meta')
+    @include('frontend.partials.meta', [
+        'page' => 'aboutus',
+    ])
+@endsection
+
 @section('content')
     <!-- navbar ends -->
 
     <!-- banner -->
-    @include('frontend.partials.breadcrum',['title'=>'About Us'])
+    @include('frontend.partials.breadcrum', [
+        'title' => 'About Us',
+    ])
 
     <!-- banner ends -->
     </section>
@@ -13,8 +22,10 @@
     <!-- about us ends -->
 
     <!-- service copy  -->
-    @include('frontend.partials.specification',['specification' => $specifications])
-    
+    @include('frontend.partials.specification', [
+        'specification' => $specifications,
+    ])
+
     <!-- service copy ends -->
 
     <!-- Why Choose Us -->
@@ -33,7 +44,7 @@
                             <div class="d-flex my-3">
                                 <div class="text-end">
                                     <h4>{{ $w->title }}</h4>
-                                        {!! $w->description !!}
+                                    {!! $w->description !!}
                                 </div>
 
                             </div>
@@ -51,7 +62,7 @@
                             <div class="d-flex my-3">
                                 <div class="text-end">
                                     <h4>{{ $w->title }}</h4>
-                                        {!! $w->description !!}
+                                    {!! $w->description !!}
                                 </div>
 
                             </div>
@@ -65,7 +76,9 @@
     <!-- Why Choose Us ends -->
 
     <!-- testimonials -->
-    @include('frontend.partials.testimonial', ['testimonials' => $testimonials])
+    @include('frontend.partials.testimonial', [
+        'testimonials' => $testimonials,
+    ])
 
     <!-- testimonials ends -->
 

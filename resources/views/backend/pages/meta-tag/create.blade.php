@@ -20,7 +20,7 @@
                                 <label for="page">Page </label>
                                 <select name="page" class="form-control" id="" required>
                                     <option value="" disabled selected>Choose Page</option>
-                                    @foreach (config('menu.pages') as $p)
+                                    @foreach (config('custom.pages') as $p)
                                     <option value="{{ $p }}" {{ old('page')==$p?'selected':'' }}>{{ $p }}</option>
                                     @endforeach
                                     @foreach (\App\Models\Service::get() as $service)

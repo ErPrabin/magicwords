@@ -1,9 +1,17 @@
 @extends('frontend.layouts.layout')
+@section('title', getPageTitle($titles, 'career-detail'))
+@section('meta')
+    @include('frontend.partials.meta', [
+        'page' => 'career-detail',
+    ])
+@endsection
 @section('content')
     <!-- navbar ends -->
 
     <!-- banner -->
-    @include('frontend.partials.breadcrum',['title'=>$career->title])
+    @include('frontend.partials.breadcrum', [
+        'title' => $career->title,
+    ])
 
     <!-- banner ends -->
     </section>
@@ -12,7 +20,7 @@
 
     <!-- job description -->
     <div class="job-description py-5">
-        
+
         <div class="container">
             <div class="top-part">
                 <h1>{{ $career->title }}</h1>
@@ -35,7 +43,7 @@
         <div class="container">
             <h1>Apply now.</h1>
             <div class="bar"></div>
-            <div class="form pt-5" id="form" >
+            <div class="form pt-5" id="form">
                 <div class="row pb-5" id="form-top">
                     <div class="col-md-4">
                         <h4>Personal Information:</h4>

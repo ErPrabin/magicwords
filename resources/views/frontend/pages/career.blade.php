@@ -1,4 +1,10 @@
 @extends('frontend.layouts.layout')
+@section('title', getPageTitle($titles, 'career'))
+@section('meta')
+    @include('frontend.partials.meta', [
+        'page' => 'career',
+    ])
+@endsection
 @section('content')
     <!-- navbar ends -->
 

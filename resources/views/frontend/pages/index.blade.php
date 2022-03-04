@@ -1,4 +1,10 @@
 @extends('frontend.layouts.layout')
+@section('title', getPageTitle($titles, 'home'))
+@section('meta')
+    @include('frontend.partials.meta', [
+        'page' => 'home',
+    ])
+@endsection
 @section('content')
     <!-- navbar ends -->
 
@@ -92,7 +98,7 @@
 
                                 <div class="heading-features ">
                                     <h5 class="m-0 text-white">
-                                        <a class="text-white" href="{{ route('singleservice',$service->slug) }}">
+                                        <a class="text-white" href="{{ route('singleservice', $service->slug) }}">
 
                                             {{ $service->title }}
                                         </a>
@@ -108,7 +114,8 @@
                                 </div>
                             </div>
                             <div class="text-center">
-                                <a href="{{ route('singleservice',$service->slug) }}" class="readmore-circle text-white"><i class="fa fa-arrow-right"></i></a>
+                                <a href="{{ route('singleservice', $service->slug) }}"
+                                    class="readmore-circle text-white"><i class="fa fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>

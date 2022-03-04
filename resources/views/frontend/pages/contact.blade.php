@@ -1,4 +1,10 @@
 @extends('frontend.layouts.layout')
+@section('title', getPageTitle($titles, 'carcontacteer'))
+@section('meta')
+    @include('frontend.partials.meta', [
+        'page' => 'contact',
+    ])
+@endsection
 @section('content')
     @include('frontend.partials.breadcrum', [
         'title' => 'Contact Us',
@@ -56,7 +62,7 @@
                 <div class="col-md-6 p-4">
                     <h1 class="head">Get In Touch With Us</h1>
                     <div class="m-bar"></div>
-                    
+
 
                     <div class="form">
                         <div class="py-3">

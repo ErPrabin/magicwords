@@ -2,10 +2,15 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
+    <meta charset="utf-8" />
+    <title>@yield('title', config('app.name'))</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    @yield('meta')
+    <meta name="keywords" content="{{ config('app.name') }}" />
+    <meta name="author" content="" />
+    <meta name="MobileOptimized" content="320" />
+    <link rel="shortcut icon" href="{{ asset('assets/images/Logo.jpg') }}" type="image/x-icon" />
+
 
     <link rel="stylesheet" href="{{ asset('assets/bootstrap-5.0.2-dist/css/bootstrap.min.css') }}" />
 
@@ -21,7 +26,7 @@
         <nav id="navbar_top" class="navbar navbar-expand-lg navbar-light">
             <div class="container">
                 <a class="navbar-brand" href="{{ route('index') }}"><img class="logo"
-                        src="../assets/images/Logo.jpg" alt="{{ config('app.name') }}" /></a>
+                        src="{{ asset('assets/images/Logo.jpg') }}" alt="{{ config('app.name') }}" /></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -76,31 +81,34 @@
                         <div class="mt-4">
                             <h5 class="text-white">Connect With Us</h5>
                             <div class="d-flex">
-                                <a class="text-decoration-none text-white" target="_blank" href="{!! strip_tags(getCData('Facebook Link','description')) !!}">
+                                <a class="text-decoration-none text-white" target="_blank"
+                                    href="{!! strip_tags(getCData('Facebook Link', 'description')) !!}">
                                     <div class="connect-circle me-2">
                                         <i class="fab fa-facebook-f"></i>
                                     </div>
                                 </a>
-                                <a class="text-decoration-none text-white" target="_blank" href="{!! strip_tags(getCData('Twitter Link','description')) !!}">
+                                <a class="text-decoration-none text-white" target="_blank"
+                                    href="{!! strip_tags(getCData('Twitter Link', 'description')) !!}">
                                     <div class="connect-circle me-2">
                                         <i class="fab fa-instagram"></i>
                                     </div>
                                 </a>
-                                <a class="text-decoration-none text-white" target="_blank" href="{!! strip_tags(getCData('Linkedin Link','description')) !!}">
+                                <a class="text-decoration-none text-white" target="_blank"
+                                    href="{!! strip_tags(getCData('Linkedin Link', 'description')) !!}">
                                     <div class="connect-circle me-2">
                                         <i class="fab fa-linkedin"></i>
                                     </div>
                                 </a>
-                                
+
                             </div>
                         </div>
 
                         <div class="mt-5">
                             <div class="contact-us-footer-bg">
                                 <div class="contact-us-footer fw-bold">
-                                   <a href="{{ route('contact') }}" class="text-white">
-                                    Contact Us
-                                   </a>
+                                    <a href="{{ route('contact') }}" class="text-white">
+                                        Contact Us
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -151,7 +159,7 @@
             <div class="container">
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="m-0">
-                        © {{ \Carbon\Carbon::now()->format('Y') }}  {{ config('app.name') }}.All Rights Reserved
+                        © {{ \Carbon\Carbon::now()->format('Y') }} {{ config('app.name') }}.All Rights Reserved
                     </div>
                     {{-- <div class="m-0">Privacy Policy</div> --}}
                 </div>
