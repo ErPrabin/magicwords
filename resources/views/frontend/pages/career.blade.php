@@ -44,10 +44,10 @@
                 @foreach ($careers as $career )
                     
                 <div class="col-md-4 my-3">
-                    <a href="#" class="text-decoration-none">
+                    <a href="{{ route('careerdetail',$career->slug) }}" class="text-decoration-none">
                         <div class="card p-4">
                             <h5 class="m-0">{{ $career->title }}</h5>
-                            <div class="text-muted vacancy-desc">
+                            <div class="text-muted vacancy-desc pt-3">
                                {{ strip_tags($career->synopsis) }}
                             </div>
                             <div class="d-flex justify-content-between align-items-center mt-4">

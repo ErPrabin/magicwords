@@ -35,15 +35,18 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav align-items-center ms-auto p-0 m-0 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{{ route('index') }}">Home</a>
+                            <a class="nav-link {{ request()->routeIs('index') ? 'active' : '' }}" aria-current="page"
+                                href="{{ route('index') }}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('aboutus') }}">About Us</a>
+                            <a class="nav-link {{ request()->routeIs('aboutus') ? 'active' : '' }}"
+                                href="{{ route('aboutus') }}">About Us</a>
                         </li>
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdown"
-                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle {{ request()->routeIs('singleservice') ? 'active' : '' }}"
+                                href="javascript:void(0)" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
                                 Services
                             </a>
                             <ul class="dropdown-menu py-0" aria-labelledby="navbarDropdown">
@@ -56,10 +59,12 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('career') }}">Career</a>
+                            <a class="nav-link {{ request()->routeIs('careerdetail') || request()->routeIs('career') ? 'active' : '' }}"
+                                href="{{ route('career') }}">Career</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('contact') }}">Contact</a>
+                            <a class="nav-link {{ request()->routeIs('contact') ? 'active' : '' }}"
+                                href="{{ route('contact') }}">Contact</a>
                         </li>
                         <li class="nav-item">
                             <a href="tel:{!! strip_tags(getCData('Contact Number', 'description')) !!}" class="nav-contact-btn"><i
