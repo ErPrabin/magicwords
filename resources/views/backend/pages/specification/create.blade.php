@@ -23,17 +23,8 @@
                                     <textarea class="textarea" id="editor1" name="description"></textarea>
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputFile">Icon </label>
-                                    <div class="input-group">
-                                        <div class="custom-file">
-                                            <input type="file" class="custom-file-input" name="icon" id="exampleInputFile"
-                                                >
-                                            <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                                        </div>
-                                        <div class="input-group-append">
-                                            <span class="input-group-text" id="">Upload</span>
-                                        </div>
-                                    </div>
+                                    <label for="question">Fa Icon {!! \App\Util\Util::htmlReq() !!}</label>
+                                    <input type="text" class="form-control" id="question" name="fa_icon" required>
                                 </div>
                                 
                                 <div class="form-group">

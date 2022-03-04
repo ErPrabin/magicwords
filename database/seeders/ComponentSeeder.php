@@ -33,6 +33,10 @@ class ComponentSeeder extends Seeder
             'Technology',
             'Feature',
             'Contact Banner',
+            'Why Choose Us',
+            'Testimonial',
+            'Career',
+            'Map',
         ];
         $arr = [];
         foreach ($datas as $d) {

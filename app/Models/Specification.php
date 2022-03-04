@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Specification extends Model
 {
     use HasFactory;
-    protected $fillable = ['title', 'description', 'icon', 'sort'];
+    protected $fillable = ['title', 'description', 'fa_icon', 'sort'];
 }

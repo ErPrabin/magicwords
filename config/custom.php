@@ -31,7 +31,7 @@ return [
 
 
     ],
-    'category' => ['mobile-development','web-development' ,'frontend', 'backend', 'design', 'database'],
+    'category' => ['mobile-development','web-development' ,'frontend', 'backend', 'design'],
     'add-exclude' => ['Component'],
     'list-exclude' => []
 ];

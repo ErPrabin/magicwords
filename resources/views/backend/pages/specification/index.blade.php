@@ -14,7 +14,7 @@
                                     <tr>
                                         <th>Title</th>
                                         <th>Description</th>
-                                        <th>Icon</th>
+                                        <th>Fa Icon</th>
                                         <th>Sort</th>
                                         <th>Action</th>
                                     </tr>
@@ -25,8 +25,7 @@
                                             <td>{{ $d->title }}</td>
                                             <td>{!! $d->description !!}</td>
                                             <td>
-                                                <img src="{{ asset('images/' . $page . '/' . $d->icon) }}" alt="null"
-                                                    width="100px">
+                                                <i class="fa {{ $d->fa_icon }} fa-3x"></i>
                                             </td>
                                             <td>{{ $d->sort }}</td>
                                             <td>

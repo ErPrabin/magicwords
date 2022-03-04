@@ -14,6 +14,7 @@
                                     <tr>
                                         <th>Title</th>
                                         <th>Description</th>
+                                        <th>Fa Icon</th>
                                         <th>Sort</th>
                                         <th>Action</th>
                                     </tr>
@@ -23,6 +24,9 @@
                                         <tr>
                                             <td>{{ $d->title }}</td>
                                             <td>{!! $d->description !!}</td>
+                                            <td>
+                                                <i class="fa {{ $d->fa_icon }} fa-3x"></i>
+                                            </td>
                                             <td>{{ $d->sort }}</td>
                                             <td>
                                                 @include('backend.partial.action', ['delme'=>'yes'])

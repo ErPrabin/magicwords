@@ -17,7 +17,7 @@ class CreateSpecificationsTable extends Migration
             $table->id();
             $table->string('title');
             $table->text('description')->nullable();
-            $table->string('icon')->nullable();
+            $table->string('fa_icon')->nullable();
             $table->integer('sort')->default(1);
             $table->timestamps();
         });

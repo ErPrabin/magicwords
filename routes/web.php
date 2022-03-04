@@ -29,6 +29,8 @@ Route::group([
     Route::get('/', 'FrontendController@index')->name('index');
     Route::get('aboutus', 'FrontendController@aboutus')->name('aboutus');
     Route::get('contact', 'FrontendController@contact')->name('contact');
+    Route::get('career', 'FrontendController@career')->name('career');
+    Route::get('career/{slug}', 'FrontendController@careerDetail')->name('careerdetail');
     Route::get('service', 'FrontendController@service')->name('service');
     Route::get('singleservice/{slug}', 'FrontendController@singleservice')->name('singleservice');
     Route::post('sendmail', [FrontendController::class, 'sendMail'])->name('sendmail');

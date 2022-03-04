@@ -10,16 +10,14 @@
     <link rel="stylesheet" href="{{ asset('assets/bootstrap-5.0.2-dist/css/bootstrap.min.css') }}" />
 
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/all.css') }}" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" />
 </head>
 
 <body>
-    <section class="banner-img-index" style="
-                background-image: url(../assets/images/banner.jpeg);
-                background-repeat: no-repeat;
-                background-position: right;
-            ">
+    <section class="banner-img-index">
         <!-- navbar -->
+        <div class="banner-curve" id="banner-curve"></div>
         <nav id="navbar_top" class="navbar navbar-expand-lg navbar-light">
             <div class="container">
                 <a class="navbar-brand" href="#"><img class="logo" src="../assets/images/Logo.jpg"
@@ -32,36 +30,30 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav align-items-center ms-auto p-0 m-0 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active" aria-current="page" href="{{ route('index') }}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About Us</a>
+                            <a class="nav-link" href="{{ route('aboutus') }}">About Us</a>
                         </li>
+
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Services
                             </a>
                             <ul class="dropdown-menu py-0" aria-labelledby="navbarDropdown">
-                                <li class="px-0">
-                                    <a class="dropdown-item" href="#">Service 1</a>
-                                </li>
-                                <li class="px-0">
-                                    <a class="dropdown-item" href="#">Service 2</a>
-                                </li>
-                                <li class="px-0">
-                                    <a class="dropdown-item" href="#">Service 3</a>
-                                </li>
-                                <li class="px-0">
-                                    <a class="dropdown-item" href="#">Service 4</a>
-                                </li>
+                                @foreach ($services as $service)
+                                    <li class="px-0">
+                                        <a class="dropdown-item menu-text" href="#">{{ $service->title }}</a>
+                                    </li>
+                                @endforeach
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Career</a>
+                            <a class="nav-link" href="{{ route('career') }}">Career</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
+                            <a class="nav-link" href="{{ route('contact') }}">Contact</a>
                         </li>
                         <li class="nav-item">
                             <a href="" class="nav-contact-btn"><i class="fa fa-phone-alt pe-1"></i>
@@ -114,14 +106,13 @@
                         </div>
                     </div>
                     <div class="col-md-3">
-                        <h4 class="text-white">Our Company</h4>
+                        <h4 class="text-white">Quick Links</h4>
 
                         <div class="footer-links">
                             <ul>
-                                <li class="py-2"><a href="#">About Us</a></li>
-                                <li class="py-2"><a href="#">Services</a></li>
-                                <li class="py-2"><a href="#">Contact</a></li>
-                                <li class="py-2"><a href="#">Careers</a></li>
+                                <li class="py-2"><a href="{{ route('aboutus') }}">About Us</a></li>
+                                <li class="py-2"><a href="{{ route('contact') }}">Contact</a></li>
+                                <li class="py-2"><a href="{{ route('career') }}">Careers</a></li>
                             </ul>
                         </div>
                     </div>
@@ -130,12 +121,9 @@
 
                         <div class="footer-links">
                             <ul>
-                                <li class="py-2"><a href="#">Service 1</a></li>
-                                <li class="py-2"><a href="#">Service 2</a></li>
-                                <li class="py-2"><a href="#">Service 3</a></li>
-                                <li class="py-2"><a href="#">Service 4</a></li>
-                                <li class="py-2"><a href="#">Service 5</a></li>
-                                <li class="py-2"><a href="#">Service 6</a></li>
+                                @foreach ($services as $service)
+                                    <li class="py-2"><a href="">{{ $service->title }}</a></li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>
@@ -183,11 +171,14 @@ integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="ano
                 document
                     .getElementById("navbar_top")
                     .classList.add("colored-nav");
+                // document
+                //     .getElementById("banner-curve")
+                //     .style.top = "-50px";
 
                 // add padding top to show content behind navbar
-                navbar_height =
-                    document.querySelector(".navbar").offsetHeight;
-                document.body.style.paddingTop = navbar_height + "px";
+                // navbar_height =
+                //     document.querySelector(".navbar").offsetHeight;
+                // document.body.style.paddingTop = navbar_height + "px";
             } else {
                 document
                     .getElementById("navbar_top")
@@ -195,6 +186,9 @@ integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="ano
                 document
                     .getElementById("navbar_top")
                     .classList.remove("colored-nav");
+                    // document
+                    // .getElementById("banner-curve")
+                    // .style.top = "0";
 
                 document
                     .getElementById("navbar_top")

@@ -14,7 +14,6 @@
                                     <tr>
                                         <th>Title</th>
                                         <th>Description</th>
-                                        <th>Image</th>
                                         <th>Sort</th>
                                         <th>Action</th>
                                     </tr>
@@ -24,10 +23,7 @@
                                         <tr>
                                             <td>{{ $d->title }}</td>
                                             <td>{!! $d->description !!}</td>
-                                            <td>
-                                                <img src="{{ asset('images/' . $page . '/' . $d->image) }}" alt="null"
-                                                    width="100px">
-                                            </td>
+                                            
                                             <td>{{ $d->sort }}</td>
                                             <td>
                                                 @include('backend.partial.action', ['delme'=>'yes'])

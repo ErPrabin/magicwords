@@ -16,7 +16,8 @@ class CreateFeaturesTable extends Migration
         Schema::create('features', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->text('description');
+            $table->text('description')->nullable();
+            $table->string('fa_icon')->nullable();
             $table->integer('sort')->default(1);
             $table->timestamps();
         });
