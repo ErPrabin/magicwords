@@ -79,7 +79,8 @@ class FrontendController extends Controller
 
     public function sendMail(Request $request)
     {
-        $email = Component::where('key', Str::slug('receiving-email-address'))->first();
+        // dd($request->all());
+        $email = Component::where('slug', Str::slug('receiving-email-address'))->first();
         if ($email) {
             $email = strip_tags($email->description);
         } else {
