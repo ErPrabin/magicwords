@@ -76,17 +76,17 @@
                         <div class="mt-4">
                             <h5 class="text-white">Connect With Us</h5>
                             <div class="d-flex">
-                                <a class="text-decoration-none text-white" href="{!! strip_tags(getCData('Facebook Link','description')) !!}">
+                                <a class="text-decoration-none text-white" target="_blank" href="{!! strip_tags(getCData('Facebook Link','description')) !!}">
                                     <div class="connect-circle me-2">
                                         <i class="fab fa-facebook-f"></i>
                                     </div>
                                 </a>
-                                <a class="text-decoration-none text-white" href="{!! strip_tags(getCData('Twitter Link','description')) !!}">
+                                <a class="text-decoration-none text-white" target="_blank" href="{!! strip_tags(getCData('Twitter Link','description')) !!}">
                                     <div class="connect-circle me-2">
                                         <i class="fab fa-instagram"></i>
                                     </div>
                                 </a>
-                                <a class="text-decoration-none text-white" href="{!! strip_tags(getCData('Linkedin Link','description')) !!}">
+                                <a class="text-decoration-none text-white" target="_blank" href="{!! strip_tags(getCData('Linkedin Link','description')) !!}">
                                     <div class="connect-circle me-2">
                                         <i class="fab fa-linkedin"></i>
                                     </div>
