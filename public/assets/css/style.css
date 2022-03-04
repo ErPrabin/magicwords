@@ -94,31 +94,39 @@ p {
     font-size: 1.1rem;
     transition: all ease 0.5s;
 }
-.banner-img-index{
+.home-banner .banner-img img {
+    position: relative;
+    height: 500px;
+    width: 100%;
+    animation-name: banner-img;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+.banner-img-index {
     position: relative;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    overflow: hidden!important
+    overflow: hidden !important;
 }
-.banner-img-index .banner-curve{
+.banner-img-index .banner-curve {
     position: absolute;
     background-color: #da251d;
     height: 190%;
     width: 100%;
     display: block;
     border-radius: 120px;
-    background: linear-gradient(-47deg, #F956CB 0%, #F74B54 100%);
+    background: linear-gradient(-47deg, #f95683 0%, #f74b54 100%);
     bottom: 0;
     right: 0;
-    -webkit-transform: translate(35%,-28%) rotate(-35deg);
-    transform: translate(35%,-28%) rotate(-35deg);
+    -webkit-transform: translate(35%, -28%) rotate(-35deg);
+    transform: translate(35%, -28%) rotate(-35deg);
     z-index: 0;
 }
-.home-banner{
+/* .home-banner{
     position: relative;
-}
+} */
 .home-banner img {
     height: 500px;
     width: 100%;
@@ -126,8 +134,8 @@ p {
     animation-duration: 4s;
     animation-iteration-count: infinite;
 }
-.about{
-    padding-top: 6rem!important;
+.about {
+    padding-top: 6rem !important;
 }
 .about-text h1 {
     font-size: 30px;
@@ -260,7 +268,6 @@ p {
     position: absolute;
     top: -30px;
     left: 40%;
-    
 }
 .about-page .card:hover .square-entity,
 .about-page .card:hover .square-entity i {
@@ -349,8 +356,8 @@ p {
     background-repeat: no-repeat;
     background-position: left;
 }
-.testimonials h4{
-    color: #fff!important;
+.testimonials h4 {
+    color: #fff !important;
 }
 .testimonials .carousel-control-prev-icon {
     display: none;
@@ -427,9 +434,8 @@ p {
     top: -40px;
     left: -60px;
 }
-.why-us{
-    padding-top: 6rem!important;
-
+.why-us {
+    padding-top: 6rem !important;
 }
 .why-us h1 {
     font-size: 30px;
