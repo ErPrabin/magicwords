@@ -12,8 +12,8 @@
             <div class="carousel-indicators">
                 @foreach ($testimonials->chunk(2) as $key => $t)
                     <button type="button" data-bs-target="#carouselExampleIndicators"
-                        data-bs-slide-to="{{ $key + 1 }}" class="active" aria-current="true"
-                        aria-label="Slide 1"></button>
+                        data-bs-slide-to="{{ $key }}" class="{{ $key == 0 ? 'active' : '' }}"
+                        {{ $key == 0 ? 'aria-current="true"' : '' }} aria-label="Slide {{ $key + 1 }}"></button>
                 @endforeach
 
             </div>
@@ -70,3 +70,5 @@
     </div>
 </div>
 <!-- testimonials ends -->
+
+

@@ -35,7 +35,9 @@
     </section>
 
     <!-- banner ends -->
-    @include('frontend.partials.specification',['specification' => $specifications])
+    @include('frontend.partials.specification', [
+        'specification' => $specifications,
+    ])
     @include('frontend.partials.about')
 
     <!-- services -->
@@ -230,7 +232,7 @@
     <!-- technologies we work with ends -->
 
     <!-- our features -->
-    <div class="features py-5" style="background-image: url({{ asset('assets/images/line.webp') }})">
+    <div class="features py-5">
         <div class="container">
             <h1 class="text-center text-white">Our Features</h1>
             <div class="bar"></div>
@@ -244,7 +246,7 @@
                             <div class="d-flex justify-content-between">
                                 <div class="me-3">
                                     <span class="circle-entity ">
-                                        <i class="fa fa-lg text-white fa-cog"></i>
+                                        <i class="fa fa-lg text-white {{ $feature->fa_icon }}"></i>
                                     </span>
                                 </div>
                                 <div class="heading-features ms-auto">
@@ -265,7 +267,7 @@
             </div>
         </div>
     </div>
-    
+
     <!-- our features ends-->
 
     @include('frontend.partials.testimonial', [

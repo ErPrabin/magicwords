@@ -50,7 +50,7 @@ p {
     padding: 5px 0px;
 }
 .navbar-nav .nav-link {
-    color: #000 !important;
+    color: #ffffff !important;
     font-weight: 600;
 }
 .bread-crumb .back-home {
@@ -64,6 +64,14 @@ p {
     padding: 0 15px;
     margin: 0;
 }
+.colored-nav .nav-item .nav-link.active,
+.colored-nav .nav-item .nav-link  {
+    color: #000 !important;
+}
+.breadcrum-text{
+    z-index: 999;
+}
+
 .sub-head {
     letter-spacing: 1.5px;
     margin: 0 auto;
@@ -72,7 +80,7 @@ p {
 .navbar-nav .nav-item .active {
     font-weight: 600;
     border-bottom: 4px solid #da251d;
-    color: #da251d !important;
+    color: #ffffff !important;
 }
 .nav-contact-btn {
     background: #ff0032;

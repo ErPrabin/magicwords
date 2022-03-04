@@ -21,6 +21,11 @@
                                     <input type="text" name="title" class="form-control" id="title"
                                         value="{{ $data->title }}" required>
                                 </div>
+                                <div class="form-group">
+                                    <label for="title">Fa Icon {!! \App\Util\Util::htmlReq() !!}</label>
+                                    <input type="text" name="fa_icon" class="form-control" id="title"
+                                        value="{{ $data->fa_icon }}" required>
+                                </div>
 
                                 <div class="form-group">
                                     <label for="description">Description</label>

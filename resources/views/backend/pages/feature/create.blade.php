@@ -19,6 +19,10 @@
                                     <input type="text" class="form-control" id="question" name="title" required>
                                 </div>
                                 <div class="form-group">
+                                    <label for="question">Fa Icon {!! \App\Util\Util::htmlReq() !!}</label>
+                                    <input type="text" class="form-control" id="question" name="fa_icon" required>
+                                </div>
+                                <div class="form-group">
                                     <label for="answer">Description</label>
                                     <textarea class="textarea" id="editor1" name="description"></textarea>
                                 </div>
