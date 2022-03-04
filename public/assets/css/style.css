@@ -647,6 +647,9 @@ p {
 .head {
     color: #ff0032 !important;
 }
+.application-form{
+    background-color: #fafbfd;
+}
 .application-form .card {
     border-radius: 30px;
 }

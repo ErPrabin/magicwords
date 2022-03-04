@@ -41,7 +41,7 @@
     <!-- appilcation form -->
     <div class="application-form py-5">
         <div class="container">
-            <h1>Apply now.</h1>
+            <h1 class="text-center">Apply now.</h1>
             <div class="bar"></div>
             <div class="form pt-5" id="form">
                 <div class="row pb-5" id="form-top">
