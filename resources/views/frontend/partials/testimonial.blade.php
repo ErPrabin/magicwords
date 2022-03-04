@@ -1,5 +1,5 @@
 <!-- testimonials -->
-<div class="testimonials py-5">
+<div class="testimonials py-5" style="background-image: url({{ asset('assets/images/line.webp') }})">
     <div class="container">
         <h1>Testimonials</h1>
         <div class="bar"></div>

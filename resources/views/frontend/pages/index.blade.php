@@ -35,31 +35,11 @@
     </section>
 
     <!-- banner ends -->
-    <div class="services py-5">
-        <div class="container">
-            <div class="row">
-                @foreach ($specifications as $specification)
-                    <div class="col-md-3 p-3">
-                        <div class="card p-4">
-                            <div class="text-center">
-                                <i class="fa {{ $specification->fa_icon }} fa-3x"></i>
-                            </div>
-                            <h4 class="text-center py-3">{{ $specification->title }}</h4>
-                            <div class="text-center">
-                                <p class="p-0 m-0">
-                                    {!! strip_tags($specification->description) !!}}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-    </div>
+    @include('frontend.partials.specification',['specification' => $specifications])
     @include('frontend.partials.about')
 
     <!-- services -->
-    <div class="services py-5" style="background-image: url({{ asset('assets/images/bg.webp') }})">
+    {{-- <div class="services py-5" style="background-image: url({{ asset('assets/images/bg.webp') }})">
         <div class="container">
             <h1>Services</h1>
             <div class="bar"></div>
@@ -86,6 +66,49 @@
                         </div>
                     </div>
                 @endforeach
+            </div>
+        </div>
+    </div> --}}
+    <div class="services py-5">
+        <div class="container">
+            <h1 class="text-white">Services</h1>
+            <div class="bar"></div>
+            <p class="text-center text-white sub-head">
+                {!! strip_tags(getCData('Service', 'synopsis')) !!}
+            </p>
+            <div class="row pt-5">
+                @foreach ($services as $service)
+                    <div class="col-md-4 p-4">
+                        <div class="card">
+                            <div class="d-flex align-items-center justify-content-between bg-dark p-3">
+                                <div class="me-3">
+                                    <span class="square-entity">
+                                        <img class="index-service-img"
+                                            src="{{ asset('images/service/' . $service->image) }}" alt="" />
+                                    </span>
+                                </div>
+
+                                <div class="heading-features ">
+                                    <h5 class="m-0 text-white">
+                                        {{ $service->title }}
+                                    </h5>
+                                </div>
+                                <!-- </div> -->
+                            </div>
+                            <div class="card-body py-5">
+                                <div class="text-justify">
+                                    <p class="p-0 m-0">
+                                        {!! strip_tags($service->synopsis) !!}
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <a href="" class="readmore-circle text-white"><i class="fa fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+
             </div>
         </div>
     </div>
@@ -209,9 +232,9 @@
     <!-- our features -->
     <div class="features py-5" style="background-image: url({{ asset('assets/images/line.webp') }})">
         <div class="container">
-            <h1 class="text-center">Our Features</h1>
+            <h1 class="text-center text-white">Our Features</h1>
             <div class="bar"></div>
-            <p class="text-center text-muted sub-head">
+            <p class="text-center text-white sub-head">
                 {!! strip_tags(getCData('feature', 'synopsis')) !!}
             </p>
             <div class="row pt-4">
@@ -242,34 +265,7 @@
             </div>
         </div>
     </div>
-    {{-- <div class="features py-5">
-        <div class="container">
-            <h1 class="text-center">Our Features</h1>
-            <div class="bar"></div>
-            <p class="text-center text-muted sub-head">
-                {!! strip_tags(getCData('feature', 'synopsis')) !!}
-            </p>
-            <div class="row pt-4">
-                @foreach ($features as $feature)
-                    <div class="col-md-6 p-3">
-
-                        <div class="d-flex">
-                            <i class="fa fa-check pe-3 pt-2"></i>
-                            <div class="heading-features">
-                                <h3>{{ $feature->title }}</h3>
-                                <div class="description-features text-muted pt-2">
-                                    <p>
-                                        {!! strip_tags($feature->description) !!}
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-
-            </div>
-        </div>
-    </div> --}}
+    
     <!-- our features ends-->
 
     @include('frontend.partials.testimonial', [
