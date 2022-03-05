@@ -31,18 +31,6 @@ class ComponentsTableSeeder extends Seeder
                 'created_at' => '2022-03-04 08:58:56',
                 'updated_at' => '2022-03-05 06:29:03',
             ),
-            1 => 
-            array (
-                'id' => 2,
-                'title' => 'Overview',
-                'slug' => 'overview',
-                'synopsis' => 'Overview',
-                'description' => 'Overview',
-                'image' => NULL,
-                'sort' => 1,
-                'created_at' => '2022-03-04 08:58:56',
-                'updated_at' => '2022-03-04 08:58:56',
-            ),
             2 => 
             array (
                 'id' => 3,
@@ -150,18 +138,6 @@ class ComponentsTableSeeder extends Seeder
                 'sort' => 1,
                 'created_at' => '2022-03-04 08:58:56',
                 'updated_at' => '2022-03-05 05:49:36',
-            ),
-            11 => 
-            array (
-                'id' => 12,
-                'title' => 'Our Experience',
-                'slug' => 'our-experience',
-                'synopsis' => 'Our Experience',
-                'description' => 'Our Experience',
-                'image' => NULL,
-                'sort' => 1,
-                'created_at' => '2022-03-04 08:58:56',
-                'updated_at' => '2022-03-04 08:58:56',
             ),
             12 => 
             array (
