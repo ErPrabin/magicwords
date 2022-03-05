@@ -138,6 +138,12 @@ p {
     transform: translate(35%, -28%) rotate(-35deg);
     z-index: 0;
 }
+@media screen and (min-width: 990px) {
+    .dropdown .dropdown-menu {
+        position: fixed !important;
+    }
+}
+
 @media screen and (max-width: 1400px) {
     .banner-img-index .banner-curve {
         right: 150px;
@@ -159,11 +165,14 @@ p {
     .navbar-light .navbar-nav .nav-link:hover {
         text-align: center;
     }
+    .dropdown .dropdown-menu {
+        position: static !important;
+    }
 }
-.vacancy-desc{
+.vacancy-desc {
     text-align: justify;
 }
-.about-text .about-index-description{
+.about-text .about-index-description {
     text-align: justify;
 }
 .home-banner .banner-content {
