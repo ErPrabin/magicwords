@@ -16,7 +16,7 @@
     <div class="home-banner pb-5" style="height: auto">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-6">
+                <div class="col-md-6 banner-content">
                     <div class="home-banner-text">
                         <h1>{!! strip_tags(getCData('Home Banner', 'synopsis')) !!}</h1>
                         <div class="home-banner-desc mt-3">
@@ -263,7 +263,7 @@
                                     <h5 class="m-0">
                                         {{ $feature->title }}
                                     </h5>
-                                    <div class="description-features text-muted pt-2">
+                                    <div class="description-features text-justify text-muted pt-2">
                                         {!! $feature->description !!}
                                     </div>
                                 </div>

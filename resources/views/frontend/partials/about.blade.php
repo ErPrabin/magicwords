@@ -10,7 +10,7 @@
                  <div class="about-text">
                      <h1>About Us</h1>
                      <div class="m-bar"></div>
-                     <div class="about-index-description mt-3">
+                     <div class="about-index-description mt-3 text-justify">
                          <p>
                              {!! getCData('About Us', 'description') !!}
                          </p>

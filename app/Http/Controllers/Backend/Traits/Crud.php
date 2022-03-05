@@ -21,7 +21,6 @@ trait Crud
     }
     public function store(Request $request)
     {
-        dd($request->all());
         $data = $request->except('_token', '_method');
         if (isset($data['slug'])) {
             $data['slug'] = Str::slug($data['slug']);
