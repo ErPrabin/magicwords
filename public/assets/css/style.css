@@ -160,6 +160,12 @@ p {
         text-align: center;
     }
 }
+.vacancy-desc{
+    text-align: justify;
+}
+.about-text .about-index-description{
+    text-align: justify;
+}
 .home-banner .banner-content {
     z-index: 9;
 }
