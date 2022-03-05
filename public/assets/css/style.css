@@ -65,16 +65,16 @@ p {
     margin: 0;
 }
 .colored-nav .nav-item .nav-link.active,
-.colored-nav .nav-item .nav-link  {
+.colored-nav .nav-item .nav-link {
     color: #000 !important;
 }
-.breadcrum-text{
+.breadcrum-text {
     z-index: 999;
 }
-.contact-section i{
+.contact-section i {
     color: #000 !important;
 }
-.contact-section:hover i{
+.contact-section:hover i {
     color: #ffffff !important;
 }
 
@@ -138,6 +138,32 @@ p {
     transform: translate(35%, -28%) rotate(-35deg);
     z-index: 0;
 }
+@media screen and (max-width: 1400px) {
+    .banner-img-index .banner-curve {
+        right: 150px;
+    }
+}
+@media (max-width: 1200px) and (min-width: 990px) {
+    .banner-img-index .banner-curve {
+        right: 300px;
+    }
+}
+@media screen and (max-width: 990px) {
+    .navbar-nav .nav-link {
+        color: #000 !important;
+    }
+    .navbar-nav .nav-item .active {
+        color: #000 !important;
+    }
+    .navbar-light .navbar-nav .nav-link:focus,
+    .navbar-light .navbar-nav .nav-link:hover {
+        text-align: center;
+    }
+}
+.home-banner .banner-content {
+    z-index: 9;
+}
+
 /* .home-banner{
     position: relative;
 } */
@@ -390,6 +416,7 @@ p {
 .testimonials .card {
     position: relative;
     border-bottom-left-radius: 80px;
+    text-align: justify;
     border-top-right-radius: 80px;
     box-shadow: 7px 8px 25px -7px rgba(0, 0, 0, 0.75);
     color: white !important;
@@ -647,7 +674,7 @@ p {
 .head {
     color: #ff0032 !important;
 }
-.application-form{
+.application-form {
     background-color: #fafbfd;
 }
 .application-form .card {

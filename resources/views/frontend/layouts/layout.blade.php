@@ -9,7 +9,7 @@
     <meta name="keywords" content="{{ config('app.name') }}" />
     <meta name="author" content="" />
     <meta name="MobileOptimized" content="320" />
-    <link rel="shortcut icon" href="{{ asset('assets/images/Logo.jpg') }}" type="image/x-icon" />
+    <link rel="shortcut icon" href="{{ asset('assets/images/Logo.png') }}" type="image/x-icon" />
 
 
     <link rel="stylesheet" href="{{ asset('assets/bootstrap-5.0.2-dist/css/bootstrap.min.css') }}" />
@@ -26,7 +26,7 @@
         <nav id="navbar_top" class="navbar navbar-expand-lg navbar-light">
             <div class="container">
                 <a class="navbar-brand" href="{{ route('index') }}"><img class="logo"
-                        src="{{ asset('assets/images/Logo.jpg') }}" alt="{{ config('app.name') }}" /></a>
+                        src="{{ asset('assets/images/Logo.png') }}" alt="{{ config('app.name') }}" /></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -82,7 +82,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-3">
-                        <img class="footer-logo" src="{{ asset('assets/images/Logo.jpg') }}" alt="" />
+                        <img class="footer-logo" src="{{ asset('assets/images/Logo.png') }}" alt="" />
                         <div class="mt-4">
                             <h5 class="text-white">Connect With Us</h5>
                             <div class="d-flex">
