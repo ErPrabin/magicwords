@@ -14,13 +14,13 @@ class WhyChooseUsTableSeeder extends Seeder
      */
     public function run()
     {
-
+        
 
         \DB::table('why_choose_us')->delete();
-
-        \DB::table('why_choose_us')->insert(array(
-            0 =>
-            array(
+        
+        \DB::table('why_choose_us')->insert(array (
+            0 => 
+            array (
                 'id' => 1,
                 'title' => 'Product Consultation',
                 'description' => '<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>',
@@ -28,8 +28,8 @@ class WhyChooseUsTableSeeder extends Seeder
                 'created_at' => '2021-11-29 15:53:24',
                 'updated_at' => '2021-11-29 15:53:24',
             ),
-            1 =>
-            array(
+            1 => 
+            array (
                 'id' => 2,
                 'title' => 'Security Consultation',
                 'description' => '<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>',
@@ -37,8 +37,8 @@ class WhyChooseUsTableSeeder extends Seeder
                 'created_at' => '2021-11-29 15:53:40',
                 'updated_at' => '2021-11-29 15:53:40',
             ),
-            2 =>
-            array(
+            2 => 
+            array (
                 'id' => 3,
                 'title' => '24/7 Technical Support',
                 'description' => '<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>',
@@ -46,8 +46,8 @@ class WhyChooseUsTableSeeder extends Seeder
                 'created_at' => '2021-11-29 15:54:00',
                 'updated_at' => '2021-11-29 15:54:00',
             ),
-            3 =>
-            array(
+            3 => 
+            array (
                 'id' => 4,
                 'title' => 'Web Security',
                 'description' => '<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>',
@@ -55,6 +55,26 @@ class WhyChooseUsTableSeeder extends Seeder
                 'created_at' => '2021-11-29 15:54:00',
                 'updated_at' => '2021-11-29 15:54:00',
             ),
+            4 => 
+            array (
+                'id' => 5,
+                'title' => 'Dynamic work environment',
+                'description' => '<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>',
+                'sort' => 1,
+                'created_at' => '2022-03-05 06:34:40',
+                'updated_at' => '2022-03-05 06:34:52',
+            ),
+            5 => 
+            array (
+                'id' => 6,
+                'title' => 'Team like no other',
+                'description' => '<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>',
+                'sort' => 1,
+                'created_at' => '2022-03-05 06:35:05',
+                'updated_at' => '2022-03-05 06:35:15',
+            ),
         ));
+        
+        
     }
 }
