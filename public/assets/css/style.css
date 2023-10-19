@@ -41,10 +41,10 @@ p {
     height: 190px;
 }
 .logo {
-    width: 100px;
+    width: 125px;
 }
 .footer-logo {
-    width: 200px;
+    width: 150px;
 }
 .navbar {
     padding: 5px 0px;
@@ -214,7 +214,7 @@ p {
     -moz-box-shadow: 0px 2px 9px 0px rgba(133, 93, 93, 0.75);
 }
 .colored-nav .logo {
-    width: 80px;
+    width: 125px;
 }
 .trans-nav {
     background: transparent;
