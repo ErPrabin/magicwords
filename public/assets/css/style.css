@@ -54,7 +54,7 @@ p {
     font-weight: 600;
 }
 .bread-crumb .back-home {
-    color: #000 !important;
+    color: #295F8F !important;
     font-weight: 600;
     color: #6c757d !important;
 }
@@ -66,13 +66,13 @@ p {
 }
 .colored-nav .nav-item .nav-link.active,
 .colored-nav .nav-item .nav-link {
-    color: #000 !important;
+    color: #295F8F !important;
 }
 .breadcrum-text {
     z-index: 999;
 }
 .contact-section i {
-    color: #000 !important;
+    color: #295F8F !important;
 }
 .contact-section:hover i {
     color: #ffffff !important;
@@ -85,14 +85,14 @@ p {
 }
 .navbar-nav .nav-item .active {
     font-weight: 600;
-    border-bottom: 4px solid #da251d;
+    border-bottom: 4px solid #76b135;
     color: #ffffff !important;
 }
 .nav-contact-btn {
-    background: #ff0032;
+    background: #76b135;
     border-radius: 30px;
     font-weight: 500;
-    border: 1px solid #ff0032;
+    border: 1px solid #76b135;
 
     padding: 10px 20px !important;
     font-size: 1.1rem;
@@ -100,8 +100,8 @@ p {
 }
 .nav-contact-btn:hover {
     background: #fff;
-    color: #ff0032 !important;
-    border: 1px solid #ff0032;
+    color: #76b135 !important;
+    border: 1px solid #76b135;
     border-radius: 30px;
     font-weight: 500;
     padding: 10px 20px !important;
@@ -126,12 +126,12 @@ p {
 }
 .banner-img-index .banner-curve {
     position: absolute;
-    background-color: #da251d;
+    background-color: #295f8f;
     height: 190%;
     width: 100%;
     display: block;
     border-radius: 120px;
-    background: linear-gradient(-47deg, #f95683 0%, #f74b54 100%);
+    /* background: linear-gradient(-47deg, #f95683 0%, #f74b54 100%); */
     bottom: 0;
     right: 0;
     -webkit-transform: translate(35%, -28%) rotate(-35deg);
@@ -156,10 +156,10 @@ p {
 }
 @media screen and (max-width: 990px) {
     .navbar-nav .nav-link {
-        color: #000 !important;
+        color: #295F8F !important;
     }
     .navbar-nav .nav-item .active {
-        color: #000 !important;
+        color: #295F8F !important;
     }
     .navbar-light .navbar-nav .nav-link:focus,
     .navbar-light .navbar-nav .nav-link:hover {
@@ -220,7 +220,7 @@ p {
     background: transparent;
 }
 .btn-index-banner {
-    background-color: #ff0032;
+    background-color: #76b135;
     color: #fff;
     padding: 10px 24px;
     border-radius: 30px;
@@ -228,17 +228,17 @@ p {
 }
 .btn-index-banner:hover {
     background-color: #fff;
-    color: #ff0032;
+    color: #76b135;
     padding: 10px 24px;
     border-radius: 30px;
     font-weight: 600;
-    border: 1px solid #ff0032;
+    border: 1px solid #76b135;
     transition: all ease 0.5s;
 }
 
 /* test */
 .top-contact-section {
-    border-left: 3px solid #dd726d;
+    border-left: 3px solid #76b135;
 }
 .contact-number-index h1 {
     color: rgb(43, 76, 114) !important;
@@ -252,7 +252,7 @@ p {
     width: 80px;
 }
 .services {
-    background-color: #383a42;
+    background-color: #295f8f;
     position: relative;
 }
 
@@ -273,7 +273,7 @@ p {
 .services .square-entity {
     height: 50px;
     width: 50px;
-    background-color: #ff0032;
+    background-color: #76b135;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -283,7 +283,7 @@ p {
     color: #fff;
 }
 .services .card:hover {
-    background-color: #ff0032 !important;
+    background-color: #76b135 !important;
     margin-top: -10px;
     transition: all ease 0.5s;
     box-shadow: 9px 10px 24px -1px rgba(0, 0, 0, 0.75);
@@ -294,20 +294,20 @@ p {
 .services .card:hover .square-entity,
 .services .card:hover .square-entity i {
     background-color: #fff;
-    color: #ff0032 !important;
+    color: #76b135 !important;
 }
 .services .card:hover h4,
 .services .card:hover a {
     color: white !important;
 }
 .about-page {
-    background-color: #383a42;
+    background-color: #295f8f;
 }
 .about-page .card {
     position: relative;
 }
 .about-page .card:hover {
-    background-color: #ff0032 !important;
+    background-color: #76b135 !important;
     margin-top: -10px;
     transition: all ease 0.5s;
     box-shadow: 9px 10px 24px -1px rgba(0, 0, 0, 0.75);
@@ -318,7 +318,7 @@ p {
 .about-page .square-entity {
     height: 60px;
     width: 60px;
-    background-color: #ff0032;
+    background-color: #76b135;
     color: #fff;
     position: absolute;
     top: -30px;
@@ -327,7 +327,7 @@ p {
 .about-page .card:hover .square-entity,
 .about-page .card:hover .square-entity i {
     background-color: #fff;
-    color: #ff0032 !important;
+    color: #76b135 !important;
 }
 .about-page .card:hover h4,
 .about-page .card:hover a {
@@ -340,7 +340,7 @@ p {
     height: 60px;
     width: 60px;
     border-radius: 50%;
-    background-color: #ff0032;
+    background-color: #76b135;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -364,7 +364,7 @@ p {
     color: rgba(31, 28, 28, 0.75);
 }
 .service-read-more:hover {
-    color: #da251d;
+    color: #295f8f;
 }
 
 .technologies h1 {
@@ -397,14 +397,14 @@ p {
 .nav-tabs .nav-item.show .nav-link,
 .nav-tabs .nav-link.active {
     color: #495057;
-    border-bottom: 2px solid #ff0032 !important;
+    border-bottom: 2px solid #76b135 !important;
     padding-bottom: 20px;
 }
 .circle-img-testimonials img {
     height: 80px;
     width: 80px;
     border-radius: 50%;
-    border: 5px solid #ff0032;
+    border: 5px solid #76b135;
 }
 .testimonials {
     background-color: #f8f9fb;
@@ -435,7 +435,7 @@ p {
     border-top-right-radius: 80px;
     box-shadow: 7px 8px 25px -7px rgba(0, 0, 0, 0.75);
     color: white !important;
-    background-color: #383a42;
+    background-color: #295f8f;
 }
 .carousel-indicators [data-bs-target] {
     box-sizing: content-box;
@@ -447,7 +447,7 @@ p {
     margin-left: 3px;
     text-indent: -999px;
     cursor: pointer;
-    background-color: #da251d;
+    background-color: #295f8f;
     background-clip: padding-box;
     border: 0;
     border-radius: 50%;
@@ -484,7 +484,7 @@ p {
     margin: 10px 30px;
     height: 60px;
     width: 60px;
-    background-color: #ff0032;
+    background-color: #76b135;
     color: #fff;
     position: absolute;
     top: -40px;
@@ -505,7 +505,7 @@ p {
     background: #fff;
     color: #6c757d !important;
     border: none;
-    /* border-bottom: 2px solid #da251d; */
+    /* border-bottom: 2px solid #295f8f; */
     transition: all ease 0.5s !important;
 }
 
@@ -529,7 +529,7 @@ p {
     /* padding: 0.25rem 1rem; */
     clear: both;
     font-weight: 600;
-    color: #000;
+    color: #295F8F;
     text-align: inherit;
     text-decoration: none;
     white-space: nowrap;
@@ -537,7 +537,7 @@ p {
     border: 0px;
 }
 .footer {
-    background-color: #000;
+    background-color: #295F8F;
     color: #fff;
 }
 .connect-circle {
@@ -557,7 +557,7 @@ p {
 }
 .contact-us-footer {
     position: absolute;
-    background-color: #da251d;
+    background-color: #76b135;
     width: 100%;
     height: 40px;
     top: -10px;
@@ -583,12 +583,12 @@ p {
 }
 
 .heading-features h3 {
-    color: #000000 !important;
+    color: #295F8F000 !important;
     font-size: 24px;
     font-weight: 400;
 }
 .features {
-    background-color: #383a42;
+    background-color: #295f8f;
     background-repeat: no-repeat;
     background-position: left;
 }
@@ -599,7 +599,7 @@ p {
     height: 60px !important;
     width: 60px;
     border-radius: 50%;
-    background-color: rgb(255, 0, 50);
+    background-color: #76b135;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -609,7 +609,7 @@ p {
     transition: all ease 0.5s !important;
 }
 .features .card:hover h5 {
-    color: #ff0032 !important;
+    color: #76b135 !important;
 }
 
 .features h1 {
@@ -623,7 +623,7 @@ p {
     border-radius: 20px;
 }
 .career-vacancy .card:hover {
-    background-color: #ff0032 !important;
+    background-color: #76b135 !important;
     margin-top: -10px;
     transition: all ease 0.5s;
     box-shadow: 9px 10px 24px -1px rgba(0, 0, 0, 0.75);
@@ -632,19 +632,19 @@ p {
     color: white;
 }
 .career-vacancy .read-more-btn {
-    background-color: #ff0032;
+    background-color: #76b135;
     color: #fff;
 }
 .career-vacancy .card .vacancy-post {
-    color: #ff0032;
+    color: #76b135;
     font-weight: 600;
 }
 .career-vacancy .card:hover {
     color: #fff !important;
-    background: #ff0032;
+    background: #76b135;
 }
 .career-vacancy .card:hover .read-more-btn {
-    color: #ff0032 !important;
+    color: #76b135 !important;
     background: #fff;
 }
 .career-vacancy .card:hover .vacancy-post,
@@ -663,7 +663,7 @@ p {
 }
 
 .red-btn-color {
-    background-color: #ff0032;
+    background-color: #76b135;
     color: #fff;
     font-weight: 600;
     transition: all ease 0.6s;
@@ -678,16 +678,16 @@ p {
 }
 .red-btn-color:hover {
     background-color: #fff;
-    color: #ff0032;
+    color: #76b135;
     font-weight: 600;
-    border: 1px solid #ff0032;
+    border: 1px solid #76b135;
     transition: all ease 0.6s;
 }
 .application-form h1 {
-    color: #ff0032 !important;
+    color: #76b135 !important;
 }
 .head {
-    color: #ff0032 !important;
+    color: #76b135 !important;
 }
 .application-form {
     background-color: #fafbfd;
@@ -720,30 +720,30 @@ p {
     background-color: #f5f5f5;
     border-radius: 5px;
     font-size: 16px;
-    color: #000;
+    color: #295F8F;
 }
 .contact .card {
     border-radius: 10px;
     background-color: #f5f5f5;
 }
 .contact .card h2 {
-    color: #dd726d !important;
+    color: #76b135 !important;
 }
 .nav-tabs .nav-item.show .nav-link,
 .nav-tabs .nav-link.active {
     color: #495057;
     /* background-color: #fff; */
     border-color: #fff #fff #fff;
-    border-bottom: #da251d !important;
+    border-bottom: #295f8f !important;
 }
 .nav-tabs .nav-item.show .nav-link,
 .nav-tabs .nav-link.active {
     color: #495057;
-    border-bottom: 4px solid #dd726d !important;
+    border-bottom: 4px solid #76b135 !important;
 }
 .contact-sub-btn {
     border-radius: 30px;
-    background-color: #ff0032;
+    background-color: #76b135;
     font-weight: 500;
     border: none;
     padding: 10px 30px;
@@ -751,7 +751,7 @@ p {
 
 /* service detail */
 .service-list {
-    background-color: #4a4a4a;
+    background-color: #295f8f;
     padding: 14px 20px;
     text-decoration: none;
     border-radius: 4px;
@@ -766,8 +766,8 @@ p {
     border-radius: 7px;
 }
 .service-list.active {
-    background-color: #ff0033;
-    border-right: 15px solid;
+    background-color: #76b135;
+    border-right: 15px solid #295f8f;
 }
 .service-detail-div-1 .description {
     text-align: justify;
@@ -831,7 +831,7 @@ p {
     height: auto;
 }
 .bar {
-    background: #edaaa3;
+    background: #76b131;
     border-radius: 30px;
     height: 5px;
     margin: 20px auto;
@@ -843,7 +843,7 @@ p {
     animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    background: #ff0032;
+    background: #76b135;
     border-radius: 50%;
     content: "";
     height: 10px;
@@ -858,7 +858,7 @@ p {
     padding-bottom: 20px;
 }
 .m-bar {
-    background: #edaaa3;
+    background: #76b131;
     border-radius: 30px;
     height: 5px;
     margin: 20px 0px;
@@ -870,7 +870,7 @@ p {
     animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    background: #ff0032;
+    background: #76b135;
     border-radius: 50%;
     content: "";
     height: 10px;
@@ -880,7 +880,7 @@ p {
     width: 10px;
 }
 .fa-check {
-    color: #ff0032;
+    color: #76b135;
 }
 /* test */
 .menu-text {
@@ -893,7 +893,7 @@ p {
 }
 .menu-text:after {
     transition: all ease-in-out 0.4s;
-    background: none repeat scroll 0 0 #da251d;
+    background: none repeat scroll 0 0 #295f8f;
     content: "";
     display: block;
     height: 2px;

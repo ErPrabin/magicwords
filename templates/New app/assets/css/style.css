@@ -75,10 +75,10 @@ p {
     color: #da251d !important;
 }
 .nav-contact-btn {
-    background: #ff0032;
+    background: #76b135;
     border-radius: 30px;
     font-weight: 500;
-    border: 1px solid #ff0032;
+    border: 1px solid #76b135;
 
     padding: 10px 20px !important;
     font-size: 1.1rem;
@@ -86,8 +86,8 @@ p {
 }
 .nav-contact-btn:hover {
     background: #fff;
-    color: #ff0032 !important;
-    border: 1px solid #ff0032;
+    color: #76b135 !important;
+    border: 1px solid #76b135;
     border-radius: 30px;
     font-weight: 500;
     padding: 10px 20px !important;
@@ -152,7 +152,7 @@ p {
     background: transparent;
 }
 .btn-index-banner {
-    background-color: #ff0032;
+    background-color: #76b135;
     color: #fff;
     padding: 10px 24px;
     border-radius: 30px;
@@ -160,11 +160,11 @@ p {
 }
 .btn-index-banner:hover {
     background-color: #fff;
-    color: #ff0032;
+    color: #76b135;
     padding: 10px 24px;
     border-radius: 30px;
     font-weight: 600;
-    border: 1px solid #ff0032;
+    border: 1px solid #76b135;
     transition: all ease 0.5s;
 }
 
@@ -184,7 +184,7 @@ p {
     width: 80px;
 }
 .services {
-    background-color: #383a42;
+    background-color: #295f8f;
     position: relative;
 }
 
@@ -205,7 +205,7 @@ p {
 .services .square-entity {
     height: 50px;
     width: 50px;
-    background-color: #ff0032;
+    background-color: #76b135;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -215,7 +215,7 @@ p {
     color: #fff;
 }
 .services .card:hover {
-    background-color: #ff0032 !important;
+    background-color: #76b135 !important;
     margin-top: -10px;
     transition: all ease 0.5s;
     box-shadow: 9px 10px 24px -1px rgba(0, 0, 0, 0.75);
@@ -226,20 +226,20 @@ p {
 .services .card:hover .square-entity,
 .services .card:hover .square-entity i {
     background-color: #fff;
-    color: #ff0032 !important;
+    color: #76b135 !important;
 }
 .services .card:hover h4,
 .services .card:hover a {
     color: white !important;
 }
 .about-page {
-    background-color: #383a42;
+    background-color: #295f8f;
 }
 .about-page .card {
     position: relative;
 }
 .about-page .card:hover {
-    background-color: #ff0032 !important;
+    background-color: #76b135 !important;
     margin-top: -10px;
     transition: all ease 0.5s;
     box-shadow: 9px 10px 24px -1px rgba(0, 0, 0, 0.75);
@@ -250,7 +250,7 @@ p {
 .about-page .square-entity {
     height: 50px;
     width: 50px;
-    background-color: #ff0032;
+    background-color: #76b135;
     color: #fff;
     position: absolute;
     top: -30px;
@@ -260,7 +260,7 @@ p {
 .about-page .card:hover .square-entity,
 .about-page .card:hover .square-entity i {
     background-color: #fff;
-    color: #ff0032 !important;
+    color: #76b135 !important;
 }
 .about-page .card:hover h4,
 .about-page .card:hover a {
@@ -273,7 +273,7 @@ p {
     height: 60px;
     width: 60px;
     border-radius: 50%;
-    background-color: #ff0032;
+    background-color: #76b135;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -330,14 +330,14 @@ p {
 .nav-tabs .nav-item.show .nav-link,
 .nav-tabs .nav-link.active {
     color: #495057;
-    border-bottom: 2px solid #ff0032 !important;
+    border-bottom: 2px solid #76b135 !important;
     padding-bottom: 20px;
 }
 .circle-img-testimonials img {
     height: 80px;
     width: 80px;
     border-radius: 50%;
-    border: 5px solid #ff0032;
+    border: 5px solid #76b135;
 }
 .testimonials {
     background-color: #f8f9fb;
@@ -365,7 +365,7 @@ p {
     border-top-right-radius: 80px;
     box-shadow: 7px 8px 25px -7px rgba(0, 0, 0, 0.75);
     color: white !important;
-    background-color: #383a42;
+    background-color: #295f8f;
 }
 .carousel-indicators [data-bs-target] {
     box-sizing: content-box;
@@ -414,7 +414,7 @@ p {
     margin: 10px 30px;
     height: 60px;
     width: 60px;
-    background-color: #ff0032;
+    background-color: #76b135;
     color: #fff;
     position: absolute;
     top: -40px;
@@ -515,7 +515,7 @@ p {
     font-weight: 400;
 }
 .features {
-    background-color: #383a42;
+    background-color: #295f8f;
 }
 .features .circle-entity {
     position: absolute;
@@ -534,7 +534,7 @@ p {
     transition: all ease 0.5s !important;
 }
 .features .card:hover h5 {
-    color: #ff0032 !important;
+    color: #76b135 !important;
 }
 
 .features h1 {
@@ -548,7 +548,7 @@ p {
     border-radius: 20px;
 }
 .career-vacancy .card:hover {
-    background-color: #ff0032 !important;
+    background-color: #76b135 !important;
     margin-top: -10px;
     transition: all ease 0.5s;
     box-shadow: 9px 10px 24px -1px rgba(0, 0, 0, 0.75);
@@ -557,19 +557,19 @@ p {
     color: white;
 }
 .career-vacancy .read-more-btn {
-    background-color: #ff0032;
+    background-color: #76b135;
     color: #fff;
 }
 .career-vacancy .card .vacancy-post {
-    color: #ff0032;
+    color: #76b135;
     font-weight: 600;
 }
 .career-vacancy .card:hover {
     color: #fff !important;
-    background: #ff0032;
+    background: #76b135;
 }
 .career-vacancy .card:hover .read-more-btn {
-    color: #ff0032 !important;
+    color: #76b135 !important;
     background: #fff;
 }
 .career-vacancy .card:hover .vacancy-post,
@@ -588,7 +588,7 @@ p {
 }
 
 .red-btn-color {
-    background-color: #ff0032;
+    background-color: #76b135;
     color: #fff;
     font-weight: 600;
     transition: all ease 0.6s;
@@ -603,16 +603,16 @@ p {
 }
 .red-btn-color:hover {
     background-color: #fff;
-    color: #ff0032;
+    color: #76b135;
     font-weight: 600;
-    border: 1px solid #ff0032;
+    border: 1px solid #76b135;
     transition: all ease 0.6s;
 }
 .application-form h1 {
-    color: #ff0032 !important;
+    color: #76b135 !important;
 }
 .head {
-    color: #ff0032 !important;
+    color: #76b135 !important;
 }
 .application-form .card {
     border-radius: 30px;
@@ -665,7 +665,7 @@ p {
 }
 .contact-sub-btn {
     border-radius: 30px;
-    background-color: #ff0032;
+    background-color: #76b135;
     font-weight: 500;
     border: none;
     padding: 10px 30px;
@@ -765,7 +765,7 @@ p {
     animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    background: #ff0032;
+    background: #76b135;
     border-radius: 50%;
     content: "";
     height: 10px;
@@ -787,7 +787,7 @@ p {
     animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    background: #ff0032;
+    background: #76b135;
     border-radius: 50%;
     content: "";
     height: 10px;
@@ -797,7 +797,7 @@ p {
     width: 10px;
 }
 .fa-check {
-    color: #ff0032;
+    color: #76b135;
 }
 /* test */
 .menu-text {
