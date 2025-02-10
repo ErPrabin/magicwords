@@ -12,6 +12,8 @@ return [
         Str::slug('contact'),
         Str::slug('career'),
         Str::slug('career-detail'),
+        Str::slug('events'),
+        Str::slug('event-detail'),
     ],
     'meta_dropdown' => [
         'title',
@@ -21,6 +23,7 @@ return [
         ['name' => 'Component', 'slug' => 'component'],
         ['name' => 'Service', 'slug' => 'service'],
         ['name' => 'Career', 'slug' => 'career'],
+        ['name' => 'Event', 'slug' => 'event'],
         ['name' => 'Technology', 'slug' => 'technology'],
         ['name' => 'Specification', 'slug' => 'specification'],
         ['name' => 'Feature', 'slug' => 'feature'],
@@ -32,7 +35,7 @@ return [
 
 
     ],
-    'category' => ['mobile-development','web-development' ,'frontend', 'backend', 'design'],
+    'category' => ['mobile-development', 'web-development', 'frontend', 'backend', 'design'],
     'add-exclude' => ['Component'],
     'list-exclude' => []
 ];

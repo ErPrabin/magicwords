@@ -63,6 +63,10 @@
                                 href="{{ route('career') }}">Career</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link {{ request()->routeIs('events') || request()->routeIs('events') ? 'active' : '' }}"
+                                href="{{ route('events') }}">Events</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link {{ request()->routeIs('contact') ? 'active' : '' }}"
                                 href="{{ route('contact') }}">Contact</a>
                         </li>

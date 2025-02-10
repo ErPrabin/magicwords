@@ -9,6 +9,7 @@ use App\Models\AboutUs;
 use App\Models\Blog;
 use App\Models\Career;
 use App\Models\Component;
+use App\Models\Event;
 use App\Models\Faq;
 use App\Models\Feature;
 use App\Models\Pricing;
@@ -54,6 +55,18 @@ class FrontendController extends Controller
         $specifications = Specification::orderBy('sort', 'asc')->get();
 
         return view('frontend.pages.about', compact('whyus', 'working_process', 'testimonials', 'specifications'));
+    }
+    public function events()
+    {
+        // $careers = Event::orderBy('sort', 'asc')->get();
+
+        return view('frontend.pages.event');
+    }
+    public function eventDetail($slug)
+    {
+        // $careers = Event::orderBy('sort', 'asc')->get();
+
+        return view('frontend.pages.event-detail');
     }
     public function career()
     {
