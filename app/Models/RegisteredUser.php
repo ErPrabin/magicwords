@@ -17,4 +17,9 @@ class RegisteredUser extends Model
         'gender',
         'location',
     ];
+
+    public function event()
+    {
+        return $this->belongsTo(Event::class);
+    }
 }

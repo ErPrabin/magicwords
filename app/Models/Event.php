@@ -20,4 +20,9 @@ class Event extends Model
         'completed_at',
         'sort',
     ];
+
+    public function registeredUsers()
+    {
+        return $this->hasMany(RegisteredUser::class);
+    }
 }

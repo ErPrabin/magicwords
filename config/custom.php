@@ -24,6 +24,7 @@ return [
         ['name' => 'Service', 'slug' => 'service'],
         ['name' => 'Career', 'slug' => 'career'],
         ['name' => 'Event', 'slug' => 'event'],
+        ['name' => 'Registered User', 'slug' => 'registered-user'],
         ['name' => 'Technology', 'slug' => 'technology'],
         ['name' => 'Specification', 'slug' => 'specification'],
         ['name' => 'Feature', 'slug' => 'feature'],
