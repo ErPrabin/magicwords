@@ -178,7 +178,7 @@
 </body>
 <script src="{{ asset('assets/bootstrap-5.0.2-dist/js/bootstrap.min.js') }}"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         window.addEventListener("scroll", function() {
@@ -250,5 +250,47 @@ integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="ano
     });
     var myCarousel = document.querySelector("#myCarousel");
 </script>
+<!-- Add this JavaScript at the bottom of the file -->
+<script>
+    document.getElementById('upcoming-events').addEventListener('click', function() {
+        this.classList.add('active');
+        document.getElementById('past-events').classList.remove('active');
+        // Add logic to show upcoming events
+    });
+
+    document.getElementById('past-events').addEventListener('click', function() {
+        this.classList.add('active');
+        document.getElementById('upcoming-events').classList.remove('active');
+        // Add logic to show past events
+    });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById('upcoming-events').addEventListener('click', function() {
+            this.classList.add('active');
+            document.getElementById('past-events').classList.remove('active');
+            document.getElementById('upcomming').classList.remove('d-none');
+            document.getElementById('past').classList.add('d-none');
+        });
+
+        document.getElementById('past-events').addEventListener('click', function() {
+            this.classList.add('active');
+            document.getElementById('upcoming-events').classList.remove('active');
+            document.getElementById('past').classList.remove('d-none');
+            document.getElementById('upcomming').classList.add('d-none');
+        });
+    });
+</script>
+<style>
+    .btn-outline-primary.active {
+        background-color: var(--bs-primary);
+        color: white;
+    }
+
+    .btn-outline-primary.active .badge {
+        background-color: white !important;
+        color: var(--bs-primary);
+    }
+</style>
 
 </html>

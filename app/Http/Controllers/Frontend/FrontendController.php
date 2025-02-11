@@ -58,7 +58,7 @@ class FrontendController extends Controller
     }
     public function events()
     {
-        // $careers = Event::orderBy('sort', 'asc')->get();
+        $careers = Event::orderBy('sort', 'asc')->get();
 
         return view('frontend.pages.event');
     }
