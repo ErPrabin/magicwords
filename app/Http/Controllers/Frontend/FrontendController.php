@@ -14,6 +14,7 @@ use App\Models\Faq;
 use App\Models\Feature;
 use App\Models\Pricing;
 use App\Models\Process;
+use App\Models\RegisteredUser;
 use App\Models\Service;
 use App\Models\Specification;
 use App\Models\Technology;
@@ -69,6 +70,21 @@ class FrontendController extends Controller
 
         return view('frontend.pages.event-detail', compact('event'));
     }
+    public function registerEvent($id)
+    {
+        Event::findOrFail($id);
+        RegisteredUser::create([
+            'event_id' => $id,
+            'name' => request('name'),
+            'email' => request('email'),
+            'contact_number' => request('contact_number'),
+            'location' => request('location'),
+            'note' => request('note'),
+            'gender' => request('gender'),
+        ]);
+        return redirect()->back()->with('flash_success', 'Registered successfully');
+    }
+
     public function career()
     {
         $careers = Career::orderBy('sort', 'asc')->get();

@@ -461,6 +461,23 @@ p {
     opacity: 1;
 }
 
+.alert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    min-width: 300px;
+    z-index: 9999;
+    border-left: 4px solid;
+}
+
+.alert-success {
+    border-left-color: #198754;
+}
+
+.alert-danger {
+    border-left-color: #dc3545;
+}
+
 .carousel-indicators {
     position: absolute;
     right: 0;
