@@ -21,22 +21,22 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <img src="https://picsum.photos/800/500" class="img-fluid rounded shadow" alt="Event Image">
+                    <img src="{{ asset('images/event/' . $event->image) }}" class="img-fluid rounded shadow" alt="Event Image">
                 </div>
                 <div class="col-lg-6">
-                    <h1 class="fw-bold mb-4">Professional Web Development Workshop</h1>
+                    <h1 class="fw-bold mb-4">{{ $event->title }}</h1>
                     <div class="event-info">
                         <div class="d-flex align-items-center mb-3">
                             <i class="far fa-calendar-alt me-2 text-primary"></i>
-                            <span>March 25, 2024 | 09:00 AM</span>
+                            <span>{{ \Carbon\Carbon::parse($event->start_at)->format('F j, Y | h:i A') }}</span>
                         </div>
                         <div class="d-flex align-items-center mb-3">
                             <i class="fas fa-users me-2 text-primary"></i>
-                            <span>Capacity: 45/100 seats</span>
+                            <span>Capacity: 45/{{ $event->capacity }} seats</span>
                         </div>
                         <div class="d-flex align-items-center mb-3">
                             <i class="fas fa-map-marker-alt me-2 text-primary"></i>
-                            <span>Tech Hub Building, Silicon Valley Street</span>
+                            <span>{{ $event->location }}</span>
                         </div>
                     </div>
                 </div>
@@ -48,23 +48,15 @@
     <div class="event-description py-5">
         <div class="container">
             <h3 class="mb-4">About This Event</h3>
-            <div class="content">
-                <p>Join us for an intensive web development workshop designed for aspiring developers. This hands-on session
-                    will cover:</p>
-                <ul>
-                    <li>Modern JavaScript frameworks</li>
-                    <li>Responsive design principles</li>
-                    <li>Backend integration</li>
-                    <li>Best practices in web development</li>
-                </ul>
-                <p>Perfect for beginners and intermediate developers looking to enhance their skills.</p>
+            <div class="content text-justify">
+                {!! $event->description !!}
             </div>
         </div>
     </div>
 
     <!-- Registration Form -->
 
-    <div class="container">
+    <div class="container mb-5">
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="card shadow">
@@ -104,32 +96,12 @@
                                     </div>
                                 </div>
                             </div>
-
-                            {{-- <div class="mb-3">
-                                <label class="form-label">Select Preferred Date</label>
-                                <div class="d-flex flex-wrap gap-3">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="preferred_date" id="date1" value="2024-03-25" required>
-                                        <label class="form-check-label" for="date1">March 25, 2024</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="preferred_date" id="date2" value="2024-03-26">
-                                        <label class="form-check-label" for="date2">March 26, 2024</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="preferred_date" id="date3" value="2024-03-27">
-                                        <label class="form-check-label" for="date3">March 27, 2024</label>
-                                    </div>
-                                </div>
-                            </div> --}}
-
                             <div class="mb-3">
                                 <label class="form-label">Special Requirements</label>
                                 <textarea class="form-control" rows="3"></textarea>
                             </div>
-
                             <div class="text-center">
-                                <button type="submit" class="btn btn-primary px-5">Submit Registration</button>
+                                <button type="submit" class="btn red-btn-color px-5">Submit Registration</button>
                             </div>
                         </form>
                     </div>
@@ -137,5 +109,4 @@
             </div>
         </div>
     </div>
-
 @endsection

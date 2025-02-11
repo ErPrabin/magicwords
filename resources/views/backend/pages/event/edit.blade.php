@@ -46,6 +46,11 @@
                                         name="capacity">
                                 </div>
                                 <div class="form-group">
+                                    <label for="question">Location</label>
+                                    <input type="text" class="form-control" value="{{ $data->location }}" id="question"
+                                        name="location">
+                                </div>
+                                <div class="form-group">
                                     <label for="description">Synopsis</label>
                                     <textarea class="textarea" id="editor1" name="synopsis">{!! $data->synopsis !!}</textarea>
                                 </div>

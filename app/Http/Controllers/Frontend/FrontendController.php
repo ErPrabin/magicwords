@@ -58,15 +58,16 @@ class FrontendController extends Controller
     }
     public function events()
     {
-        $careers = Event::orderBy('sort', 'asc')->get();
+        $upcomming_events = Event::orderBy('sort', 'asc')->whereNull('completed_at')->get();
+        $past_events = Event::orderBy('sort', 'asc')->whereNotNull('completed_at')->get();
 
-        return view('frontend.pages.event');
+        return view('frontend.pages.event', compact('upcomming_events', 'past_events'));
     }
     public function eventDetail($slug)
     {
-        // $careers = Event::orderBy('sort', 'asc')->get();
+        $event = Event::where('slug', $slug)->first();
 
-        return view('frontend.pages.event-detail');
+        return view('frontend.pages.event-detail', compact('event'));
     }
     public function career()
     {

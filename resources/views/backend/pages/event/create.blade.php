@@ -40,6 +40,10 @@
                                     <input type="number" class="form-control" id="question" name="capacity">
                                 </div>
                                 <div class="form-group">
+                                    <label for="question">Location</label>
+                                    <input type="text" class="form-control" id="question" name="location">
+                                </div>
+                                <div class="form-group">
                                     <label for="answer">Synopsis</label>
                                     <textarea class="textarea" id="editor1" name="synopsis"></textarea>
                                 </div>
@@ -47,7 +51,7 @@
                                     <label for="answer">Description</label>
                                     <textarea class="textarea" id="editor2" name="description"></textarea>
                                 </div>
-                               
+
 
                                 <div class="form-group">
                                     <label for="exampleInputFile">Image </label>
