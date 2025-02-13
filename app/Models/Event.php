@@ -20,9 +20,15 @@ class Event extends Model
         'completed_at',
         'sort',
     ];
+    protected $appends = ['user_registered'];
 
     public function registeredUsers()
     {
         return $this->hasMany(RegisteredUser::class);
+    }
+
+    public function getUserRegisteredAttribute()
+    {
+        return $this->registeredUsers()->count();
     }
 }

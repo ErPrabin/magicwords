@@ -13,13 +13,6 @@
         'title' => 'Event Detail',
     ])
 
-    @if (session('flash_success'))
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
-            {{ session('flash_success') }}
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-    @endif
-
     <!-- banner ends -->
     </section>
     <!-- banner ends -->
@@ -40,7 +33,7 @@
                         </div>
                         <div class="d-flex align-items-center mb-3">
                             <i class="fas fa-users me-2 text-primary"></i>
-                            <span>Capacity: 45/{{ $event->capacity }} seats</span>
+                            <span>Capacity: {{ $event->user_registered }}/{{ $event->capacity }} seats</span>
                         </div>
                         <div class="d-flex align-items-center mb-3">
                             <i class="fas fa-map-marker-alt me-2 text-primary"></i>

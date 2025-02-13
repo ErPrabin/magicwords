@@ -72,7 +72,13 @@ class FrontendController extends Controller
     }
     public function registerEvent($id)
     {
-        Event::findOrFail($id);
+        $event = Event::findOrFail($id);
+        if ($event->registeredUsers()->where('email', request('email'))->count() > 0) {
+            return redirect()->back()->with('flash_error', 'You have already registered for this event');
+        }
+        if ($event->registeredUsers()->count() >= $event->capacity) {
+            return redirect()->back()->with('flash_error', 'Event is full');
+        }
         RegisteredUser::create([
             'event_id' => $id,
             'name' => request('name'),

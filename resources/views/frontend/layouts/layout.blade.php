@@ -20,6 +20,7 @@
 </head>
 
 <body>
+    @include('frontend.partials.message')
     <section class="banner-img-index">
         <!-- navbar -->
         <div class="banner-curve" id="banner-curve"></div>

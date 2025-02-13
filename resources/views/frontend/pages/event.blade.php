@@ -46,7 +46,7 @@
                                     @if (isset($event->capacity) && $event->capacity > 0)
                                         <div
                                             class="capacity-badge position-absolute top-0 end-0 m-2 red-btn-color text-white px-2 py-1 rounded">
-                                            <small>Capacity: 50/{{ $event->capacity }}</small>
+                                            <small>Capacity: {{ $event->user_registered }}/{{ $event->capacity }}</small>
                                         </div>
                                     @endif
                                 </div>
@@ -85,7 +85,8 @@
                                             @if (isset($event->capacity) && $event->capacity > 0)
                                                 <div
                                                     class="capacity-badge position-absolute top-0 end-0 m-2 red-btn-color text-white px-2 py-1 rounded">
-                                                    <small>Capacity: 50/{{ $event->capacity }}</small>
+                                                    <small>Capacity:
+                                                        {{ $event->user_registered }}/{{ $event->capacity }}</small>
                                                 </div>
                                             @endif
                                         </div>
