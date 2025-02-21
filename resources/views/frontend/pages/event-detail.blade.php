@@ -84,7 +84,7 @@
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label class="form-label">Address</label>
-                                    <input type="tel" class="form-control" name="location" required>
+                                    <input type="text" class="form-control" name="location" required>
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label class="form-label">Gender</label>
@@ -100,7 +100,7 @@
                                             <label class="form-check-label" for="female">Female</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="other" id="other"
+                                            <input class="form-check-input" type="radio" name="gender" id="other"
                                                 value="o">
                                             <label class="form-check-label" for="female">Other</label>
                                         </div>
