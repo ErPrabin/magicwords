@@ -29,7 +29,7 @@
                                     @foreach ($data as $d)
                                         <tr>
                                             <td>{{ $d->event->title }}</td>
-                                            <td>{{ $d->event->name }}</td>
+                                            <td>{{ $d->name }}</td>
                                             <td>{{ $d->email }}</td>
                                             <td>{{ $d->contact_number }}</td>
                                             <td>{{ $d->location }}</td>
