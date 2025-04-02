@@ -36,8 +36,6 @@
                     <div class="description mt-5 px-4">
                         <h1 class="py-3">{{ $singleservice->title }}</h1>
                         {!! $singleservice->description !!}
-                        <br>
-                        {!! $singleservice->description !!}
                     </div>
                 </div>
             </div>
